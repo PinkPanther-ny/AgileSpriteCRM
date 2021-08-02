@@ -3,7 +3,7 @@
 
 ```
 TeamSupervisor MyTien7
-Member1 Jiayin Cai
+Member1 Jiayin 
 Member2 Jieyi Chen
 Member3 Nuoyen Chen
 Member4 XinZhang
