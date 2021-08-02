@@ -4,8 +4,7 @@
 ```
 TeamSupervisor MyTien7
 Member1 Jiayin 
-Member2 Jieyi Chen
+Member2 Jieyi
 Member3 Nuoyen Chen
-Member4 XinZhang
-Member5 LixuanDuan
-```
+Member4 Xin
+Member5 Lixuan
