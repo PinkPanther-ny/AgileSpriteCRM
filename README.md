@@ -1,4 +1,4 @@
-# This repo is for IT Project (COMP30022_2021_SM2) Team 43.
+# This repo is for IT Project (COMP30022_2021_SM2) Team AgileSprite (team043).
 ## TeamSupervisor MyTien
 
 ### Team members
