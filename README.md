@@ -6,7 +6,7 @@
 Member1 Jiayin Cai
 Member2 Jieyi Chen
 Member3 Nuoyan Chen
-Member4 Xin
+Member4 Xin Zhang
 Member5 Lixuan Duan
 ```
 ### Client details
