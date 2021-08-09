@@ -5,7 +5,7 @@
 ```
 Member1 Jiayin Cai
 Member2 Jieyi Chen
-Member3 Nuoyen Chen
+Member3 Nuoyan Chen
 Member4 Xin
 Member5 Lixuan Duan
 ```
