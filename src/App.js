@@ -1,17 +1,19 @@
 import logo from './logo.svg';
+import agile from './agile.png';
+
 import './App.css';
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Hello world!! AgileSprite~
-        </p>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+
+        <p><strong>Hello world!! </strong></p>
+        <p>AgileSprite~</p>
+        <img src={agile} className="Agile-logo" alt="logo" />
+
+        <img id="agile-icon-position" src={logo} className="App-logo" alt="logo" />
         <a
           className="App-link"
           href="https://reactjs.org"
