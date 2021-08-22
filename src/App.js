@@ -10,8 +10,21 @@ function App() {
       <header className="App-header">
 
         <p><strong>Hello world!! </strong></p>
-        <p>AgileSprite~</p>
-        <img src={agile} className="Agile-logo" alt="logo" />
+        ----***** AgileSprite *****---- <br/>
+        <a
+            className="App-link"
+            href="https://github.com/PinkPanther-ny/IT_project_0"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+        Check our github repo
+        </a>
+
+        <a href="https://dashboard.heroku.com/apps/test0agilesprite">
+          <img src={agile} className="Agile-logo" alt="logo" /></a>
+        <a href="https://dashboard.heroku.com/apps/test0agilesprite">
+          Go to our heroku console
+        </a>
 
         <img id="agile-icon-position" src={logo} className="App-logo" alt="logo" />
         <a
