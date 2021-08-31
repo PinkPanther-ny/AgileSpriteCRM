@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import agile from './agile.png';
+import agile from './agileSprite.png';
 
 import './App.css';
 
