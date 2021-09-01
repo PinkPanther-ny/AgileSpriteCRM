@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import agile from './agileSprite.png';
 
 import './App.css';
+import { Button } from '@material-ui/core';
 
 function App() {
 
@@ -12,13 +13,17 @@ function App() {
         <p><strong>Hello world!! </strong></p>
         ----***** AgileSprite *****---- <br/>
         <a
+
+        >
+        </a>
+        <Button
+            color="primary"
             className="App-link"
             href="https://github.com/PinkPanther-ny/IT_project_0"
-            target="_blank"
+            //target="_blank"
             rel="noopener noreferrer"
-        >
-        Check our github repo
-        </a>
+        >Check our github repo
+        </Button>
 
         <a href="https://dashboard.heroku.com/apps/test0agilesprite">
           <img src={agile} className="Agile-logo" alt="logo" /></a>
