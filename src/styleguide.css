@@ -1,0 +1,80 @@
+:root { 
+  --blueberry: #4e6ffc;
+  --dove-gray: #707070;
+  --ebony-clay: #212340;
+  --iron: #d4d4d5;
+  --scarpa-flow: #555558;
+  --unmellow-yellow: #002dec;
+  --white: #ffffff;
+ 
+  --font-size-l: 35px;
+  --font-size-m: 28px;
+  --font-size-s: 26px;
+  --font-size-xl: 64px;
+  --font-size-xs: 22px;
+  --font-size-xxs: 18px;
+  --font-size-xxxs: 16px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-segoeui-black: "SegoeUI-Black", Helvetica;
+  --font-family-tahoma: "Tahoma", Helvetica;
+  --font-family-tahoma-bold: "Tahoma-Bold", Helvetica;
+  --font-family-tahoma-regular: "Tahoma-Regular", Helvetica;
+}
+.tahoma-regular-normal-scarpa-flow-16px {
+  color: var(--scarpa-flow);
+  font-family: var(--font-family-tahoma-regular);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.tahoma-regular-normal-dove-gray-16px {
+  color: var(--dove-gray);
+  font-family: var(--font-family-tahoma-regular);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.tahoma-bold-ebony-clay-35px {
+  color: var(--ebony-clay);
+  font-family: var(--font-family-tahoma-bold);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.tahoma-regular-normal-blueberry-22px {
+  color: var(--blueberry);
+  font-family: var(--font-family-tahoma-regular);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.tahoma-normal-blueberry-16px {
+  color: var(--blueberry);
+  font-family: var(--font-family-tahoma);
+  font-size: var(--font-size-xxxs);
+}
+
+.tahoma-regular-normal-blueberry-16px {
+  color: var(--blueberry);
+  font-family: var(--font-family-tahoma-regular);
+  font-size: var(--font-size-xxxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.tahoma-regular-normal-unmellow-yellow-22px {
+  color: var(--unmellow-yellow);
+  font-family: var(--font-family-tahoma-regular);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.border-1-5px-iron {
+  border: 1.5px solid var(--iron);
+}

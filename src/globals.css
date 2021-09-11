@@ -1,0 +1,52 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Inter:500");
+@font-face {
+  font-family: "SegoeUI-Black";
+  font-style: normal;
+  font-weight: 900;
+  src: url("fonts/cloud-documents[1]");
+}
+@font-face {
+  font-family: "Tahoma-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/Tahoma Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Tahoma-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Tahoma.ttf") format("truetype");
+}
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+input:focus {
+  outline: none;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,47 @@
+.start-button {
+  cursor: pointer;
+  display: flex;
+  height: 56px;
+  left: 5px;
+  pointer-events: auto;
+  position: absolute;
+  top: 343px;
+  transition: all 0.2s ease;
+  width: 228px;
+}
+
+.start-button:hover {
+  transform: scale(1.1);
+}
+
+.button {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  min-width: 228px;
+}
+
+.overlap-group-2 {
+  align-items: flex-end;
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 12px;
+  display: flex;
+  height: 56px;
+  justify-content: flex-end;
+  min-width: 228px;
+  padding: 10px 63px;
+}
+
+.start-now {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  line-height: 24px;
+  min-height: 32px;
+  min-width: 99px;
+  white-space: nowrap;
+}
+
