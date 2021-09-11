@@ -1,10 +1,10 @@
 import React from "react";
 import StartButton from "../StartButton";
 import Logo from "../Logo";
-import "./Web1920Homepage.css";
+import "./Homepage.css";
 import {Link} from "react-router-dom";
 
-function Web1920Homepage(props) {
+function Homepage(props) {
   const {
     gradientbg,
     bluebg,
@@ -26,7 +26,7 @@ function Web1920Homepage(props) {
 
   return (
     <div className="container-center-horizontal">
-      <div className="web-1920-homepage animate-enter screen">
+      <div className="homepage animate-enter screen">
         <div className="overlap-group3">
           <div className="overlap-group-1">
             <div className="lightblue-bg"></div>
@@ -81,4 +81,4 @@ function Web1920Homepage(props) {
   );
 }
 
-export default Web1920Homepage;
+export default Homepage;

@@ -1,20 +1,23 @@
-:root { 
+:root {
+  --alto: #d9d9da;
   --blueberry: #4e6ffc;
+  --blueberry-2: #4e6ffce8;
   --dove-gray: #707070;
   --ebony-clay: #212340;
   --iron: #d4d4d5;
+  --royal-blue: #3e5bd6;
   --scarpa-flow: #555558;
   --unmellow-yellow: #002dec;
   --white: #ffffff;
- 
-  --font-size-l: 35px;
-  --font-size-m: 28px;
-  --font-size-s: 26px;
-  --font-size-xl: 64px;
-  --font-size-xs: 22px;
-  --font-size-xxs: 18px;
-  --font-size-xxxs: 16px;
- 
+
+  --font-size-l: 17px;
+  --font-size-m: 16px;
+  --font-size-xl: 18px;
+  --font-size-xxl: 22px;
+  --font-size-xxxl: 26px;
+  --font-size-xxxxl: 28px;
+  --font-size-xxxxxl: 35px;
+
   --font-family-inter: "Inter", Helvetica;
   --font-family-segoeui-black: "SegoeUI-Black", Helvetica;
   --font-family-tahoma: "Tahoma", Helvetica;
@@ -24,7 +27,7 @@
 .tahoma-regular-normal-scarpa-flow-16px {
   color: var(--scarpa-flow);
   font-family: var(--font-family-tahoma-regular);
-  font-size: var(--font-size-xxxs);
+  font-size: var(--font-size-m);
   font-style: normal;
   font-weight: 400;
 }
@@ -32,23 +35,7 @@
 .tahoma-regular-normal-dove-gray-16px {
   color: var(--dove-gray);
   font-family: var(--font-family-tahoma-regular);
-  font-size: var(--font-size-xxxs);
-  font-style: normal;
-  font-weight: 400;
-}
-
-.tahoma-bold-ebony-clay-35px {
-  color: var(--ebony-clay);
-  font-family: var(--font-family-tahoma-bold);
-  font-size: var(--font-size-l);
-  font-style: normal;
-  font-weight: 700;
-}
-
-.tahoma-regular-normal-blueberry-22px {
-  color: var(--blueberry);
-  font-family: var(--font-family-tahoma-regular);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-m);
   font-style: normal;
   font-weight: 400;
 }
@@ -56,13 +43,13 @@
 .tahoma-normal-blueberry-16px {
   color: var(--blueberry);
   font-family: var(--font-family-tahoma);
-  font-size: var(--font-size-xxxs);
+  font-size: var(--font-size-m);
 }
 
 .tahoma-regular-normal-blueberry-16px {
   color: var(--blueberry);
   font-family: var(--font-family-tahoma-regular);
-  font-size: var(--font-size-xxxs);
+  font-size: var(--font-size-m);
   font-style: normal;
   font-weight: 400;
 }
@@ -70,11 +57,59 @@
 .tahoma-regular-normal-unmellow-yellow-22px {
   color: var(--unmellow-yellow);
   font-family: var(--font-family-tahoma-regular);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.tahoma-bold-ebony-clay-35px {
+  color: var(--ebony-clay);
+  font-family: var(--font-family-tahoma-bold);
+  font-size: var(--font-size-xxxxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.tahoma-regular-normal-blueberry-22px {
+  color: var(--blueberry);
+  font-family: var(--font-family-tahoma-regular);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.tahoma-bold-blueberry-35px {
+  color: var(--blueberry);
+  font-family: var(--font-family-tahoma-bold);
+  font-size: var(--font-size-xxxxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.tahoma-regular-normal-white-18px {
+  color: var(--white);
+  font-family: var(--font-family-tahoma-regular);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.tahoma-regular-normal-blueberry-17px {
+  color: var(--blueberry-2);
+  font-family: var(--font-family-tahoma-regular);
+  font-size: var(--font-size-l);
   font-style: normal;
   font-weight: 400;
 }
 
 .border-1-5px-iron {
   border: 1.5px solid var(--iron);
+}
+
+.border-1-5px-dove-gray {
+  border: 1.5px solid var(--dove-gray);
+}
+
+.border-1px-alto {
+  border: 1px solid var(--alto);
 }

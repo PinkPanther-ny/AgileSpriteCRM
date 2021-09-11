@@ -1,11 +1,11 @@
-.web-1920-homepage {
+.homepage {
   height: 1080px;
   overflow: hidden;
   width: 1920px;
   opacity: 0;filter: blur(10px);
 }
 
-.web-1920-homepage.animate-enter {
+.homepage.animate-enter {
   animation: animate-enter-frames 0.40s ease-in-out 0.00s 1 normal forwards;
   opacity: 0;filter: blur(10px);
 }
@@ -66,7 +66,7 @@
 .copyright {
   color: #88c3e6;
   font-family: var(--font-family-segoeui-black);
-  font-size: var(--font-size-xxs);
+  font-size: var(--font-size-xl);
   font-weight: 900;
   left: 2283px;
   letter-spacing: 0;
@@ -108,7 +108,7 @@
 .text-1 {
   color: var(--ebony-clay);
   font-family: var(--font-family-tahoma-bold);
-  font-size: var(--font-size-xl);
+  font-size: 64px;
   height: 159px;
   letter-spacing: 0.48px;
   line-height: 80px;
@@ -126,7 +126,7 @@
 .text-2 {
   color: var(--ebony-clay);
   font-family: var(--font-family-tahoma);
-  font-size: var(--font-size-m);
+  font-size: var(--font-size-xxxxl);
   height: 352px;
   left: 0;
   letter-spacing: 0.19px;
@@ -144,7 +144,7 @@
 
 .span1 {
   font-family: var(--font-family-tahoma-regular);
-  font-size: var(--font-size-s);
+  font-size: var(--font-size-xxxl);
 }
 
 .overlap-group2 {

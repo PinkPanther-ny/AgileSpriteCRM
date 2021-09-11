@@ -1,0 +1,385 @@
+.login-2 {
+  background-color: var(--white);
+  height: 1079px;
+  overflow: hidden;
+  width: 1920px;
+  opacity: 0;filter: blur(10px);
+}
+
+.login-2.animate-enter2 {
+  animation: animate-enter2-frames 0.20s ease-out 0.00s 1 normal forwards;
+  opacity: 0;filter: blur(10px);
+}
+
+.overlap-group4-1 {
+  height: 1051px;
+  left: -440px;
+  position: relative;
+  width: 2800px;
+}
+
+.path-4606-1 {
+  height: 972px;
+  left: 171px;
+  object-fit: cover;
+  position: absolute;
+  top: 79px;
+  width: 1275px;
+}
+
+.path-4643-1 {
+  height: 424px;
+  left: 2128px;
+  object-fit: cover;
+  position: absolute;
+  top: 627px;
+  width: 390px;
+}
+
+.group-4808-1 {
+  align-items: flex-end;
+  display: flex;
+  height: 736px;
+  left: 568px;
+  min-width: 1657px;
+  position: absolute;
+  top: 213px;
+}
+
+.sign-in-page {
+  height: 734px;
+  object-fit: cover;
+  width: 741px;
+}
+
+.form-1 {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  margin-left: 279px;
+  min-height: 736px;
+  padding: 29px 118px;
+  width: 637px;
+}
+
+.agile-sprite-2 {
+  height: 159px;
+  margin-right: 1.0px;
+  object-fit: cover;
+  width: 162px;
+}
+
+.log-in-3 {
+  letter-spacing: 0;
+  line-height: 35px;
+  margin-top: 32px;
+  min-height: 44px;
+  min-width: 109px;
+  white-space: nowrap;
+}
+
+.email-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.0px;
+  margin-top: 18px;
+  min-height: 75px;
+  width: 396px;
+}
+
+.email-3 {
+  letter-spacing: 0.11px;
+  line-height: 16px;
+  margin-top: 2px;
+  min-height: 21px;
+  white-space: nowrap;
+}
+
+.overlap-group2-2 {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 4px;
+  display: flex;
+  height: 50px;
+  justify-content: flex-end;
+  margin-top: 2px;
+  min-width: 396px;
+  padding: 12.5px 7.5px;
+}
+
+.overlap-group-9 {
+  height: 17px;
+  margin-bottom: 1.15px;
+  position: relative;
+  width: 24px;
+}
+
+.rectangle-52-1 {
+  height: 17px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 23px;
+}
+
+.path-54-1 {
+  height: 9px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 24px;
+}
+
+.enter-email-address-1 {
+  align-self: flex-end;
+  background-color: transparent;
+  border: 0;
+  height: 22px;
+  letter-spacing: 0.05px;
+  line-height: 24px;
+  margin-left: 10px;
+  padding: 0;
+  white-space: nowrap;
+  width: 342px;
+}
+
+.enter-email-address-1::placeholder {
+  color: #70707099;
+}
+
+.password-3 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.0px;
+  margin-top: 25px;
+  min-height: 75px;
+  width: 396px;
+}
+
+.password-4 {
+  letter-spacing: 0.11px;
+  line-height: 16px;
+  margin-top: 2px;
+  min-height: 21px;
+  white-space: nowrap;
+}
+
+.overlap-group1-3 {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 4px;
+  display: flex;
+  height: 50px;
+  justify-content: flex-end;
+  margin-top: 2px;
+  min-width: 396px;
+  padding: 0 7.5px;
+}
+
+.lock-1 {
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  margin-bottom: 3.0px;
+  width: 20px;
+}
+
+.password-5 {
+  background-color: transparent;
+  border: 0;
+  height: 22px;
+  letter-spacing: 0.05px;
+  line-height: 24px;
+  margin-left: 12px;
+  margin-top: 3.0px;
+  padding: 0;
+  white-space: nowrap;
+  width: 342px;
+}
+
+.password-5::placeholder {
+  color: #70707099;
+}
+
+.signup-buton-1 {
+  background-color: var(--blueberry);
+  border-radius: 4px;
+  cursor: pointer;
+  height: 50px;
+  margin-right: 1.0px;
+  margin-top: 47px;
+  pointer-events: auto;
+  transition: all 0.15s ease-in-out;
+  width: 396px;
+}
+
+.signup-buton-1:hover {
+  transform: scale(0.9); 
+}
+
+.overlap-group-10 {
+  border-radius: 4px;
+  height: 50px;
+  position: relative;
+}
+
+.hover-1 {
+  background-color: var(--royal-blue);
+  border-radius: 4px;
+  height: 50px;
+  left: 0;
+  opacity: 0;
+  pointer-events: auto;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s ease;
+  width: 396px;
+}
+
+.hover-1:hover {
+  opacity: 1;
+}
+
+.login-3 {
+  left: 167px;
+  letter-spacing: 0.13px;
+  line-height: 18px;
+  position: absolute;
+  top: 16px;
+  white-space: nowrap;
+}
+
+.flex-row {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  height: 23px;
+  margin-top: 10px;
+  min-width: 398px;
+}
+
+.forgot-password {
+  cursor: pointer;
+  letter-spacing: 0.10px;
+  line-height: 22px;
+  min-height: 23px;
+  min-width: 136px;
+  white-space: nowrap;
+}
+
+.sign-up-now {
+  cursor: pointer;
+  letter-spacing: 0.10px;
+  line-height: 22px;
+  margin-left: 160px;
+  min-height: 23px;
+  white-space: nowrap;
+}
+
+.overlap-group3-2 {
+  height: 100px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 2800px;
+}
+
+.menu-2 {
+  align-items: flex-start;
+  display: flex;
+  height: 31px;
+  left: 2055px;
+  min-width: 222px;
+  position: absolute;
+  top: 35px;
+}
+
+.login-4 {
+  cursor: pointer;
+  display: flex;
+  height: 31px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.2s ease;
+  width: 68px;
+}
+
+.login-4:hover {
+  transform: scale(1.1);
+}
+
+.signup-3 {
+  display: flex;
+  height: 31px;
+  margin-left: 80px;
+  pointer-events: auto;
+  transition: all 0.2s ease;
+  width: 74px;
+}
+
+.signup-3:hover {
+  transform: scale(1.1);
+}
+
+.group-143614-5 {
+  cursor: pointer;
+  flex: 1;
+  pointer-events: auto;
+  transition: all 0.2s ease;
+  width: 76px;
+}
+
+.group-143614-5:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
+
+.overlap-group-11 {
+  height: 29px;
+  position: relative;
+  top: 2px;
+}
+
+.path-4599-4 {
+  height: 2px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 28px;
+  width: 68px;
+}
+
+.sign-up-4 {
+  left: 0;
+  letter-spacing: 0.16px;
+  line-height: 22px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.text-6 {
+  left: 474px;
+  letter-spacing: 0;
+  line-height: 35px;
+  pointer-events: auto;
+  position: absolute;
+  top: 30px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.text-6:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
+
+@keyframes animate-enter2-frames {
+  from{opacity: 0;filter: blur(10px);
+}
+to{opacity: 1;filter: none;
+}
+}
+

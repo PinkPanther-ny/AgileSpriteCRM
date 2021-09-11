@@ -1,0 +1,46 @@
+.bgborder {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  min-height: 100px;
+  position: absolute;
+  top: 0;
+  width: 2800px;
+}
+
+.white-bg-1 {
+  background: linear-gradient(180deg, #0e67ee 0%, rgba(69, 118, 190, 0.56) 0%, rgba(32, 114, 236, 0.65) 5.01%, rgba(48, 120, 227, 0.47) 35.56%, rgba(63, 110, 180, 0.34) 100%);
+  height: 100px;
+  width: 2800px;
+}
+
+.border-top-bar-1 {
+  background: linear-gradient(180deg, #0e67ee 0%, rgba(69, 118, 190, 0.56) 0%, rgba(32, 114, 236, 0.65) 5.01%, rgba(48, 120, 227, 0.47) 35.56%, rgba(63, 110, 180, 0.34) 100%);
+  height: 1px;
+  width: 2800px;
+}
+
+.bgborder-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  min-height: 100px;
+  position: absolute;
+  top: 0;
+  width: 2800px;
+}
+
+.white-bg-2 {
+  background: linear-gradient(180deg, #0e67ee 0%, rgba(69, 118, 190, 0.56) 0%, rgba(32, 114, 236, 0.65) 5.01%, rgba(48, 120, 227, 0.47) 35.56%, rgba(63, 110, 180, 0.34) 100%);
+  height: 100px;
+  width: 2800px;
+}
+
+.border-top-bar-2 {
+  background: linear-gradient(180deg, #0e67ee 0%, rgba(69, 118, 190, 0.56) 0%, rgba(32, 114, 236, 0.65) 5.01%, rgba(48, 120, 227, 0.47) 35.56%, rgba(63, 110, 180, 0.34) 100%);
+  height: 1px;
+  width: 2800px;
+}
+
