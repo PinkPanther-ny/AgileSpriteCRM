@@ -4,6 +4,8 @@ import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import Homepage from "./components/Homepage";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import NotFound from './components/NotFound';
+
 
 function App() {
   return (
@@ -18,6 +20,7 @@ function App() {
         <Route path="/login">
           <Login {...loginData} />
         </Route>
+        <Route component={NotFound} />
       </Switch>
     </Router>
   );
