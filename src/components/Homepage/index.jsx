@@ -1,8 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import StartButton from "../StartButton";
 import Logo from "../Logo";
 import "./Homepage.css";
-import {Link} from "react-router-dom";
 
 function Homepage(props) {
   const {
@@ -63,16 +63,16 @@ function Homepage(props) {
                   </div>
                 </div>
               </Link>
-              <div className="signup smart-layers-pointers">
-                <Link to="/signup">
+              <Link to="/signup">
+                <div className="signup smart-layers-pointers">
                   <div className="group-143614-1 smart-layers-pointers">
                     <div className="overlap-group">
                       <img className="path-4599" src={path45992} />
                       <div className="sign-up tahoma-regular-normal-blueberry-22px">{signUp}</div>
                     </div>
                   </div>
-                </Link>
-              </div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

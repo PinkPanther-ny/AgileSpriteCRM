@@ -461,48 +461,13 @@
   height: 31px;
   margin-left: 80px;
   pointer-events: auto;
+  position: relative;
   transition: all 0.2s ease;
   width: 74px;
 }
 
 .signup-2:hover {
   transform: scale(1.1);
-}
-
-.group-143614-2 {
-  cursor: pointer;
-  flex: 1;
-  pointer-events: auto;
-  transition: all 0.2s ease;
-  width: 76px;
-}
-
-.group-143614-2:hover {
-  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
-}
-
-.overlap-group-6 {
-  height: 29px;
-  position: relative;
-  top: 2px;
-}
-
-.path-4599-1 {
-  height: 2px;
-  left: 0;
-  object-fit: cover;
-  position: absolute;
-  top: 28px;
-  width: 68px;
-}
-
-.sign-up-3 {
-  left: 0;
-  letter-spacing: 0.16px;
-  line-height: 22px;
-  position: absolute;
-  top: 0;
-  white-space: nowrap;
 }
 
 .text-5 {

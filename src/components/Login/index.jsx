@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Bgborder from "../Bgborder";
 import Group143614 from "../Group143614";
+import Group1436142 from "../Group1436142";
 import "./Login.css";
-import {Link} from "react-router-dom";
 
 function Login(props) {
   const {
@@ -24,8 +25,6 @@ function Login(props) {
     login,
     forgotPassword,
     signUpNow,
-    path4599,
-    signUp,
     text6,
   } = props;
 
@@ -46,7 +45,7 @@ function Login(props) {
                   <span className="tahoma-regular-normal-blueberry-16px">{spanText2}</span>
                 </div>
                 <div className="overlap-group2-2 border-1-5px-iron">
-                  <div className="overlap-group-9">
+                  <div className="overlap-group-10">
                     <div className="rectangle-52-1 border-1-5px-dove-gray"></div>
                     <img className="path-54-1" src={path54} />
                   </div>
@@ -77,16 +76,16 @@ function Login(props) {
               </div>
               <a href="javascript:SubmitForm('form2')">
                 <div className="signup-buton-1 smart-layers-pointers">
-                  <div className="overlap-group-10">
+                  <div className="overlap-group-11">
                     <div className="hover-1 smart-layers-pointers hidden"></div>
                     <div className="login-3 tahoma-regular-normal-white-18px">{login}</div>
                   </div>
                 </div>
               </a>
               <div className="flex-row">
-                <Link to="/reset-password">
+                <a href="https://www.agilespritecrm.com/reset">
                   <div className="forgot-password tahoma-regular-normal-blueberry-17px">{forgotPassword}</div>
-                </Link>
+                </a>
                 <Link to="/signup">
                   <div className="sign-up-now tahoma-regular-normal-blueberry-17px">{signUpNow}</div>
                 </Link>
@@ -96,21 +95,14 @@ function Login(props) {
           <div className="overlap-group3-2">
             <Bgborder />
             <div className="menu-2">
-              <Link to="/login">
-                <div className="login-4 smart-layers-pointers">
-                  <Group143614 />
+              <div className="login-4 smart-layers-pointers">
+                <Group143614 />
+              </div>
+              <Link to="/signup">
+                <div className="signup-3 smart-layers-pointers">
+                  <Group1436142 />
                 </div>
               </Link>
-              <div className="signup-3 smart-layers-pointers">
-                <Link to="/signup">
-                  <div className="group-143614-5 smart-layers-pointers">
-                    <div className="overlap-group-11">
-                      <img className="path-4599-4" src={path4599} />
-                      <div className="sign-up-4 tahoma-regular-normal-unmellow-yellow-22px">{signUp}</div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
             </div>
             <div className="text-6 smart-layers-pointers tahoma-bold-ebony-clay-35px">{text6}</div>
           </div>

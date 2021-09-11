@@ -241,6 +241,7 @@
 }
 
 .signup {
+  cursor: pointer;
   display: flex;
   height: 31px;
   margin-left: 80px;
@@ -254,7 +255,6 @@
 }
 
 .group-143614-1 {
-  cursor: pointer;
   flex: 1;
   pointer-events: auto;
   transition: all 0.2s ease;

@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Bgborder from "../Bgborder";
 import Group143614 from "../Group143614";
+import Group1436142 from "../Group1436142";
 import "./Signup.css";
-import {Link} from "react-router-dom";
 
 function Signup(props) {
   const {
@@ -34,8 +35,6 @@ function Signup(props) {
     inputPlaceholder5,
     signUp2,
     text4,
-    path4599,
-    signUp3,
     text5,
     path4643,
   } = props;
@@ -140,7 +139,7 @@ function Signup(props) {
                   </div>
                 </div>
               </a>
-              <Link to="/login">
+              <Link to="/login" className="align-self-flex-end">
                 <div className="text-4">{text4}</div>
               </Link>
             </div>
@@ -154,14 +153,7 @@ function Signup(props) {
                 </div>
               </Link>
               <div className="signup-2 smart-layers-pointers">
-                <Link to="/signup">
-                  <div className="group-143614-2 smart-layers-pointers">
-                    <div className="overlap-group-6">
-                      <img className="path-4599-1" src={path4599} />
-                      <div className="sign-up-3 tahoma-regular-normal-unmellow-yellow-22px">{signUp3}</div>
-                    </div>
-                  </div>
-                </Link>
+                <Group1436142 />
               </div>
             </div>
             <div className="text-5 smart-layers-pointers tahoma-bold-ebony-clay-35px">{text5}</div>

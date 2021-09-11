@@ -1,0 +1,18 @@
+h1
+{
+    color:orange;
+    text-align:center;
+    font-size:50px;
+}
+
+body
+{
+    background-color:#d0e4fe;
+}
+
+img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

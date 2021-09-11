@@ -6,21 +6,21 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 
 function App() {
-    return (
-        <Router>
-            <Switch>
-                <Route path="/:path(|homepage)">
-                    <Homepage {...homepageData} />
-                </Route>
-                <Route path="/signup">
-                    <Signup {...signupData} />
-                </Route>
-                <Route path="/login">
-                    <Login {...loginData} />
-                </Route>
-            </Switch>
-        </Router>
-    );
+  return (
+    <Router>
+      <Switch>
+        <Route path="/:path(|homepage)">
+          <Homepage {...homepageData} />
+        </Route>
+        <Route path="/signup">
+          <Signup {...signupData} />
+        </Route>
+        <Route path="/login">
+          <Login {...loginData} />
+        </Route>
+      </Switch>
+    </Router>
+  );
 }
 
 export default App;
@@ -81,8 +81,6 @@ const signupData = {
     inputPlaceholder5: "Confirm Password",
     signUp2: "Sign Up",
     text4: "Already have an account? Sign in here",
-    path4599: "/img/path-4599-1@1x.png",
-    signUp3: "Sign up",
     text5: "AGILE SPRITE PERSONAL CRM",
     path4643: "/img/path-4643-1@1x.png",
 };
@@ -106,8 +104,6 @@ const loginData = {
     login: "Login",
     forgotPassword: "Forgot password?",
     signUpNow: "Sign up now!",
-    path4599: "/img/path-4599-1@1x.png",
-    signUp: "Sign up",
     text6: "AGILE SPRITE PERSONAL CRM",
 };
 
