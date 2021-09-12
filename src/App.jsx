@@ -113,7 +113,7 @@ const signupData = {
     lock: "/img/combined-shape-1@1x.png",
     inputType3: "password",
     inputPlaceholder3: "Password",
-    spanText3: "Confiirm Password ",
+    spanText3: "Confirm Password ",
     spanText4: "*",
     lock2: "/img/combined-shape-1@1x.png",
     inputType4: "password",
