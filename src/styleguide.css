@@ -24,6 +24,14 @@
   --font-family-tahoma-bold: "Tahoma-Bold", Helvetica;
   --font-family-tahoma-regular: "Tahoma-Regular", Helvetica;
 }
+.tahoma-regular-normal-unmellow-yellow-22px {
+  color: var(--unmellow-yellow);
+  font-family: var(--font-family-tahoma-regular);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
 .tahoma-regular-normal-scarpa-flow-16px {
   color: var(--scarpa-flow);
   font-family: var(--font-family-tahoma-regular);
@@ -54,28 +62,12 @@
   font-weight: 400;
 }
 
-.tahoma-regular-normal-unmellow-yellow-22px {
-  color: var(--unmellow-yellow);
-  font-family: var(--font-family-tahoma-regular);
-  font-size: var(--font-size-xxl);
-  font-style: normal;
-  font-weight: 400;
-}
-
 .tahoma-bold-ebony-clay-35px {
   color: var(--ebony-clay);
   font-family: var(--font-family-tahoma-bold);
   font-size: var(--font-size-xxxxxl);
   font-style: normal;
   font-weight: 700;
-}
-
-.tahoma-regular-normal-blueberry-22px {
-  color: var(--blueberry);
-  font-family: var(--font-family-tahoma-regular);
-  font-size: var(--font-size-xxl);
-  font-style: normal;
-  font-weight: 400;
 }
 
 .tahoma-bold-blueberry-35px {
@@ -90,6 +82,22 @@
   color: var(--white);
   font-family: var(--font-family-tahoma-regular);
   font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.tahoma-regular-normal-dove-gray-17px {
+  color: var(--dove-gray);
+  font-family: var(--font-family-tahoma-regular);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.tahoma-regular-normal-blueberry-22px {
+  color: var(--blueberry);
+  font-family: var(--font-family-tahoma-regular);
+  font-size: var(--font-size-xxl);
   font-style: normal;
   font-weight: 400;
 }

@@ -1,4 +1,4 @@
-.signup-1 {
+.signup-3 {
   background-color: var(--white);
   height: 1079px;
   overflow: hidden;
@@ -7,8 +7,8 @@
   opacity: 0;filter: blur(10px);
 }
 
-.signup-1.animate-enter1 {
-  animation: animate-enter1-frames 0.20s ease-out 0.00s 1 normal forwards;
+.signup-3.animate-enter3 {
+  animation: animate-enter3-frames 0.20s ease-out 0.00s 1 normal forwards;
   opacity: 0;filter: blur(10px);
 }
 
@@ -20,7 +20,7 @@
   width: 2800px;
 }
 
-.path-4606 {
+.path-4606-2 {
   height: 972px;
   left: 171px;
   object-fit: cover;
@@ -29,7 +29,7 @@
   width: 1275px;
 }
 
-.group-4808 {
+.group-4808-1 {
   display: flex;
   height: 878px;
   left: 1077px;
@@ -38,7 +38,7 @@
   width: 760px;
 }
 
-.form {
+.form-1 {
   align-items: center;
   background-color: var(--white);
   display: flex;
@@ -49,7 +49,7 @@
   width: 760px;
 }
 
-.agile-sprite-1 {
+.agile-sprite-3 {
   height: 159px;
   margin-right: 2.0px;
   margin-top: 2px;
@@ -57,7 +57,7 @@
   width: 162px;
 }
 
-.sign-up-1 {
+.sign-up-5 {
   letter-spacing: 0;
   line-height: 35px;
   margin-left: 1.0px;
@@ -92,7 +92,7 @@
   white-space: nowrap;
 }
 
-.overlap-group1-1 {
+.overlap-group1-3 {
   align-items: flex-start;
   background-color: var(--white);
   border-radius: 4px;
@@ -163,7 +163,7 @@
   white-space: nowrap;
 }
 
-.overlap-group-3 {
+.overlap-group-13 {
   align-items: flex-start;
   background-color: var(--white);
   border-radius: 4px;
@@ -199,78 +199,7 @@
   color: #70707099;
 }
 
-.email {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  margin-right: 1.0px;
-  margin-top: 31px;
-  min-height: 75px;
-  width: 491px;
-}
-
-.email-1 {
-  letter-spacing: 0.11px;
-  line-height: 16px;
-  margin-top: 2px;
-  min-height: 21px;
-  white-space: nowrap;
-}
-
-.overlap-group3-1 {
-  align-items: center;
-  background-color: var(--white);
-  border-radius: 4px;
-  display: flex;
-  height: 50px;
-  justify-content: flex-end;
-  margin-top: 2px;
-  min-width: 491px;
-  padding: 12.5px 7.5px;
-}
-
-.overlap-group-4 {
-  height: 17px;
-  margin-bottom: 1.15px;
-  position: relative;
-  width: 24px;
-}
-
-.rectangle-52 {
-  height: 17px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 23px;
-}
-
-.path-54 {
-  height: 9px;
-  left: 0;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 24px;
-}
-
-.enter-email-address {
-  align-self: flex-end;
-  background-color: transparent;
-  border: 0;
-  height: 22px;
-  letter-spacing: 0.05px;
-  line-height: 24px;
-  margin-left: 10px;
-  padding: 0;
-  white-space: nowrap;
-  width: 437px;
-}
-
-.enter-email-address::placeholder {
-  color: #70707099;
-}
-
-.password {
+.password-3 {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -280,7 +209,7 @@
   width: 491px;
 }
 
-.password-1 {
+.password-4 {
   letter-spacing: 0.11px;
   line-height: 16px;
   margin-top: 2px;
@@ -288,7 +217,7 @@
   white-space: nowrap;
 }
 
-.overlap-group1-2 {
+.overlap-group1-4 {
   align-items: flex-start;
   background-color: var(--white);
   border-radius: 4px;
@@ -300,14 +229,14 @@
   padding: 12.2px 7.5px;
 }
 
-.lock {
+.lock-1 {
   background-position: 50% 50%;
   background-size: cover;
   height: 22px;
   width: 20px;
 }
 
-.password-2 {
+.password-5 {
   align-self: flex-end;
   background-color: transparent;
   border: 0;
@@ -321,7 +250,7 @@
   width: 437px;
 }
 
-.password-2::placeholder {
+.password-5::placeholder {
   color: #70707099;
 }
 
@@ -333,7 +262,7 @@
   white-space: nowrap;
 }
 
-.overlap-group2-1 {
+.overlap-group2-3 {
   align-items: flex-start;
   background-color: var(--white);
   border-radius: 4px;
@@ -362,7 +291,7 @@
   color: #70707099;
 }
 
-.signup-buton {
+.signup-buton-1 {
   background-color: var(--blueberry);
   border-radius: 4px;
   cursor: pointer;
@@ -374,17 +303,17 @@
   width: 492px;
 }
 
-.signup-buton:hover {
+.signup-buton-1:hover {
   transform: scale(0.9); 
 }
 
-.overlap-group-5 {
+.overlap-group-14 {
   border-radius: 4px;
   height: 50px;
   position: relative;
 }
 
-.hover {
+.hover-1 {
   background-color: var(--royal-blue);
   border-radius: 4px;
   height: 50px;
@@ -397,11 +326,11 @@
   width: 492px;
 }
 
-.hover:hover {
+.hover-1:hover {
   opacity: 1;
 }
 
-.sign-up-2 {
+.sign-up-6 {
   left: 215px;
   letter-spacing: 0.13px;
   line-height: 18px;
@@ -410,7 +339,7 @@
   white-space: nowrap;
 }
 
-.text-4 {
+.text-7 {
   align-self: flex-end;
   color: var(--blueberry);
   cursor: pointer;
@@ -424,7 +353,7 @@
   white-space: nowrap;
 }
 
-.overlap-group4 {
+.overlap-group4-1 {
   height: 100px;
   left: 0;
   position: absolute;
@@ -432,7 +361,7 @@
   width: 2800px;
 }
 
-.menu-1 {
+.menu-3 {
   align-items: flex-start;
   display: flex;
   height: 31px;
@@ -442,7 +371,7 @@
   top: 35px;
 }
 
-.login-1 {
+.login-5 {
   cursor: pointer;
   display: flex;
   height: 31px;
@@ -452,11 +381,11 @@
   width: 68px;
 }
 
-.login-1:hover {
+.login-5:hover {
   transform: scale(1.1);
 }
 
-.signup-2 {
+.signup-4 {
   display: flex;
   height: 31px;
   margin-left: 80px;
@@ -466,11 +395,12 @@
   width: 74px;
 }
 
-.signup-2:hover {
+.signup-4:hover {
   transform: scale(1.1);
 }
 
-.text-5 {
+.text-8 {
+  cursor: pointer;
   left: 474px;
   letter-spacing: 0;
   line-height: 35px;
@@ -481,11 +411,11 @@
   white-space: nowrap;
 }
 
-.text-5:hover {
+.text-8:hover {
   box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
 }
 
-.path-4643 {
+.path-4643-2 {
   height: 424px;
   left: 1688px;
   object-fit: cover;
@@ -494,7 +424,7 @@
   width: 390px;
 }
 
-@keyframes animate-enter1-frames {
+@keyframes animate-enter3-frames {
   from{opacity: 0;filter: blur(10px);
 }
 to{opacity: 1;filter: none;

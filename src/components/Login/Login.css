@@ -11,7 +11,7 @@
   opacity: 0;filter: blur(10px);
 }
 
-.overlap-group4-1 {
+.overlap-group4 {
   height: 1051px;
   left: -440px;
   position: relative;
@@ -36,7 +36,7 @@
   width: 390px;
 }
 
-.group-4808-1 {
+.group-4808 {
   align-items: flex-end;
   display: flex;
   height: 736px;
@@ -52,7 +52,7 @@
   width: 741px;
 }
 
-.form-1 {
+.form {
   align-items: center;
   background-color: var(--white);
   display: flex;
@@ -70,7 +70,7 @@
   width: 162px;
 }
 
-.log-in-3 {
+.log-in-5 {
   letter-spacing: 0;
   line-height: 35px;
   margin-top: 32px;
@@ -79,7 +79,7 @@
   white-space: nowrap;
 }
 
-.email-2 {
+.email {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -89,7 +89,7 @@
   width: 396px;
 }
 
-.email-3 {
+.email-1 {
   letter-spacing: 0.11px;
   line-height: 16px;
   margin-top: 2px;
@@ -109,14 +109,14 @@
   padding: 12.5px 7.5px;
 }
 
-.overlap-group-10 {
+.overlap-group-8 {
   height: 17px;
   margin-bottom: 1.15px;
   position: relative;
   width: 24px;
 }
 
-.rectangle-52-1 {
+.rectangle-52 {
   height: 17px;
   left: 0;
   position: absolute;
@@ -124,7 +124,7 @@
   width: 23px;
 }
 
-.path-54-1 {
+.path-54 {
   height: 9px;
   left: 0;
   object-fit: cover;
@@ -133,7 +133,7 @@
   width: 24px;
 }
 
-.enter-email-address-1 {
+.enter-email-address {
   align-self: flex-end;
   background-color: transparent;
   border: 0;
@@ -146,11 +146,11 @@
   width: 342px;
 }
 
-.enter-email-address-1::placeholder {
+.enter-email-address::placeholder {
   color: #70707099;
 }
 
-.password-3 {
+.password {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -160,7 +160,7 @@
   width: 396px;
 }
 
-.password-4 {
+.password-1 {
   letter-spacing: 0.11px;
   line-height: 16px;
   margin-top: 2px;
@@ -168,7 +168,7 @@
   white-space: nowrap;
 }
 
-.overlap-group1-3 {
+.overlap-group1-2 {
   align-items: center;
   background-color: var(--white);
   border-radius: 4px;
@@ -180,7 +180,7 @@
   padding: 0 7.5px;
 }
 
-.lock-1 {
+.lock {
   background-position: 50% 50%;
   background-size: cover;
   height: 22px;
@@ -188,7 +188,7 @@
   width: 20px;
 }
 
-.password-5 {
+.password-2 {
   background-color: transparent;
   border: 0;
   height: 22px;
@@ -201,11 +201,11 @@
   width: 342px;
 }
 
-.password-5::placeholder {
+.password-2::placeholder {
   color: #70707099;
 }
 
-.signup-buton-1 {
+.signup-buton {
   background-color: var(--blueberry);
   border-radius: 4px;
   cursor: pointer;
@@ -217,17 +217,17 @@
   width: 396px;
 }
 
-.signup-buton-1:hover {
+.signup-buton:hover {
   transform: scale(0.9); 
 }
 
-.overlap-group-11 {
+.overlap-group-9 {
   border-radius: 4px;
   height: 50px;
   position: relative;
 }
 
-.hover-1 {
+.hover {
   background-color: var(--royal-blue);
   border-radius: 4px;
   height: 50px;
@@ -240,7 +240,7 @@
   width: 396px;
 }
 
-.hover-1:hover {
+.hover:hover {
   opacity: 1;
 }
 
@@ -280,7 +280,7 @@
   white-space: nowrap;
 }
 
-.overlap-group3-2 {
+.overlap-group3-1 {
   height: 100px;
   left: 0;
   position: absolute;
@@ -311,7 +311,7 @@
   transform: scale(1.1);
 }
 
-.signup-3 {
+.signup-2 {
   cursor: pointer;
   display: flex;
   height: 31px;
@@ -322,11 +322,12 @@
   width: 74px;
 }
 
-.signup-3:hover {
+.signup-2:hover {
   transform: scale(1.1);
 }
 
 .text-6 {
+  cursor: pointer;
   left: 474px;
   letter-spacing: 0;
   line-height: 35px;

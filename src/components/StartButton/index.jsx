@@ -9,7 +9,7 @@ function StartButton(props) {
     <div className="start-button smart-layers-pointers">
       <Link to="/signup">
         <div className="button">
-          <div className="overlap-group-2" style={{ backgroundImage: `url(${overlapGroup})` }}>
+          <div className="overlap-group-7" style={{ backgroundImage: `url(${overlapGroup})` }}>
             <div className="start-now">{startNow}</div>
           </div>
         </div>

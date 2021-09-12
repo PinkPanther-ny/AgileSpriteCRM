@@ -12,7 +12,7 @@ function Homepage(props) {
     copyright,
     path2,
     crmimage,
-    text1,
+    text3,
     spanText,
     spanText2,
     agilesprite,
@@ -26,9 +26,9 @@ function Homepage(props) {
 
   return (
     <div className="container-center-horizontal">
-      <div className="homepage animate-enter screen">
+      <div className="homepage animate-enter1 screen">
         <div className="overlap-group3">
-          <div className="overlap-group-1">
+          <div className="overlap-group-6">
             <div className="lightblue-bg"></div>
             <img className="gradient-bg" src={gradientbg} />
             <img className="blue-bg" src={bluebg} />
@@ -38,37 +38,37 @@ function Homepage(props) {
             <img className="crm-image" src={crmimage} />
           </div>
           <div className="text-area">
-            <h1 className="text-1">{text1}</h1>
-            <div className="overlap-group1">
-              <div className="text-2">
+            <h1 className="text-3">{text3}</h1>
+            <div className="overlap-group1-1">
+              <div className="text-4">
                 <span className="span0">{spanText}</span>
                 <span className="span1">{spanText2}</span>
               </div>
               <StartButton overlapGroup={startButtonProps.overlapGroup} startNow={startButtonProps.startNow} />
             </div>
           </div>
-          <div className="overlap-group2">
-            <div className="white-bg"></div>
-            <div className="border-top-bar"></div>
-            <img className="agile-sprite" src={agilesprite} />
+          <div className="overlap-group2-1">
+            <div className="white-bg-4"></div>
+            <div className="border-top-bar-4"></div>
+            <img className="agile-sprite-1" src={agilesprite} />
             <Logo>{logoProps.children}</Logo>
-            <div className="menu">
+            <div className="menu-1">
               <Link to="/login">
-                <div className="login smart-layers-pointers">
-                  <div className="group-143614 smart-layers-pointers">
-                    <div className="overlap-group">
-                      <img className="path-4599" src={path4599} />
-                      <div className="log-in tahoma-regular-normal-blueberry-22px">{logIn}</div>
+                <div className="login-1 smart-layers-pointers">
+                  <div className="group-143614-5 smart-layers-pointers">
+                    <div className="overlap-group-5">
+                      <img className="path-4599-5" src={path4599} />
+                      <div className="log-in-4 tahoma-regular-normal-blueberry-22px">{logIn}</div>
                     </div>
                   </div>
                 </div>
               </Link>
               <Link to="/signup">
-                <div className="signup smart-layers-pointers">
-                  <div className="group-143614-1 smart-layers-pointers">
-                    <div className="overlap-group">
-                      <img className="path-4599" src={path45992} />
-                      <div className="sign-up tahoma-regular-normal-blueberry-22px">{signUp}</div>
+                <div className="signup-1 smart-layers-pointers">
+                  <div className="group-143614-6 smart-layers-pointers">
+                    <div className="overlap-group-5">
+                      <img className="path-4599-5" src={path45992} />
+                      <div className="sign-up-1 tahoma-regular-normal-blueberry-22px">{signUp}</div>
                     </div>
                   </div>
                 </div>

@@ -1,0 +1,205 @@
+.notfoundpage {
+  background-color: var(--white);
+  height: 1079px;
+  overflow: hidden;
+  position: relative;
+  width: 1920px;
+  opacity: 0;filter: blur(10px);
+}
+
+.notfoundpage.animate-enter {
+  animation: animate-enter-frames 0.20s ease-out 0.00s 1 normal forwards;
+  opacity: 0;filter: blur(10px);
+}
+
+.overlap-group2 {
+  height: 1051px;
+  left: -440px;
+  position: absolute;
+  top: 0;
+  width: 2800px;
+}
+
+.path-4606 {
+  height: 972px;
+  left: 171px;
+  object-fit: cover;
+  position: absolute;
+  top: 79px;
+  width: 1275px;
+}
+
+.x404-nf {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  left: 1249px;
+  min-height: 554px;
+  position: absolute;
+  top: 158px;
+  width: 403px;
+}
+
+.agile-sprite {
+  cursor: pointer;
+  height: 159px;
+  margin-right: 26.0px;
+  object-fit: cover;
+  width: 162px;
+}
+
+.address {
+  letter-spacing: 0;
+  line-height: 35px;
+  margin-right: 25.0px;
+  margin-top: 38px;
+  min-height: 44px;
+  min-width: 291px;
+  text-shadow: 0px 8px 6px #00000082;
+  white-space: nowrap;
+}
+
+.text-1 {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  letter-spacing: 0.10px;
+  line-height: 22px;
+  margin-top: 56px;
+  min-height: 23px;
+  min-width: 403px;
+  white-space: nowrap;
+}
+
+.back-to-home-page {
+  color: #3f59c4;
+  cursor: pointer;
+  font-family: var(--font-family-tahoma-bold);
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  letter-spacing: 0.16px;
+  line-height: 22px;
+  margin-right: 23.0px;
+  margin-top: 210px;
+  min-height: 29px;
+  min-width: 215px;
+  pointer-events: auto;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.back-to-home-page:hover {
+  transform: scale(1.1);
+}
+
+.overlap-group1 {
+  height: 100px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 2800px;
+}
+
+.menu {
+  align-items: flex-start;
+  display: flex;
+  height: 31px;
+  left: 2055px;
+  min-width: 222px;
+  position: absolute;
+  top: 35px;
+}
+
+.login {
+  cursor: pointer;
+  display: flex;
+  height: 31px;
+  pointer-events: auto;
+  position: relative;
+  transition: all 0.2s ease;
+  width: 68px;
+}
+
+.login:hover {
+  transform: scale(1.1);
+}
+
+.signup {
+  display: flex;
+  height: 31px;
+  margin-left: 80px;
+  pointer-events: auto;
+  transition: all 0.2s ease;
+  width: 74px;
+}
+
+.signup:hover {
+  transform: scale(1.1);
+}
+
+.group-143614 {
+  cursor: pointer;
+  flex: 1;
+  pointer-events: auto;
+  transition: all 0.2s ease;
+  width: 76px;
+}
+
+.group-143614:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
+
+.overlap-group {
+  height: 29px;
+  position: relative;
+  top: 2px;
+}
+
+.path-4599 {
+  height: 2px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 28px;
+  width: 68px;
+}
+
+.sign-up {
+  left: 0;
+  letter-spacing: 0.16px;
+  line-height: 22px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.text-2 {
+  cursor: pointer;
+  left: 474px;
+  letter-spacing: 0;
+  line-height: 35px;
+  pointer-events: auto;
+  position: absolute;
+  top: 30px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.text-2:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
+
+.path-4643 {
+  height: 424px;
+  left: 1688px;
+  object-fit: cover;
+  position: absolute;
+  top: 627px;
+  width: 390px;
+}
+
+@keyframes animate-enter-frames {
+  from{opacity: 0;filter: blur(10px);
+}
+to{opacity: 1;filter: none;
+}
+}
+
