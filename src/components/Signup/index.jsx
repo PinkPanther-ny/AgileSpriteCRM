@@ -94,7 +94,7 @@ function Signup(props) {
                 </div>
               </div>
               <div className="password-3">
-                <div className="confirm-password tahoma-normal-blueberry-16px">
+                <div className="confiirm-password tahoma-normal-blueberry-16px">
                   <span className="tahoma-regular-normal-scarpa-flow-16px">{spanText3}</span>
                   <span className="tahoma-regular-normal-blueberry-16px">{spanText4}</span>
                 </div>
