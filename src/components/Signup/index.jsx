@@ -94,14 +94,14 @@ function Signup(props) {
                 </div>
               </div>
               <div className="password-3">
-                <div className="confiirm-password tahoma-normal-blueberry-16px">
+                <div className="confirm-password tahoma-normal-blueberry-16px">
                   <span className="tahoma-regular-normal-scarpa-flow-16px">{spanText3}</span>
                   <span className="tahoma-regular-normal-blueberry-16px">{spanText4}</span>
                 </div>
                 <div className="overlap-group2-3 border-1-5px-iron">
                   <div className="lock-1" style={{ backgroundImage: `url(${lock2})` }}></div>
                   <input
-                    className="confirm-password tahoma-regular-normal-dove-gray-16px"
+                    className="confirm-password1 tahoma-regular-normal-dove-gray-16px"
                     name="confirm-password3"
                     placeholder={inputPlaceholder4}
                     type={inputType4}
@@ -110,7 +110,7 @@ function Signup(props) {
                 </div>
               </div>
               <a href="javascript:SubmitForm('form2')">
-                <div className="signup-buton-1 smart-layers-pointers">
+                <div className="signup-button-1 smart-layers-pointers">
                   <div className="overlap-group-14">
                     <div className="hover-1 smart-layers-pointers hidden"></div>
                     <div className="sign-up-6 tahoma-regular-normal-white-18px">{signUp2}</div>

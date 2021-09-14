@@ -4,12 +4,14 @@
   overflow: hidden;
   position: relative;
   width: 1920px;
-  opacity: 0;filter: blur(10px);
+  opacity: 0;
+filter: blur(10px);
 }
 
 .signup-3.animate-enter3 {
   animation: animate-enter3-frames 0.20s ease-out 0.00s 1 normal forwards;
-  opacity: 0;filter: blur(10px);
+  opacity: 0;
+filter: blur(10px);
 }
 
 .overlap-group5 {
@@ -254,7 +256,7 @@
   color: #70707099;
 }
 
-.confiirm-password {
+.confirm-password {
   letter-spacing: 0.11px;
   line-height: 16px;
   margin-top: 2px;
@@ -273,7 +275,7 @@
   padding: 12.3px 14.3px;
 }
 
-.confirm-password {
+.confirm-password1 {
   align-self: flex-end;
   background-color: transparent;
   border: 0;
@@ -287,11 +289,11 @@
   width: 425px;
 }
 
-.confirm-password::placeholder {
+.confirm-password1::placeholder {
   color: #70707099;
 }
 
-.signup-buton-1 {
+.signup-button-1 {
   background-color: var(--blueberry);
   border-radius: 4px;
   cursor: pointer;
@@ -303,7 +305,7 @@
   width: 492px;
 }
 
-.signup-buton-1:hover {
+.signup-button-1:hover {
   transform: scale(0.9); 
 }
 
@@ -425,9 +427,11 @@
 }
 
 @keyframes animate-enter3-frames {
-  from{opacity: 0;filter: blur(10px);
+  from{opacity: 0;
+filter: blur(10px);
 }
-to{opacity: 1;filter: none;
+to{opacity: 1;
+filter: none;
 }
 }
 
