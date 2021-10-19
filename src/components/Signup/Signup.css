@@ -293,21 +293,6 @@ filter: blur(10px);
   color: #70707099;
 }
 
-.signup-button-1 {
-  background-color: var(--blueberry);
-  border-radius: 4px;
-  cursor: pointer;
-  height: 50px;
-  margin-right: 2.0px;
-  margin-top: 42px;
-  pointer-events: auto;
-  transition: all 0.15s ease-in-out;
-  width: 492px;
-}
-
-.signup-button-1:hover {
-  transform: scale(0.9); 
-}
 
 .overlap-group-14 {
   border-radius: 4px;
@@ -426,6 +411,34 @@ filter: blur(10px);
   width: 390px;
 }
 
+
+.signup-btn:hover {
+  transform: scale(0.9);
+}
+
+.signup-btn {
+  background-color: var(--blueberry);
+  border-radius: 4px;
+  cursor: pointer;
+  height: 50px;
+  margin-right: 2.0px;
+  margin-top: 42px;
+  pointer-events: auto;
+  transition: all 0.15s ease-in-out;
+  width: 492px;
+
+  position: relative;
+  left: 0px;
+  line-height: 30px;
+  white-space: nowrap;
+
+  font-size: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  border: none;
+  padding: 0.6em;
+  text-align: center;
+  color: #ffffff;
+}
 @keyframes animate-enter3-frames {
   from{opacity: 0;
 filter: blur(10px);

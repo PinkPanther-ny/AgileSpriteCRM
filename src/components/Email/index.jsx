@@ -17,7 +17,7 @@ function Email(props) {
         </div>
         <input
           className="enter-email-address-1 tahoma-regular-normal-dove-gray-16px"
-          name="enter-email-address21"
+          name="email"
           placeholder="Enter email address"
           type="email"
           required

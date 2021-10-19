@@ -30,7 +30,7 @@ function Login(props) {
 
   return (
     <div className="container-center-horizontal">
-      <form className="login-2 animate-enter2 screen" name="form1" action="form1" method="post">
+      <form className="login-2 animate-enter2 screen" name="login" action="https://agilespritebackend.herokuapp.com/account/login" method="post">
         <div className="overlap-group4">
           <img className="path-4606-1" src={path4606} />
           <img className="path-4643-1" src={path4643} />
@@ -51,7 +51,7 @@ function Login(props) {
                   </div>
                   <input
                     className="enter-email-address tahoma-regular-normal-dove-gray-16px"
-                    name="enter-email-address2"
+                    name="email"
                     placeholder={inputPlaceholder}
                     type={inputType}
                     required
@@ -67,21 +67,18 @@ function Login(props) {
                   <div className="lock" style={{ backgroundImage: `url(${lock})` }}></div>
                   <input
                     className="password-2 tahoma-regular-normal-dove-gray-16px"
-                    name="password31"
+                    name="password"
                     placeholder={inputPlaceholder2}
                     type={inputType2}
                     required
                   />
                 </div>
               </div>
-              <a href="javascript:SubmitForm('form1')">
-                <div className="signup-buton smart-layers-pointers">
-                  <div className="overlap-group-9">
-                    <div className="hover smart-layers-pointers hidden"></div>
-                    <div className="login-3 tahoma-regular-normal-white-18px">{login}</div>
-                  </div>
-                </div>
-              </a>
+              <input className="login-btn smart-layers-pointers"
+                     value={login}
+                     type={"submit"}
+                     formTarget={'_blank'}
+              />
               <div className="flex-row">
                 <Link to="/forgotpassword">
                   <div className="forgot-password tahoma-regular-normal-blueberry-17px">{forgotPassword}</div>

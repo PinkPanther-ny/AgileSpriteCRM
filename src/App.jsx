@@ -16,7 +16,7 @@ function App() {
         </Route>
         <Route path="/login">
           <Login {...loginData} />
-        </Route>
+        </Route>    
         <Route path="/signup">
           <Signup {...signupData} />
         </Route>
