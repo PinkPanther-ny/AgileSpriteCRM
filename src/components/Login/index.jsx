@@ -4,6 +4,85 @@ import Bgborder from "../Bgborder";
 import Group143614 from "../Group143614";
 import Group1436142 from "../Group1436142";
 import "./Login.css";
+import "./Loading.css";
+
+
+
+
+// showing loading
+function displayLoading() {
+  // selecting loading div
+  const loader = document.querySelector("#loading");
+  loader.classList.add("display");
+  // to stop loading after some time
+  setTimeout(() => {
+    loader.classList.remove("display");
+  }, 4000);
+}
+
+// hiding loading
+function hideLoading() {
+  const loader = document.querySelector("#loading");
+  loader.classList.remove("display");
+}
+
+
+
+/**
+ * Adopted from https://www.learnwithjason.dev/blog/get-form-values-as-json
+ * Retrieves input data from a form and returns it as a JSON object.
+ * @param  {HTMLFormControlsCollection} elements  the form elements
+ * @return {Object}                               form data as an object literal
+ */
+const formToJSON = (elements) =>
+    [].reduce.call(
+        elements,
+        (data, element) => {
+          data[element.name] = element.value;
+          return data;
+        },
+        {},
+    );
+
+function validateLogin(event) {
+  // Stop the form from submitting since we’re handling that with AJAX.
+  event.preventDefault();
+  const form = document.getElementsByName('login')[0];
+
+  // Call our function to get the form data.
+  const data = formToJSON(form.elements);
+
+  // displayLoading();
+  fetch('https://agilespritebackend.herokuapp.com/account/login', {
+    body: JSON.stringify(data), // must match 'Content-Type' header
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'same-origin', // include, same-origin, *omit
+    headers: {
+      'user-agent': 'Mozilla/4.0 MDN Example',
+      'content-type': 'application/json'
+    },
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, cors, *same-origin
+    redirect: 'follow', // manual, *follow, error
+    referrer: 'no-referrer', // *client, no-referrer
+  }).then((response) => response.json())
+      .then((response) => {
+        console.log(response['code']);
+        console.log(response['msg']);
+        const ret_code = response['code'];
+        if(ret_code === 101){
+          alert("Wrong username/password!")
+        }else if(ret_code===100){
+          alert("User: "+ response['token'] + "\n" +
+              "Login successfully! Let's go!")
+          window.location.href = "/homepage";
+        }else{
+          alert("Error! Please refresh the page and try again!")
+        }
+      });
+
+}
+
 
 function Login(props) {
   const {
@@ -30,13 +109,15 @@ function Login(props) {
 
   return (
     <div className="container-center-horizontal">
-      <form className="login-2 animate-enter2 screen" name="login" action="https://agilespritebackend.herokuapp.com/account/login" method="post">
+      <form className="login-2 animate-enter2 screen" name="login" onSubmit={validateLogin}>
         <div className="overlap-group4">
           <img className="path-4606-1" src={path4606} />
           <img className="path-4643-1" src={path4643} />
           <div className="group-4808">
+            {/*<div className="loading" id="loading"></div>*/}
             <img className="sign-in-page" src={signInPage} />
             <div className="form border-1px-alto">
+
               <img className="agile-sprite-2" src={agilesprite} />
               <div className="log-in-5 tahoma-bold-blueberry-35px">{logIn}</div>
               <div className="email">
@@ -77,7 +158,6 @@ function Login(props) {
               <input className="login-btn smart-layers-pointers"
                      value={login}
                      type={"submit"}
-                     formTarget={'_blank'}
               />
               <div className="flex-row">
                 <Link to="/forgotpassword">

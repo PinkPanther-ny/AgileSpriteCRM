@@ -25,6 +25,9 @@ function hideLoading() {
   loader.classList.remove("display");
 }
 
+
+
+
 /**
  * Adopted from https://www.learnwithjason.dev/blog/get-form-values-as-json
  * Retrieves input data from a form and returns it as a JSON object.
@@ -41,7 +44,7 @@ const formToJSON = (elements) =>
         {},
     );
 
-function check(event) {
+function validateSignup(event) {
   // Stop the form from submitting since we’re handling that with AJAX.
   event.preventDefault();
   const form = document.getElementsByName('register')[0];
@@ -115,7 +118,7 @@ function Signup(props) {
   } = props;
   return (
     <div className="container-center-horizontal">
-      <form className="signup-3 animate-enter3 screen" name="register" onSubmit={check}>
+      <form className="signup-3 animate-enter3 screen" name="register" onSubmit={validateSignup}>
         <div className="overlap-group5">
           <img className="path-4606-2" src={path4606} />
 
