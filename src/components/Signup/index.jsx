@@ -55,7 +55,8 @@ function check(event) {
           if(ret_code === 106){
             alert("Sorry! This email has been used, please try another.")
           }else if(ret_code===105){
-            alert("User created successfully!")
+            alert("Account created successfully! Let's go!")
+            window.location.href = "/login";
           }else{
             alert("Error! Please refresh the page and try again!")
           }
