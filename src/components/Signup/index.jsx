@@ -5,7 +5,25 @@ import Bgborder from "../Bgborder";
 import Group143614 from "../Group143614";
 import Group1436142 from "../Group1436142";
 import "./Signup.css";
+import "./Loading.css";
 
+
+// showing loading
+function displayLoading() {
+  // selecting loading div
+  const loader = document.querySelector("#loading");
+  loader.classList.add("display");
+  // to stop loading after some time
+  setTimeout(() => {
+    loader.classList.remove("display");
+  }, 4000);
+}
+
+// hiding loading
+function hideLoading() {
+  const loader = document.querySelector("#loading");
+  loader.classList.remove("display");
+}
 
 /**
  * Adopted from https://www.learnwithjason.dev/blog/get-form-values-as-json
@@ -35,6 +53,7 @@ function check(event) {
     alert("Please confirm your password!")
 
   }else{
+    displayLoading();
     fetch('https://agilespritebackend.herokuapp.com/account/register', {
       body: JSON.stringify(data), // must match 'Content-Type' header
       cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -208,8 +227,10 @@ function Signup(props) {
             </Link>
           </div>
         </div>
-        <img className="path-4643-2" src={path4643} />
+        <img className="path-4643-2" src={path4643}  alt={''}/>
+        <div className="loading" id="loading"></div>
       </form>
+
     </div>
   );
 }

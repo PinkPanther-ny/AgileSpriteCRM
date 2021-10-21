@@ -1,0 +1,26 @@
+/* creating css loader */
+
+
+#loading {
+    width: 4rem;
+    height: 4rem;
+    margin-left: 51%;
+    margin-top: 20%;
+    border: 11px solid #f3f3f3;
+    border-top: 12px solid #9c41f2;
+    border-radius: 100%;
+
+    visibility: hidden;
+    animation: spin 1s infinite linear;
+}
+#loading.display {
+    visibility: visible;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
