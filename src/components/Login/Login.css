@@ -208,7 +208,7 @@ filter: blur(10px);
 }
 
 
-.signup-btn:hover {
+.login-btn:hover {
   transform: scale(0.9);
 }
 
