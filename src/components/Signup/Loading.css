@@ -2,12 +2,12 @@
 
 
 #loading {
-    width: 4rem;
-    height: 4rem;
-    margin-left: 51%;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 51.8%;
     margin-top: 20%;
-    border: 11px solid #f3f3f3;
-    border-top: 12px solid #9c41f2;
+    border: 8px solid rgba(192, 214, 229, 0.71);
+    border-top: 9px solid rgba(156, 65, 242, 0.85);
     border-radius: 100%;
 
     visibility: hidden;

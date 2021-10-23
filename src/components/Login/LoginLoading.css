@@ -2,12 +2,12 @@
 
 
 #login_loading {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     margin-top: 13px;
     margin-bottom: 6px;
-    border: 6px solid #f3f3f3;
-    border-top: 7px solid #9c41f2;
+    border: 8px solid rgba(192, 214, 229, 0.71);
+    border-top: 9px solid rgba(156, 65, 242, 0.85);
     border-radius: 100%;
 
     visibility: hidden;

@@ -1,4 +1,4 @@
-.signup-3 {
+.signupForm {
   background-color: var(--white);
   height: 1079px;
   overflow: hidden;
@@ -8,13 +8,13 @@
 filter: blur(10px);
 }
 
-.signup-3.animate-enter3 {
+.signupForm.animate-enter3 {
   animation: animate-enter3-frames 0.20s ease-out 0.00s 1 normal forwards;
   opacity: 0;
 filter: blur(10px);
 }
 
-.overlap-group5 {
+.wholeSignupPage {
   height: 1051px;
   left: -440px;
   position: absolute;
@@ -22,7 +22,7 @@ filter: blur(10px);
   width: 2800px;
 }
 
-.path-4606-2 {
+.backgroundImageLeft {
   height: 972px;
   left: 171px;
   object-fit: cover;
@@ -31,7 +31,7 @@ filter: blur(10px);
   width: 1275px;
 }
 
-.group-4808-1 {
+.signupFormBody {
   display: flex;
   height: 878px;
   left: 1077px;
@@ -54,16 +54,16 @@ filter: blur(10px);
 .agile-sprite-3 {
   height: 159px;
   margin-right: 2.0px;
-  margin-top: 2px;
+  margin-top: 5px;
   object-fit: cover;
   width: 162px;
 }
 
-.sign-up-5 {
+.sign-up-text {
   letter-spacing: 0;
   line-height: 35px;
-  margin-left: 1.0px;
-  margin-top: 46px;
+  margin-left: 1px;
+  margin-top: 25px;
   min-height: 44px;
   min-width: 137px;
   white-space: nowrap;
@@ -74,7 +74,7 @@ filter: blur(10px);
   display: flex;
   height: 75px;
   margin-right: 1.0px;
-  margin-top: 32px;
+  margin-top: 55px;
   min-width: 491px;
 }
 

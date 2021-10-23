@@ -109,14 +109,14 @@ function Signup(props) {
   } = props;
   return (
     <div className="container-center-horizontal">
-      <form className="signup-3 animate-enter3 screen" name="register" onSubmit={validateSignup}>
-        <div className="overlap-group5">
-          <img className="path-4606-2" src={path4606} alt={""}/>
+      <form className="signupForm animate-enter3 screen" name="register" onSubmit={validateSignup}>
+        <div className="wholeSignupPage">
+          <img className="backgroundImageLeft" src={path4606} alt={""}/>
 
-          <div className="group-4808-1">
+          <div className="signupFormBody">
             <div className="form-1 border-1px-alto">
               <img className="agile-sprite-3" src={agilesprite} alt={""}/>
-              <div className="sign-up-5 tahoma-bold-blueberry-35px">{signUp}</div>
+              <div className="sign-up-text tahoma-bold-blueberry-35px">{signUp}</div>
 
               {/*FIRST LAST NAME*/}
               <div className="name">
