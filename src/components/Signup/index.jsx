@@ -65,11 +65,14 @@ function validateSignup(event) {
           console.log(response['code']);
           console.log(response['msg']);
           const ret_code = response['code'];
-          if(ret_code === 106){
-            alert("Sorry! This email has been used, please try another.")
-          }else if(ret_code===105){
+          if(ret_code === 105){
             alert("Account created successfully! Let's go!")
             window.location.href = "/login";
+          }else if(ret_code===106){
+            alert("Sorry! This email has been used, please try another.")
+          }else if(ret_code===107){
+            alert("Password must contains at least a digit, a letter, a upper \n" +
+                "case letter and a symbol, and length is between 8 and 30")
           }else{
             alert("Error! Please refresh the page and try again!")
           }
