@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Email from "../Email";
-import Bgborder from "../Bgborder";
+import BackgroundBorder from "../BackgroundBorder";
 import Group143614 from "../Group143614";
 import Group1436142 from "../Group1436142";
 import "./Signup.css";
@@ -18,15 +18,6 @@ function displayLoading() {
     loader.classList.remove("display");
   }, 4000);
 }
-
-// hiding loading
-function hideLoading() {
-  const loader = document.querySelector("#loading");
-  loader.classList.remove("display");
-}
-
-
-
 
 /**
  * Adopted from https://www.learnwithjason.dev/blog/get-form-values-as-json
@@ -120,11 +111,11 @@ function Signup(props) {
     <div className="container-center-horizontal">
       <form className="signup-3 animate-enter3 screen" name="register" onSubmit={validateSignup}>
         <div className="overlap-group5">
-          <img className="path-4606-2" src={path4606} />
+          <img className="path-4606-2" src={path4606} alt={""}/>
 
           <div className="group-4808-1">
             <div className="form-1 border-1px-alto">
-              <img className="agile-sprite-3" src={agilesprite} />
+              <img className="agile-sprite-3" src={agilesprite} alt={""}/>
               <div className="sign-up-5 tahoma-bold-blueberry-35px">{signUp}</div>
 
               {/*FIRST LAST NAME*/}
@@ -133,8 +124,8 @@ function Signup(props) {
                   <div className="first-name tahoma-regular-normal-scarpa-flow-16px">{firstName}</div>
                   <div className="overlap-group1-3 border-1-5px-iron">
                     <div className="icon">
-                      <div className="ellipse-7 border-1-5px-dove-gray"></div>
-                      <img className="path-51" src={path51} />
+                      <div className="ellipse-7 border-1-5px-dove-gray"/>
+                      <img className="path-51" src={path51} alt={""}/>
                     </div>
                     <input
                       className="enter-first-name tahoma-regular-normal-dove-gray-16px"
@@ -149,8 +140,8 @@ function Signup(props) {
                   <div className="last-name-1 tahoma-regular-normal-scarpa-flow-16px">{lastName}</div>
                   <div className="overlap-group-13 border-1-5px-iron">
                     <div className="icon">
-                      <div className="ellipse-7-1 border-1-5px-dove-gray"></div>
-                      <img className="path-51" src={path512} />
+                      <div className="ellipse-7-1 border-1-5px-dove-gray"/>
+                      <img className="path-51" src={path512} alt={""}/>
                     </div>
                     <input
                       className="enter-last-name tahoma-regular-normal-dove-gray-16px"
@@ -173,7 +164,7 @@ function Signup(props) {
                   <span className="tahoma-regular-normal-blueberry-16px">{spanText2}</span>
                 </div>
                 <div className="overlap-group1-4 border-1-5px-iron">
-                  <div className="lock-1" style={{ backgroundImage: `url(${lock})` }}></div>
+                  <div className="lock-1" style={{backgroundImage: `url(${lock})`}}/>
                   <input
                     className="password-5 tahoma-regular-normal-dove-gray-16px"
                     name="password"
@@ -214,7 +205,7 @@ function Signup(props) {
             </div>
           </div>
           <div className="overlap-group4-1">
-            <Bgborder />
+            <BackgroundBorder />
             <div className="menu-3">
               <Link to="/login">
                 <div className="login-5 smart-layers-pointers">
@@ -231,7 +222,7 @@ function Signup(props) {
           </div>
         </div>
         <img className="path-4643-2" src={path4643}  alt={''}/>
-        <div className="loading" id="loading"></div>
+        <div className="loading" id="loading"/>
       </form>
 
     </div>

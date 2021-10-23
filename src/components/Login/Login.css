@@ -1,26 +1,26 @@
-.login-2 {
+.loginForm {
   background-color: var(--white);
-  height: 1079px;
+  height: 1080px;
   overflow: hidden;
   width: 1920px;
   opacity: 0;
 filter: blur(10px);
 }
 
-.login-2.animate-enter2 {
+.loginForm.animate-enter2 {
   animation: animate-enter2-frames 0.20s ease-out 0.00s 1 normal forwards;
   opacity: 0;
 filter: blur(10px);
 }
 
-.overlap-group4 {
+.loginWholePage {
   height: 1051px;
   left: -440px;
   position: relative;
   width: 2800px;
 }
 
-.path-4606-1 {
+.backgroundShapeLeft {
   height: 972px;
   left: 171px;
   object-fit: cover;
@@ -29,7 +29,7 @@ filter: blur(10px);
   width: 1275px;
 }
 
-.path-4643-1 {
+.backgroundShapeRight {
   height: 424px;
   left: 2128px;
   object-fit: cover;
@@ -38,7 +38,7 @@ filter: blur(10px);
   width: 390px;
 }
 
-.group-4808 {
+.insidePageComponents {
   align-items: flex-end;
   display: flex;
   height: 736px;
@@ -65,14 +65,14 @@ filter: blur(10px);
   width: 637px;
 }
 
-.agile-sprite-2 {
+.agile-sprite-login_image {
   height: 159px;
   margin-right: 1.0px;
   object-fit: cover;
   width: 162px;
 }
 
-.log-in-5 {
+.log-in-text {
   letter-spacing: 0;
   line-height: 35px;
   margin-top: 32px;
@@ -86,7 +86,7 @@ filter: blur(10px);
   display: flex;
   flex-direction: column;
   margin-right: 1.0px;
-  margin-top: 18px;
+  margin-top: 1px;
   min-height: 75px;
   width: 396px;
 }
@@ -289,7 +289,7 @@ filter: blur(10px);
   white-space: nowrap;
 }
 
-.overlap-group3-1 {
+.loginPageHeaderBar {
   height: 100px;
   left: 0;
   position: absolute;

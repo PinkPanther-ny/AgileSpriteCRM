@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Bgborder from "../Bgborder";
+import BackgroundBorder from "../BackgroundBorder";
 import Group143614 from "../Group143614";
 import "./NotFoundPage.css";
 
@@ -23,7 +23,7 @@ function NotFoundPage(props) {
             </Link>
           </div>
           <div className="overlap-group1">
-            <Bgborder />
+            <BackgroundBorder />
             <div className="menu">
               <Link to="/login">
                 <div className="login smart-layers-pointers">

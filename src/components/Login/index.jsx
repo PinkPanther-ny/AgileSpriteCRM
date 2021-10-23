@@ -1,32 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Bgborder from "../Bgborder";
+import BackgroundBorder from "../BackgroundBorder";
 import Group143614 from "../Group143614";
 import Group1436142 from "../Group1436142";
 import "./Login.css";
-import "./Loading.css";
-
-
+import "./LoginLoading.css";
 
 
 // showing loading
 function displayLoading() {
   // selecting loading div
-  const loader = document.querySelector("#loading");
+  const loader = document.querySelector("#login_loading");
   loader.classList.add("display");
   // to stop loading after some time
   setTimeout(() => {
     loader.classList.remove("display");
   }, 4000);
 }
-
-// hiding loading
-function hideLoading() {
-  const loader = document.querySelector("#loading");
-  loader.classList.remove("display");
-}
-
-
 
 /**
  * Adopted from https://www.learnwithjason.dev/blog/get-form-values-as-json
@@ -52,7 +42,7 @@ function validateLogin(event) {
   // Call our function to get the form data.
   const data = formToJSON(form.elements);
 
-  // displayLoading();
+  displayLoading();
   fetch('https://agilespritebackend.herokuapp.com/account/login', {
     body: JSON.stringify(data), // must match 'Content-Type' header
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -109,17 +99,21 @@ function Login(props) {
 
   return (
     <div className="container-center-horizontal">
-      <form className="login-2 animate-enter2 screen" name="login" onSubmit={validateLogin}>
-        <div className="overlap-group4">
-          <img className="path-4606-1" src={path4606} />
-          <img className="path-4643-1" src={path4643} />
-          <div className="group-4808">
-            {/*<div className="loading" id="loading"></div>*/}
-            <img className="sign-in-page" src={signInPage} />
+      <form className="loginForm animate-enter2 screen" name="login" onSubmit={validateLogin}>
+        <div className="loginWholePage">
+
+          <img className="backgroundShapeLeft" src={path4606}  alt={""}/>
+          <img className="backgroundShapeRight" src={path4643}  alt={""}/>
+          <div className="insidePageComponents">
+            <img className="sign-in-page" src={signInPage}  alt={""}/>
             <div className="form border-1px-alto">
 
-              <img className="agile-sprite-2" src={agilesprite} />
-              <div className="log-in-5 tahoma-bold-blueberry-35px">{logIn}</div>
+              <img className="agile-sprite-login_image" src={agilesprite} alt={""}/>
+              <div className="log-in-text tahoma-bold-blueberry-35px">{logIn}</div>
+
+
+              <div className="login_loading" id="login_loading"/>
+
               <div className="email">
                 <div className="email-1 tahoma-normal-blueberry-16px">
                   <span className="tahoma-regular-normal-scarpa-flow-16px">{spanText}</span>
@@ -127,8 +121,8 @@ function Login(props) {
                 </div>
                 <div className="overlap-group2-2 border-1-5px-iron">
                   <div className="overlap-group-8">
-                    <div className="rectangle-52 border-1-5px-dove-gray"></div>
-                    <img className="path-54" src={path54} />
+                    <div className="rectangle-52 border-1-5px-dove-gray"/>
+                    <img className="path-54" src={path54}  alt={""}/>
                   </div>
                   <input
                     className="enter-email-address tahoma-regular-normal-dove-gray-16px"
@@ -145,7 +139,7 @@ function Login(props) {
                   <span className="tahoma-regular-normal-blueberry-16px">{spanText4}</span>
                 </div>
                 <div className="overlap-group1-2 border-1-5px-iron">
-                  <div className="lock" style={{ backgroundImage: `url(${lock})` }}></div>
+                  <div className="lock" style={{backgroundImage: `url(${lock})`}}/>
                   <input
                     className="password-2 tahoma-regular-normal-dove-gray-16px"
                     name="password"
@@ -169,8 +163,8 @@ function Login(props) {
               </div>
             </div>
           </div>
-          <div className="overlap-group3-1">
-            <Bgborder />
+          <div className="loginPageHeaderBar">
+            <BackgroundBorder />
             <div className="menu-2">
               <div className="login-4 smart-layers-pointers">
                 <Group143614 />
@@ -185,6 +179,7 @@ function Login(props) {
               <div className="text-6 smart-layers-pointers tahoma-bold-ebony-clay-35px">{text6}</div>
             </Link>
           </div>
+
         </div>
       </form>
     </div>

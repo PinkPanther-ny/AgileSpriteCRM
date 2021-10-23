@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Email from "../Email";
-import Bgborder from "../Bgborder";
+import BackgroundBorder from "../BackgroundBorder";
 import Group143614 from "../Group143614";
 import Group1436142 from "../Group1436142";
 import "./ForgotPassword.css";
@@ -31,7 +31,7 @@ function ForgotPassword(props) {
             <div className="text-9 tahoma-regular-normal-dove-gray-17px">{text9}</div>
           </div>
           <div className="overlap-group3-3">
-            <Bgborder />
+            <BackgroundBorder />
             <div className="menu-4">
               <Link to="/login">
                 <div className="login-6 smart-layers-pointers">

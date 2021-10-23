@@ -1,4 +1,4 @@
-.bgborder {
+.backgroundBorder {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
   width: 2800px;
 }
 
-.bgborder-1 {
+.backgroundBorder-1 {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@
   width: 2800px;
 }
 
-.bgborder-2 {
+.backgroundBorder-2 {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -67,7 +67,7 @@
   width: 2800px;
 }
 
-.bgborder-3 {
+.backgroundBorder-3 {
   align-items: flex-start;
   display: flex;
   flex-direction: column;

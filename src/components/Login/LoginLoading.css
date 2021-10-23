@@ -1,18 +1,19 @@
 /* creating css loader */
 
 
-#loading {
-    width: 4rem;
-    height: 4rem;
-    margin: auto;
-    border: 11px solid #f3f3f3;
-    border-top: 12px solid #9c41f2;
+#login_loading {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 13px;
+    margin-bottom: 6px;
+    border: 6px solid #f3f3f3;
+    border-top: 7px solid #9c41f2;
     border-radius: 100%;
 
-    visibility: visible;
+    visibility: hidden;
     animation: spin 1s infinite linear;
 }
-#loading.display {
+#login_loading.display {
     visibility: visible;
 }
 @keyframes spin {
