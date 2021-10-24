@@ -8,14 +8,18 @@ import "./LoginLoading.css";
 
 
 // showing loading
-function displayLoading() {
+function displayLoading(loader) {
   // selecting loading div
-  const loader = document.querySelector("#login_loading");
   loader.classList.add("display");
-  // to stop loading after some time
-  setTimeout(() => {
-    loader.classList.remove("display");
-  }, 4000);
+  // // to stop loading after some time
+  // setTimeout(() => {
+  //   loader.classList.remove("display");
+  // }, 4000);
+}
+
+// hiding loading
+function hideLoading(loader) {
+  loader.classList.remove("display");
 }
 
 /**
@@ -37,12 +41,13 @@ const formToJSON = (elements) =>
 function validateLogin(event) {
   // Stop the form from submitting since we’re handling that with AJAX.
   event.preventDefault();
-  const form = document.getElementsByName('login')[0];
+  const loader = document.querySelector("#login_loading");
+  displayLoading(loader);
 
+  const form = document.getElementsByName('login')[0];
   // Call our function to get the form data.
   const data = formToJSON(form.elements);
 
-  displayLoading();
   fetch('https://agilespritebackend.herokuapp.com/account/login', {
     body: JSON.stringify(data), // must match 'Content-Type' header
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -57,15 +62,16 @@ function validateLogin(event) {
     referrer: 'no-referrer', // *client, no-referrer
   }).then((response) => response.json())
       .then((response) => {
-        console.log(response['code']);
-        console.log(response['msg']);
+
+        hideLoading(loader);
+
         const ret_code = response['code'];
-        if(ret_code === 101){
-          alert("Wrong username/password!")
-        }else if(ret_code===100){
+        if(ret_code === 100){
           alert("User: "+ response['token'] + "\n" +
               "Login successfully! Let's go!")
-          window.location.href = "/homepage";
+          // window.location.href = "/homepage";
+        }else if(ret_code === 101){
+          alert("Wrong username/password!")
         }else{
           alert("Error! Please refresh the page and try again!")
         }

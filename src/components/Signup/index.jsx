@@ -9,14 +9,14 @@ import "./Loading.css";
 
 
 // showing loading
-function displayLoading() {
+function displayLoading(loader) {
   // selecting loading div
-  const loader = document.querySelector("#loading");
   loader.classList.add("display");
-  // to stop loading after some time
-  setTimeout(() => {
-    loader.classList.remove("display");
-  }, 4000);
+}
+
+// hiding loading
+function hideLoading(loader) {
+  loader.classList.remove("display");
 }
 
 /**
@@ -38,6 +38,7 @@ const formToJSON = (elements) =>
 function validateSignup(event) {
   // Stop the form from submitting since we’re handling that with AJAX.
   event.preventDefault();
+
   const form = document.getElementsByName('register')[0];
 
   // Call our function to get the form data.
@@ -47,7 +48,10 @@ function validateSignup(event) {
     alert("Please confirm your password!")
 
   }else{
-    displayLoading();
+
+    const loader = document.querySelector("#loading");
+    displayLoading(loader);
+
     fetch('https://agilespritebackend.herokuapp.com/account/register', {
       body: JSON.stringify(data), // must match 'Content-Type' header
       cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -62,8 +66,8 @@ function validateSignup(event) {
       referrer: 'no-referrer', // *client, no-referrer
     }).then((response) => response.json())
         .then((response) => {
-          console.log(response['code']);
-          console.log(response['msg']);
+          hideLoading(loader);
+
           const ret_code = response['code'];
           if(ret_code === 105){
             alert("Account created successfully! Let's go!")
