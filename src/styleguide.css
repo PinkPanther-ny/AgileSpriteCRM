@@ -78,6 +78,15 @@
   font-weight: 700;
 }
 
+
+.tahoma-bold-red-22px {
+  color: #e21515;
+  font-family: var(--font-family-tahoma-bold);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
 .tahoma-regular-normal-white-18px {
   color: var(--white);
   font-family: var(--font-family-tahoma-regular);

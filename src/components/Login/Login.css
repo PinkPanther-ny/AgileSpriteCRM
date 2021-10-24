@@ -218,7 +218,7 @@ filter: blur(10px);
   cursor: pointer;
   height: 50px;
   margin-right: 2.0px;
-  margin-top: 42px;
+  margin-top: 48px;
   pointer-events: auto;
   transition: all 0.15s ease-in-out;
   width: 396px;
@@ -269,6 +269,26 @@ filter: blur(10px);
   height: 23px;
   margin-top: 10px;
   min-width: 398px;
+}
+
+.warning-container{
+
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  max-width: 90px;
+  margin-top: 10px;
+  min-width: 30px;
+}
+
+.warning-text{
+  margin-top: 10px;
+
+  letter-spacing: 0.10px;
+  line-height: 22px;
+  min-height: 23px;
+  min-width: 136px;
+  white-space: nowrap;
 }
 
 .forgot-password {
