@@ -26,6 +26,7 @@ function Homepage(props) {
 
   return (
     <div className="container-center-horizontal">
+      {/* TODO: Add cookie validation, if exist valid cookie, switch to main user page */}
       <div className="homepage animate-enter1 screen">
         <div className="overlap-group3">
           <div className="overlap-group-6">

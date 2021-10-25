@@ -6,6 +6,7 @@ import Homepage from "./components/Homepage";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import ForgotPassword from "./components/ForgotPassword";
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -23,7 +24,9 @@ function App() {
         <Route path="/forgotpassword">
           <ForgotPassword {...forgotPasswordData} />
         </Route>
-
+        <Route path="/home">
+            <Home />
+        </Route>
 
         <Route>
           <NotFoundPage {...notFoundPageData} />

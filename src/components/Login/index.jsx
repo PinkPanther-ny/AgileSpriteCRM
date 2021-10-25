@@ -5,6 +5,7 @@ import Group143614 from "../Group143614";
 import Group1436142 from "../Group1436142";
 import "./Login.css";
 import "./LoginLoading.css";
+import cookie from 'react-cookies'
 
 
 // showing loading
@@ -47,7 +48,6 @@ function validateLogin(event) {
   const form = document.getElementsByName('login')[0];
   // Call our function to get the form data.
   const data = formToJSON(form.elements);
-
   fetch('https://agilespritebackend.herokuapp.com/account/login', {
     body: JSON.stringify(data), // must match 'Content-Type' header
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -67,9 +67,15 @@ function validateLogin(event) {
 
         const ret_code = response['code'];
         if(ret_code === 100){
-          alert("User: "+ response['token'] + "\n" +
-              "Login successfully! Let's go!")
-          // window.location.href = "/homepage";
+
+          cookie.save('userEmail', data.email, {path:"/"})
+          cookie.save('userToken', response['token'], {path:"/"})
+
+          // alert("User: " + cookie.load('userEmail') + "\n" +
+          //       "Token: "  + cookie.load('userToken') + "\n" +
+          //       "Login successfully! Let's go!")
+
+          window.location.href = "/home";
         }else if(ret_code === 101){
           alert("Wrong username/password!")
         }else{
