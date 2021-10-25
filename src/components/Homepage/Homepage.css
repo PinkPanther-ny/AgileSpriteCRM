@@ -2,15 +2,17 @@
   height: 1080px;
   overflow: hidden;
   width: 1920px;
-  opacity: 0;filter: blur(10px);
+  opacity: 0;
+filter: blur(10px);
 }
 
 .homepage.animate-enter1 {
   animation: animate-enter1-frames 0.40s ease-in-out 0.00s 1 normal forwards;
-  opacity: 0;filter: blur(10px);
+  opacity: 0;
+filter: blur(10px);
 }
 
-.overlap-group3 {
+.whole-home-page {
   height: 1642px;
   left: -1512px;
   position: relative;
@@ -18,7 +20,7 @@
   width: 5019px;
 }
 
-.overlap-group-6 {
+.bottom-layer-images {
   height: 1642px;
   left: 0;
   position: absolute;
@@ -147,7 +149,7 @@
   font-size: var(--font-size-xxxl);
 }
 
-.overlap-group2-1 {
+.home-page-head-bar {
   height: 100px;
   left: 1055px;
   position: absolute;
@@ -164,7 +166,7 @@
   width: 2800px;
 }
 
-.border-top-bar-4 {
+.head-bar-sep-line {
   background-color: var(--iron);
   height: 1px;
   left: 0;
@@ -275,9 +277,11 @@
 }
 
 @keyframes animate-enter1-frames {
-  from{opacity: 0;filter: blur(10px);
+  from{opacity: 0;
+filter: blur(10px);
 }
-to{opacity: 1;filter: none;
+to{opacity: 1;
+filter: none;
 }
 }
 
