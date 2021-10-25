@@ -12,8 +12,8 @@ function Email(props) {
       </div>
       <div className="overlap-group3-2 border-1-5px-iron">
         <div className="overlap-group-15">
-          <div className="rectangle-52-1 border-1-5px-dove-gray"></div>
-          <img className="path-54-1" src="/img/path-54-1@1x.png" />
+          <div className="rectangle-52-1 border-1-5px-dove-gray"/>
+          <img className="path-54-1" src={"/img/path-54-1@1x.png"} alt={" "}/>
         </div>
         <input
           className="enter-email-address-1 tahoma-regular-normal-dove-gray-16px"

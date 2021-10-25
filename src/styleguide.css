@@ -24,7 +24,7 @@
   --font-family-tahoma-bold: "Tahoma-Bold", Helvetica;
   --font-family-tahoma-regular: "Tahoma-Regular", Helvetica;
 }
-.tahoma-regular-normal-unmellow-yellow-22px {
+.tahoma-regular-normal-un-mellow-yellow-22px {
   color: var(--unmellow-yellow);
   font-family: var(--font-family-tahoma-regular);
   font-size: var(--font-size-xxl);
@@ -120,11 +120,11 @@
 }
 
 .border-1-5px-iron {
-  border: 1.5px solid var(--iron);
+  border: 2px solid var(--iron);
 }
 
 .border-1-5px-dove-gray {
-  border: 1.5px solid var(--dove-gray);
+  border: 2px solid var(--dove-gray);
 }
 
 .border-1px-alto {

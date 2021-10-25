@@ -11,18 +11,18 @@ function ForgotPassword(props) {
 
   return (
     <div className="container-center-horizontal">
-      <form className="forgotpassword animate-enter4 screen" name="form3" action="form3" method="post">
+      <form className="forgotpassword animate-enter4 screen" name="form3" method="post">
         <div className="overlap-group4-2">
-          <img className="path-4606-3" src={path4606} />
+          <img className="path-4606-3" src={path4606}  alt={" "}/>
           <div className="overlap-group2-4">
             <div className="form-2 border-1px-alto">
-              <img className="agile-sprite-4" src={agilesprite} />
+              <img className="agile-sprite-4" src={agilesprite} alt={" "}/>
               <div className="account-recovery tahoma-bold-blueberry-35px">{accountRecovery}</div>
               <Email className={emailProps.className} />
-              <a href="javascript:SubmitForm('form3')" className="align-self-flex-start">
-                <div className="signup-buton-2 smart-layers-pointers">
+              <a href="" className="align-self-flex-start">
+                <div className="signup-btn-2 smart-layers-pointers">
                   <div className="overlap-group-17">
-                    <div className="hover-2 smart-layers-pointers hidden"></div>
+                    <div className="hover-2 smart-layers-pointers hidden"/>
                     <div className="confirm tahoma-regular-normal-white-18px">{confirm}</div>
                   </div>
                 </div>
@@ -49,7 +49,7 @@ function ForgotPassword(props) {
             </Link>
           </div>
         </div>
-        <img className="path-4643-3" src={path4643} />
+        <img className="path-4643-3" src={path4643} alt={" "}/>
       </form>
     </div>
   );

@@ -1,15 +1,17 @@
-.notfoundpage {
+.not-found-page {
   background-color: var(--white);
   height: 1079px;
   overflow: hidden;
   position: relative;
   width: 1920px;
-  opacity: 0;filter: blur(10px);
+  opacity: 0;
+filter: blur(10px);
 }
 
-.notfoundpage.animate-enter {
+.not-found-page.animate-enter {
   animation: animate-enter-frames 0.20s ease-out 0.00s 1 normal forwards;
-  opacity: 0;filter: blur(10px);
+  opacity: 0;
+filter: blur(10px);
 }
 
 .overlap-group2 {
@@ -197,9 +199,11 @@
 }
 
 @keyframes animate-enter-frames {
-  from{opacity: 0;filter: blur(10px);
+  from{opacity: 0;
+filter: blur(10px);
 }
-to{opacity: 1;filter: none;
+to{opacity: 1;
+filter: none;
 }
 }
 

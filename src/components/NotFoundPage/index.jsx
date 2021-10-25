@@ -9,12 +9,12 @@ function NotFoundPage(props) {
 
   return (
     <div className="container-center-horizontal">
-      <div className="notfoundpage animate-enter screen">
+      <div className="not-found-page animate-enter screen">
         <div className="overlap-group2">
-          <img className="path-4606" src={path4606} />
+          <img className="path-4606" src={path4606} alt={" "}/>
           <div className="x404-nf">
             <Link to="/homepage">
-              <img className="agile-sprite" src={agilesprite} />
+              <img className="agile-sprite" src={agilesprite} alt={" "}/>
             </Link>
             <div className="address tahoma-bold-blueberry-35px">{address}</div>
             <div className="text-1 tahoma-regular-normal-dove-gray-17px">{text1}</div>
@@ -34,8 +34,8 @@ function NotFoundPage(props) {
                 <Link to="/signup">
                   <div className="group-143614 smart-layers-pointers">
                     <div className="overlap-group">
-                      <img className="path-4599" src={path4599} />
-                      <div className="sign-up tahoma-regular-normal-unmellow-yellow-22px">{signUp}</div>
+                      <img className="path-4599" src={path4599} alt={" "}/>
+                      <div className="sign-up tahoma-regular-normal-un-mellow-yellow-22px">{signUp}</div>
                     </div>
                   </div>
                 </Link>
@@ -46,7 +46,7 @@ function NotFoundPage(props) {
             </Link>
           </div>
         </div>
-        <img className="path-4643" src={path4643} />
+        <img className="path-4643" src={path4643} alt={" "}/>
       </div>
     </div>
   );
