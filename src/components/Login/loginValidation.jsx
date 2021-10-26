@@ -1,6 +1,7 @@
 // showing loading
 import cookie from "react-cookies";
 import {displayLoading, formToJSON, hideLoading, postDataToBackend} from "../../helper";
+import {ACCOUNT_LOGIN_SUCCESS} from "../../backendReturnCodeHandling";
 
 export function validateLogin(event) {
     // Stop the form from submitting since we’re handling that with AJAX.
@@ -17,20 +18,15 @@ export function validateLogin(event) {
                 hideLoading(loader);
 
                 const ret_code = response['code'];
-                if (ret_code === 100) {
+                if (ret_code === ACCOUNT_LOGIN_SUCCESS) {
 
                     cookie.save('userEmail', data.email, {path: "/"})
                     cookie.save('userToken', response['token'], {path: "/"})
 
-                    // alert("User: " + cookie.load('userEmail') + "\n" +
-                    //       "Token: "  + cookie.load('userToken') + "\n" +
-                    //       "Login successfully! Let's go!")
-
                     window.location.href = "/home";
-                } else if (ret_code === 101) {
-                    alert("Wrong username/password!")
+
                 } else {
-                    alert("Error! Please refresh the page and try again!")
+                    alert(response['msg']);
                 }
             });
 }

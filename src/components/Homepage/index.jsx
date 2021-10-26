@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import StartButton from "../StartButton";
 import Logo from "../Logo";
 import "./Homepage.css";
-import {onLinkClick} from "../Home/findLoggedInUser";
 
 
 function Homepage(props) {
@@ -56,7 +55,7 @@ function Homepage(props) {
             <Logo>{logoProps.children}</Logo>
             <div className="menu-1">
 
-              <Link to="/login" onClick={onLinkClick}>
+              <Link to="/login">
                 <div className="login-1 smart-layers-pointers">
                   <div className="group-143614-5 smart-layers-pointers">
                     <div className="overlap-group-5">

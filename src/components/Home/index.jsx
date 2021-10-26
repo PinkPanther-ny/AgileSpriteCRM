@@ -1,17 +1,39 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import JSONPretty from 'react-json-pretty';
 import cookie from "react-cookies";
+import {postDataToBackend} from "../../helper";
+import {CONTACT_GET_ALL_SUCCESS} from "../../backendReturnCodeHandling";
 
-function Home(props) {
-    const {} = props;
+export default class Home extends React.Component  {
 
-    return (
-        <div >
-            Home<br/>
-            User: {cookie.load('userEmail')}<br/>
-            Token: {cookie.load('userToken')}<br/>
-        </div>
-    );
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            data : null
+        };
+        this.renderMyData();
+    }
+
+    renderMyData(){
+        const token = {'token': cookie.load('userToken')}
+        postDataToBackend("contact/get_all", token)
+            .then((responseJson) => {
+                if(responseJson['code']===CONTACT_GET_ALL_SUCCESS){
+                    this.setState({ data : responseJson['contacts'] })
+                }else {
+                    // token error
+                    alert(responseJson['msg'])
+                    window.location.href = "/login";
+                }
+            });
+    }
+
+    render(){
+        return(
+            <div>
+                <JSONPretty data={this.state.data} theme={require('react-json-pretty/dist/monikai')}/>
+            </div>
+        );
+    }
 }
-
-export default Home;

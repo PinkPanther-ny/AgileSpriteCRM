@@ -1,5 +1,6 @@
 // showing loading
 import {displayLoading, formToJSON, hideLoading, postDataToBackend} from "../../helper";
+import {ACCOUNT_REGISTER_SUCCESS} from "../../backendReturnCodeHandling";
 
 export function validateSignup(event) {
     // Stop the form from submitting since we’re handling that with AJAX.
@@ -23,16 +24,12 @@ export function validateSignup(event) {
                 hideLoading(loader);
 
                 const ret_code = response['code'];
-                if(ret_code === 105){
-                    alert("Account created successfully! Let's go!")
+                if(ret_code === ACCOUNT_REGISTER_SUCCESS){
+                    alert("Account created successfully! Let's go!");
                     window.location.href = "/login";
-                }else if(ret_code===106){
-                    alert("Sorry! This email has been used, please try another.")
-                }else if(ret_code===107){
-                    alert("Password must contains at least a digit, a letter, a upper \n" +
-                        "case letter and a symbol, and length is between 8 and 30")
+
                 }else{
-                    alert("Error! Please refresh the page and try again!")
+                    alert(response['msg']);
                 }
             });
 
