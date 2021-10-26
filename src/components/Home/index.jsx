@@ -1,5 +1,5 @@
 import React from "react";
-import JSONPretty from 'react-json-pretty';
+// import JSONPretty from 'react-json-pretty';
 import cookie from "react-cookies";
 import {postDataToBackend} from "../../helper";
 import {CONTACT_GET_ALL_SUCCESS} from "../../backendReturnCodeHandling";
@@ -32,7 +32,8 @@ export default class Home extends React.Component  {
     render(){
         return(
             <div>
-                <JSONPretty data={this.state.data} theme={require('react-json-pretty/dist/monikai')}/>
+                {this.state.data}
+                {/*<JSONPretty data={this.state.data} theme={require('react-json-pretty/dist/monikai')}/>*/}
             </div>
         );
     }
