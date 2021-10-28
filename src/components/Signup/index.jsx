@@ -137,7 +137,7 @@ function Signup(props) {
             <BackgroundBorder />
             <div className="menu-3">
               <Link to="/login">
-                <div className="login-5 smart-layers-pointers">
+                <div className="signup_5_btn smart-layers-pointers">
                   <Group143614 />
                 </div>
               </Link>

@@ -358,7 +358,7 @@ filter: blur(10px);
   top: 35px;
 }
 
-.login-5 {
+.signup_5_btn {
   cursor: pointer;
   display: flex;
   height: 31px;
@@ -368,7 +368,7 @@ filter: blur(10px);
   width: 68px;
 }
 
-.login-5:hover {
+.signup_5_btn:hover {
   transform: scale(1.1);
 }
 

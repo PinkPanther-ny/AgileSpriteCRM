@@ -38,7 +38,7 @@ function Login(props) {
           <img className="backgroundShapeLeft" src={path4606}  alt={""}/>
           <img className="backgroundShapeRight" src={path4643}  alt={""}/>
           <div className="insidePageComponents">
-            <img className="sign-in-page" src={signInPage}  alt={""}/>
+            <img className="login_image_left" src={signInPage} alt={""}/>
             <div className="form border-1px-alto">
 
               <img className="agile-sprite-login_image" src={agilesprite} alt={""}/>
