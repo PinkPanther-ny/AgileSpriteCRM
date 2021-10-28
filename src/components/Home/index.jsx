@@ -32,7 +32,7 @@ export default class Home extends React.Component  {
     render(){
         return(
             <div>
-                {this.state.data}
+                {JSON.stringify(this.state.data,null,2)}
                 {/*<JSONPretty data={this.state.data} theme={require('react-json-pretty/dist/monikai')}/>*/}
             </div>
         );
