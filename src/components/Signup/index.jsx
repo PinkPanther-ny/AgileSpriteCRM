@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Email from "../Email";
 import BackgroundBorder from "../BackgroundBorder";
-import Group143614 from "../Group143614";
-import Group1436142 from "../Group1436142";
+import LoginLink from "../LoginLink";
+import SignupLink from "../SignupLink";
 import "./Signup.css";
 import "./Loading.css";
 import {validateSignup} from "./signupValidation";
@@ -137,12 +137,12 @@ function Signup(props) {
             <BackgroundBorder />
             <div className="menu-3">
               <Link to="/login">
-                <div className="signup_5_btn smart-layers-pointers">
-                  <Group143614 />
+                <div className="login-5 smart-layers-pointers">
+                  <LoginLink />
                 </div>
               </Link>
               <div className="signup-4 smart-layers-pointers">
-                <Group1436142 />
+                <SignupLink />
               </div>
             </div>
             <Link to="/homepage">

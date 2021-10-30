@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Email from "../Email";
 import BackgroundBorder from "../BackgroundBorder";
-import Group143614 from "../Group143614";
-import Group1436142 from "../Group1436142";
+import LoginLink from "../LoginLink";
+import SignupLink from "../SignupLink";
 import "./ForgotPassword.css";
 
 function ForgotPassword(props) {
@@ -35,12 +35,12 @@ function ForgotPassword(props) {
             <div className="menu-4">
               <Link to="/login">
                 <div className="login-6 smart-layers-pointers">
-                  <Group143614 />
+                  <LoginLink />
                 </div>
               </Link>
               <Link to="/signup">
                 <div className="signup-5 smart-layers-pointers">
-                  <Group1436142 />
+                  <SignupLink />
                 </div>
               </Link>
             </div>

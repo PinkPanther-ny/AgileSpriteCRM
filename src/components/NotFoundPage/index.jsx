@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BackgroundBorder from "../BackgroundBorder";
-import Group143614 from "../Group143614";
+import LoginLink from "../LoginLink";
 import "./NotFoundPage.css";
 
 function NotFoundPage(props) {
@@ -27,7 +27,7 @@ function NotFoundPage(props) {
             <div className="menu">
               <Link to="/login">
                 <div className="login smart-layers-pointers">
-                  <Group143614 />
+                  <LoginLink />
                 </div>
               </Link>
               <div className="signup smart-layers-pointers">

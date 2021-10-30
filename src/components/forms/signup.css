@@ -1,57 +1,18 @@
-.loginForm {
-  background-color: var(--white);
-  height: 1080px;
-  overflow: hidden;
-  width: 1920px;
-  opacity: 0;
-filter: blur(10px);
-}
-
-.loginForm.animate-enter2 {
-  animation: animate-enter2-frames 0.20s ease-out 0.00s 1 normal forwards;
-  opacity: 0;
-filter: blur(10px);
-}
-
-.loginWholePage {
-  height: 1051px;
-  left: -440px;
-  position: relative;
-  width: 2800px;
-}
-
-.backgroundShapeLeft {
-  height: 972px;
-  left: 171px;
+.sign-up_left-image {
+  height: 400px;
   object-fit: cover;
   position: absolute;
-  top: 79px;
-  width: 1275px;
+  left: 10%;
+  top: 20%;
+  width: 400px;
 }
-
-.backgroundShapeRight {
-  height: 424px;
-  left: 2128px;
+.b {
+  height: 400px;
   object-fit: cover;
   position: absolute;
-  top: 627px;
-  width: 390px;
-}
-
-.insideLoginPageComponents {
-  align-items: flex-end;
-  display: flex;
-  height: 736px;
-  left: 568px;
-  min-width: 1657px;
-  position: absolute;
-  top: 213px;
-}
-
-.login_image_left {
-  height: 734px;
-  object-fit: cover;
-  width: 741px;
+  left: -40%;
+  top: 20%;
+  width: 400px;
 }
 
 .form {
@@ -65,14 +26,14 @@ filter: blur(10px);
   width: 637px;
 }
 
-.agile-sprite-login_image {
+.agile-sprite-2 {
   height: 159px;
-  margin-right: 1.0px;
+  margin-right: 1px;
   object-fit: cover;
   width: 162px;
 }
 
-.log-in-text {
+.log-in-5 {
   letter-spacing: 0;
   line-height: 35px;
   margin-top: 32px;
@@ -85,8 +46,8 @@ filter: blur(10px);
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  margin-right: 1.0px;
-  margin-top: 1px;
+  margin-right: 1px;
+  margin-top: 18px;
   min-height: 75px;
   width: 396px;
 }
@@ -156,7 +117,7 @@ filter: blur(10px);
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  margin-right: 1.0px;
+  margin-right: 1px;
   margin-top: 25px;
   min-height: 75px;
   width: 396px;
@@ -186,8 +147,15 @@ filter: blur(10px);
   background-position: 50% 50%;
   background-size: cover;
   height: 22px;
-  margin-bottom: 3.0px;
+  margin-bottom: 3px;
   width: 20px;
+}
+.evelope {
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 22px;
+  margin-bottom: 3px;
+  width: 30px;
 }
 
 .password-2 {
@@ -197,7 +165,7 @@ filter: blur(10px);
   letter-spacing: 0.05px;
   line-height: 24px;
   margin-left: 12px;
-  margin-top: 3.0px;
+  margin-top: 3px;
   padding: 0;
   white-space: nowrap;
   width: 342px;
@@ -207,33 +175,26 @@ filter: blur(10px);
   color: #70707099;
 }
 
-
-.login-btn:hover {
-  transform: scale(0.9);
-}
-
-.login-btn {
+.signup-buton {
   background-color: var(--blueberry);
   border-radius: 4px;
   cursor: pointer;
   height: 50px;
-  margin-right: 2.0px;
-  margin-top: 48px;
+  margin-right: 1px;
+  margin-top: 47px;
   pointer-events: auto;
   transition: all 0.15s ease-in-out;
   width: 396px;
+}
 
+.signup-buton:hover {
+  transform: scale(0.9);
+}
+
+.overlap-group-9 {
+  border-radius: 4px;
+  height: 50px;
   position: relative;
-  left: 0px;
-  line-height: 30px;
-  white-space: nowrap;
-
-  font-size: 20px;
-  font-family: 'Source Sans Pro', sans-serif;
-  border: none;
-  padding: 0.6em;
-  text-align: center;
-  color: #ffffff;
 }
 
 .hover {
@@ -271,29 +232,9 @@ filter: blur(10px);
   min-width: 398px;
 }
 
-.warning-container{
-
-  align-items: flex-start;
-  align-self: flex-end;
-  display: flex;
-  max-width: 90px;
-  margin-top: 10px;
-  min-width: 30px;
-}
-
-.warning-text{
-  margin-top: 10px;
-
-  letter-spacing: 0.10px;
-  line-height: 22px;
-  min-height: 23px;
-  min-width: 136px;
-  white-space: nowrap;
-}
-
 .forgot-password {
   cursor: pointer;
-  letter-spacing: 0.10px;
+  letter-spacing: 0.1px;
   line-height: 22px;
   min-height: 23px;
   min-width: 136px;
@@ -302,14 +243,14 @@ filter: blur(10px);
 
 .sign-up-now {
   cursor: pointer;
-  letter-spacing: 0.10px;
+  letter-spacing: 0.1px;
   line-height: 22px;
   margin-left: 160px;
   min-height: 23px;
   white-space: nowrap;
 }
 
-.loginPageHeaderBar {
+.overlap-group3-1 {
   height: 100px;
   left: 0;
   position: absolute;
@@ -335,12 +276,19 @@ filter: blur(10px);
   transition: all 0.2s ease;
   width: 68px;
 }
-
+.path-4606 {
+  height: 972px;
+  left: 171px;
+  background-size: contain;
+  position: absolute;
+  top: 79px;
+  width: 1275px;
+}
 .login-4:hover {
   transform: scale(1.1);
 }
 
-.login_signup-2 {
+.signup-2 {
   cursor: pointer;
   display: flex;
   height: 31px;
@@ -368,15 +316,16 @@ filter: blur(10px);
 }
 
 .text-6:hover {
-  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes animate-enter2-frames {
-  from{opacity: 0;
-filter: blur(10px);
+  from {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    filter: none;
+  }
 }
-to{opacity: 1;
-filter: none;
-}
-}
-

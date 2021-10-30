@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BackgroundBorder from "../BackgroundBorder";
-import Group143614 from "../Group143614";
-import Group1436142 from "../Group1436142";
+import LoginLink from "../LoginLink";
+import SignupLink from "../SignupLink";
 import "./Login.css";
 import "./LoginLoading.css";
 import {validateLogin} from "./loginValidation";
@@ -37,8 +37,8 @@ function Login(props) {
 
           <img className="backgroundShapeLeft" src={path4606}  alt={""}/>
           <img className="backgroundShapeRight" src={path4643}  alt={""}/>
-          <div className="insidePageComponents">
-            <img className="login_image_left" src={signInPage} alt={""}/>
+          <div className="insideLoginPageComponents">
+            <img className="sign-in-page" src={signInPage}  alt={""}/>
             <div className="form border-1px-alto">
 
               <img className="agile-sprite-login_image" src={agilesprite} alt={""}/>
@@ -100,11 +100,11 @@ function Login(props) {
             <BackgroundBorder />
             <div className="menu-2">
               <div className="login-4 smart-layers-pointers">
-                <Group143614 />
+                <LoginLink />
               </div>
               <Link to="/signup">
                 <div className="signup-2 smart-layers-pointers">
-                  <Group1436142 />
+                  <SignupLink />
                 </div>
               </Link>
             </div>
