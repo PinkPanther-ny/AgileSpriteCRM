@@ -8,6 +8,8 @@ import signInPage from "../../images/sign in page.png";
 import logo from "../../images/AgileSprite logo.png";
 import { HomePageContainer } from "./HomePageContainer";
 import "./signup.css";
+import Nav from "../main/nav";
+import {ContactWrapper} from "../main/style";
 
 class EventForm extends React.Component {
   state = {
@@ -46,56 +48,61 @@ class EventForm extends React.Component {
 
   render() {
     return (
-      <HomePageContainer>
-        <Form onSubmit={this.onSubmit} loading={this.loading}>
-          <div>
-            <img src={logo} alt="Logo" height="200px" width="200px" />
-            <img className="sign-in-page" src={signInPage}  alt={''}/>
-          </div>
-          <div>
-            <Form.Field error={!!this.state.errors.date}>
-              <label htmlFor="date">Enter your date </label>
-              <input
-                type="date"
-                id="date"
-                name="date"
-                placeholder="Enter your start event date"
-                value={this.state.data.date}
-                onChange={this.onChange}
-              />
-              {this.state.errors.date && (
-                <InlineError text={this.state.errors.date} />
-              )}
-            </Form.Field>
-            <Form.Field>
-              <label htmlFor="time*">Enter your time </label>
-              <input
-                type="time"
-                id="time"
-                name="time"
-                placeholder="Enter your start time"
-                value={this.state.data.time}
-                onChange={this.onChange}
-              />
-            </Form.Field>
+        <ContactWrapper>
+          <React.Fragment>
+            <Nav />
+            <HomePageContainer>
+              <Form onSubmit={this.onSubmit} loading={this.loading}>
+                <div>
+                  <img src={logo} alt="Logo" height="200px" width="200px" />
+                  <img className="sign-in-page" src={signInPage}  alt={''}/>
+                </div>
+                <div>
+                  <Form.Field error={!!this.state.errors.date}>
+                    <label htmlFor="date">Enter your date </label>
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        placeholder="Enter your start event date"
+                        value={this.state.data.date}
+                        onChange={this.onChange}
+                    />
+                    {this.state.errors.date && (
+                        <InlineError text={this.state.errors.date} />
+                    )}
+                  </Form.Field>
+                  <Form.Field>
+                    <label htmlFor="time*">Enter your time </label>
+                    <input
+                        type="time"
+                        id="time"
+                        name="time"
+                        placeholder="Enter your start time"
+                        value={this.state.data.time}
+                        onChange={this.onChange}
+                    />
+                  </Form.Field>
 
-            <Form.Field>
-              <label htmlFor="content*">Enter your event content </label>
-              <input
-                type="word"
-                id="content"
-                name="content"
-                placeholder="describe what your event is about?"
-                value={this.state.data.content}
-                onChange={this.onChange}
-              />
-            </Form.Field>
-          </div>
-          <Link to="/calendar">
-            <button type="submit">Save</button>
-          </Link>
-        </Form>
-      </HomePageContainer>
+                  <Form.Field>
+                    <label htmlFor="content*">Enter your event content </label>
+                    <input
+                        type="word"
+                        id="content"
+                        name="content"
+                        placeholder="describe what your event is about?"
+                        value={this.state.data.content}
+                        onChange={this.onChange}
+                    />
+                  </Form.Field>
+                </div>
+                <Link to="/calendar">
+                  <button type="submit">Save</button>
+                </Link>
+              </Form>
+            </HomePageContainer>
+          </React.Fragment>
+        </ContactWrapper>
     );
   }
 }

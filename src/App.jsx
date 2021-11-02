@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, {useState} from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import NotFoundPage from "./components/NotFoundPage";
 import Homepage from "./components/Homepage";
@@ -7,35 +7,77 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import ForgotPassword from "./components/ForgotPassword";
 import Home from "./components/Home";
-import Main from "./components/main";
-import Header from "./components/header";
-import {GlobalStyle} from "./style";
+import {ContactWrapper} from "./components/main/style";
+import Nav from "./components/main/nav";
+import Contact from "./components/main/contact";
+import Group from "./components/main/group";
+import Calendar1 from "./components/main/Calendar1";
+import EventForm from "./components/forms/EventForm";
 
 function App() {
-  return (
+
+    const [group, setGroup] = useState(groupList);
+    const [contact, setContact] = useState(contactList);
+
+    return (
     <Router>
       <Switch>
+
         <Route path="/:path(|homepage)">
           <Homepage {...homepageData} />
         </Route>
+
         <Route path="/login">
           <Login {...loginData} />
-        </Route>    
+        </Route>
+
         <Route path="/signup">
           <Signup {...signupData} />
         </Route>
+
         <Route path="/forgotpassword">
           <ForgotPassword {...forgotPasswordData} />
         </Route>
+
         <Route path="/home">
             <Home />
         </Route>
 
-        <React.Fragment>
-            <Header />
-            <GlobalStyle />
-            <Main/>
-        </React.Fragment>
+
+        <Route path="/me">
+          <ContactWrapper>
+            <Nav />
+          </ContactWrapper>
+        </Route>
+
+        <Route path="/contact">
+          <ContactWrapper>
+            <Nav />
+            <Contact contact={contact} setContact={setContact} />
+          </ContactWrapper>
+        </Route>
+
+        <Route path="/group">
+          <ContactWrapper>
+            <Nav />
+            <Group
+              group={group}
+              contact={contact}
+              setGroup={setGroup}
+              setContact={setContact}
+              grouplist={groupList}
+            />
+          </ContactWrapper>
+        </Route>
+
+        <Route path="/calendar" >
+          <ContactWrapper>
+            <Nav />
+            <Calendar1/>
+          </ContactWrapper>
+        </Route>
+
+        <Route path="/form" component={EventForm} />
 
         <Route>
           <NotFoundPage {...notFoundPageData} />
@@ -152,3 +194,146 @@ const forgotPasswordData = {
     emailProps: email2Data,
 };
 
+const groupList = [
+        {
+            name: "Family",
+            members: [
+                {
+                    name: "John Wick",
+                    profile: "/images/contactProfiles/dad.png",
+                    company: "xxxxxxxx",
+                    email: "xxxxxxxx",
+                    phone: "xxxxxxxx",
+                    mobile: "xxxxxxxx",
+                    address: "xxxxxxxx",
+                    birthday: "xxxxxxxx",
+                    relationship: "xxxxxxxx",
+                },
+                {
+                    name: "Andrew Davis",
+                    profile: "/images/contactProfiles/emma.png",
+                    company: "xxxxxxxx",
+                    email: "xxxxxxxx",
+                    phone: "xxxxxxxx",
+                    mobile: "xxxxxxxx",
+                    address: "xxxxxxxx",
+                    birthday: "xxxxxxxx",
+                    relationship: "xxxxxxxx",
+                },
+                {
+                    name: "Jack Xin",
+                    profile: "/images/contactProfiles/granddad.png",
+                    company: "xxxxxxxx",
+                    email: "xxxxxxxx",
+                    phone: "xxxxxxxx",
+                    mobile: "xxxxxxxx",
+                    address: "xxxxxxxx",
+                    birthday: "xxxxxxxx",
+                    relationship: "xxxxxxxx",
+                },
+            ],
+        },
+        {
+            name: "Company",
+            members: [],
+        },
+        {
+            name: "Club",
+            members: [],
+        },
+        {
+            name: "School",
+            members: [],
+        },
+    ]
+
+const contactList = [
+        {
+            name: "Dad",
+            profile: "/images/contactProfiles/dad.png",
+            company: "xxxxxxxx",
+            email: "xxxxxxxx",
+            phone: "xxxxxxxx",
+            mobile: "xxxxxxxx",
+            address: "xxxxxxxx",
+            birthday: "xxxxxxxx",
+            relationship: "xxxxxxxx",
+        },
+        {
+            name: "Emma",
+            profile: "/images/contactProfiles/emma.png",
+            company: "xxxxxxxx",
+            email: "2198434593",
+            phone: "xxxxxxxx",
+            mobile: "xxxxxxxx",
+            address: "xxxxxxxx",
+            birthday: "xxxxxxxx",
+            relationship: "xxxxxxxx",
+        },
+        {
+            name: "Grand dad",
+            profile: "/images/contactProfiles/granddad.png",
+            company: "xxxxxxxx",
+            email: "xxxxxxxx",
+            phone: "xxxxxxxx",
+            mobile: "xxxxxxxx",
+            address: "xxxxxxxx",
+            birthday: "xxxxxxxx",
+            relationship: "xxxxxxxx",
+        },
+        {
+            name: "Grand mom",
+            profile: "/images/contactProfiles/grandmom.png",
+            company: "xxxxxxxx",
+            email: "xxxxxxxx",
+            phone: "xxxxxxxx",
+            mobile: "xxxxxxxx",
+            address: "xxxxxxxx",
+            birthday: "xxxxxxxx",
+            relationship: "xxxxxxxx",
+        },
+        {
+            name: "Mom",
+            profile: "/images/contactProfiles/mom.png",
+            company: "xxxxxxxx",
+            email: "xxxxxxxx",
+            phone: "xxxxxxxx",
+            mobile: "xxxxxxxx",
+            address: "xxxxxxxx",
+            birthday: "xxxxxxxx",
+            relationship: "xxxxxxxx",
+        },
+        {
+            name: "Sophia",
+            profile: "/images/contactProfiles/sophia.png",
+            company: "xxxxxxxx",
+            email: "xxxxxxxx",
+            phone: "xxxxxxxx",
+            mobile: "xxxxxxxx",
+            address: "xxxxxxxx",
+            birthday: "xxxxxxxx",
+            relationship: "xxxxxxxx",
+        },
+        {
+            name: "Wife",
+            profile: "/images/contactProfiles/wife.png",
+            company: "xxxxxxxx",
+            email: "xxxxxxxx",
+            phone: "xxxxxxxx",
+            mobile: "xxxxxxxx",
+            address: "xxxxxxxx",
+            birthday: "xxxxxxxx",
+            relationship: "xxxxxxxx",
+        },
+        {
+            name: "Zoey",
+            profile: "/images/contactProfiles/zoey.png",
+            company: "xxxxxxxx",
+            email: "xxxxxxxx",
+            phone: "xxxxxxxx",
+            mobile: "xxxxxxxx",
+            address: "xxxxxxxx",
+            birthday: "xxxxxxxx",
+            relationship: "xxxxxxxx",
+        },
+    ]
