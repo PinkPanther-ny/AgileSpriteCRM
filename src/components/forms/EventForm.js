@@ -1,12 +1,11 @@
-import Calendar from "react-awesome-calendar";
 import React from "react";
 import Validator from "validator";
 import InlineError from "./InlineError";
 import PropTypes from "prop-types";
-import { Form, Button } from "semantic-ui-react";
+import { Form} from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import signInPage from "../../public/sign in page.png";
-import logo from "../../public/AgileSprite logo.png";
+import signInPage from "../../images/sign in page.png";
+import logo from "../../images/AgileSprite logo.png";
 import { HomePageContainer } from "./HomePageContainer";
 import "./signup.css";
 
@@ -51,7 +50,7 @@ class EventForm extends React.Component {
         <Form onSubmit={this.onSubmit} loading={this.loading}>
           <div>
             <img src={logo} alt="Logo" height="200px" width="200px" />
-            <img className="sign-in-page" src={signInPage} />
+            <img className="sign-in-page" src={signInPage}  alt={''}/>
           </div>
           <div>
             <Form.Field error={!!this.state.errors.date}>

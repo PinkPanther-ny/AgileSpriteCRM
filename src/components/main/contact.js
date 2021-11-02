@@ -50,7 +50,7 @@ const Contact = ({ contact, setContact }) => {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <section>
         <div>
           <span>Contact</span>
@@ -84,7 +84,7 @@ const Contact = ({ contact, setContact }) => {
         </div>
       </section>
       <article>{renderPersonal()}</article>
-    </div>
+    </React.Fragment>
   );
 };
 

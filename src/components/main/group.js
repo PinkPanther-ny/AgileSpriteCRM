@@ -88,7 +88,7 @@ const Group = ({ group, contact, setGroup, grouplist }) => {
         }
     }
     const handleSearch = (e) => {
-        if (e.target.value == "") {
+        if (e.target.value === "") {
             setGroup(grouplist);
         } else {
             setGroup(group.filter(item => item.name.includes(e.target.value)))
@@ -173,7 +173,7 @@ const Group = ({ group, contact, setGroup, grouplist }) => {
     }
 
     return (
-        <div>
+        <React.Fragment>
             <section className="grouplist">
                 <div
                     style={{
@@ -244,7 +244,7 @@ const Group = ({ group, contact, setGroup, grouplist }) => {
             <article ref={remain} className="grouplist">
                 {renderGroup()}
             </article>
-        </div>
+        </React.Fragment>
     )
 }
 

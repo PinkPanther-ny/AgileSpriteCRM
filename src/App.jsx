@@ -8,6 +8,8 @@ import Signup from "./components/Signup";
 import ForgotPassword from "./components/ForgotPassword";
 import Home from "./components/Home";
 import Main from "./components/main";
+import Header from "./components/header";
+import {GlobalStyle} from "./style";
 
 function App() {
   return (
@@ -29,10 +31,16 @@ function App() {
             <Home />
         </Route>
 
-          <Main/>
+        <React.Fragment>
+            <Header />
+            <GlobalStyle />
+            <Main/>
+        </React.Fragment>
+
         <Route>
           <NotFoundPage {...notFoundPageData} />
         </Route>
+
       </Switch>
     </Router>
   );

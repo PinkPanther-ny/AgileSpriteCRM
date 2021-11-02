@@ -1,17 +1,15 @@
 import { useState } from "react";
 import React  from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import { ContactWrapper } from "./style";
 import Nav from "./nav";
 import Contact from "./contact";
 import Group from "./group";
 import Calendar1 from "../main/Calendar1";
 import EventForm from "../forms/EventForm";
-import { GlobalStyle } from "../../style";
-import Header from "../../components/header";
 
 
-const grouplist = [
+const groupList = [
   {
     name: "Family",
     members: [
@@ -155,49 +153,42 @@ const contactlist = [
 ];
 
 export const Main = () => {
-  const [group, setGroup] = useState(grouplist);
+  const [group, setGroup] = useState(groupList);
 
   const [contact, setContact] = useState(contactlist);
 
   return (
     <Router>
-      <ContactWrapper>
-
-        <Route path="/me">
-          <Nav />
-          <GlobalStyle />
-          <Header />
-        </Route>
-
-        <Route path="/contact">
-          <Nav />
-          <GlobalStyle />
-          <Contact contact={contact} setContact={setContact} />
-        </Route>
-
-        <Route path="/group">
+      <Switch>
+        <ContactWrapper>
 
           <Nav />
-          <GlobalStyle />
-          <Group
-            group={group}
-            contact={contact}
-            setGroup={setGroup}
-            setContact={setContact}
-            grouplist={grouplist}
-          />
-        </Route>
 
-        <Route path="/calendar" >
+          <Route path="/me">
+          </Route>
 
-          <Nav />
-          <GlobalStyle />
-          <Calendar1/>
-        </Route>
+          <Route path="/contact">
+            <Contact contact={contact} setContact={setContact} />
+          </Route>
 
-        <Route path="/form" component={EventForm} />
+          <Route path="/group">
+            <Group
+                group={group}
+                contact={contact}
+                setGroup={setGroup}
+                setContact={setContact}
+                grouplist={groupList}
+            />
+          </Route>
 
-      </ContactWrapper>
+          <Route path="/calendar" >
+            <Calendar1/>
+          </Route>
+
+          <Route path="/form" component={EventForm} />
+
+        </ContactWrapper>
+      </Switch>
     </Router>
   );
 };

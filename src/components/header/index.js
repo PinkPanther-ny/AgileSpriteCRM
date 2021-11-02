@@ -1,13 +1,11 @@
-import { Head } from './style';
+import { TopBar } from './style';
 import React  from 'react';
 
 const Header = () => (
-    <Head>
+    <TopBar>
         <div>A G I L E S P R I T E</div>
-        <div>
-            <img src="/images/logo.jpg" alt="logo" />
-        </div>
-    </Head>
+        <img src="/images/logo.jpg" alt="logo" />
+    </TopBar>
 )
 
 export default Header;
