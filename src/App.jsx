@@ -13,6 +13,7 @@ import Contact from "./components/main/contact";
 import Group from "./components/main/group";
 import Calendar1 from "./components/main/Calendar1";
 import EventForm from "./components/forms/EventForm";
+import Header from "./components/header";
 
 function App() {
 
@@ -20,72 +21,76 @@ function App() {
     const [contact, setContact] = useState(contactList);
 
     return (
-    <Router>
-      <Switch>
+        <Router>
+            <Switch>
 
-        <Route path="/:path(|homepage)">
-          <Homepage {...homepageData} />
-        </Route>
+                <Route path="/:path(|homepage)">
+                    <Homepage {...homepageData} />
+                </Route>
 
-        <Route path="/login">
-          <Login {...loginData} />
-        </Route>
+                <Route path="/login">
+                    <Login {...loginData} />
+                </Route>
 
-        <Route path="/signup">
-          <Signup {...signupData} />
-        </Route>
+                <Route path="/signup">
+                    <Signup {...signupData} />
+                </Route>
 
-        <Route path="/forgotpassword">
-          <ForgotPassword {...forgotPasswordData} />
-        </Route>
+                <Route path="/forgotpassword">
+                    <ForgotPassword {...forgotPasswordData} />
+                </Route>
 
-        <Route path="/home">
-            <Home />
-        </Route>
+                <Route path="/home">
+                    <Home />
+                </Route>
 
 
-        <Route path="/me">
-          <ContactWrapper>
-            <Nav />
-          </ContactWrapper>
-        </Route>
+                <Route path="/me">
+                    <Header/>
+                    <ContactWrapper>
+                        <Nav />
+                    </ContactWrapper>
+                </Route>
 
-        <Route path="/contact">
-          <ContactWrapper>
-            <Nav />
-            <Contact contact={contact} setContact={setContact} />
-          </ContactWrapper>
-        </Route>
+                <Route path="/contact">
+                    <Header/>
+                    <ContactWrapper>
+                        <Nav />
+                        <Contact contact={contact} setContact={setContact} />
+                    </ContactWrapper>
+                </Route>
 
-        <Route path="/group">
-          <ContactWrapper>
-            <Nav />
-            <Group
-              group={group}
-              contact={contact}
-              setGroup={setGroup}
-              setContact={setContact}
-              grouplist={groupList}
-            />
-          </ContactWrapper>
-        </Route>
+                <Route path="/group">
+                    <Header/>
+                    <ContactWrapper>
+                        <Nav />
+                        <Group
+                            group={group}
+                            contact={contact}
+                            setGroup={setGroup}
+                            setContact={setContact}
+                            grouplist={groupList}
+                        />
+                    </ContactWrapper>
+                </Route>
 
-        <Route path="/calendar" >
-          <ContactWrapper>
-            <Nav />
-            <Calendar1/>
-          </ContactWrapper>
-        </Route>
+                <Route path="/calendar" >
+                    <Header/>
+                    <ContactWrapper>
+                        <Nav />
+                        <Calendar1/>
+                    </ContactWrapper>
+                </Route>
 
-        <Route path="/form" component={EventForm} />
+                <Route path="/form" component={EventForm} />
 
-        <Route>
-          <NotFoundPage {...notFoundPageData} />
-        </Route>
+                <Route>
+                    <NotFoundPage {...notFoundPageData} />
+                </Route>
 
-      </Switch>
-    </Router>
-  );
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;
@@ -195,145 +200,145 @@ const forgotPasswordData = {
 };
 
 const groupList = [
-        {
-            name: "Family",
-            members: [
-                {
-                    name: "John Wick",
-                    profile: "/images/contactProfiles/dad.png",
-                    company: "xxxxxxxx",
-                    email: "xxxxxxxx",
-                    phone: "xxxxxxxx",
-                    mobile: "xxxxxxxx",
-                    address: "xxxxxxxx",
-                    birthday: "xxxxxxxx",
-                    relationship: "xxxxxxxx",
-                },
-                {
-                    name: "Andrew Davis",
-                    profile: "/images/contactProfiles/emma.png",
-                    company: "xxxxxxxx",
-                    email: "xxxxxxxx",
-                    phone: "xxxxxxxx",
-                    mobile: "xxxxxxxx",
-                    address: "xxxxxxxx",
-                    birthday: "xxxxxxxx",
-                    relationship: "xxxxxxxx",
-                },
-                {
-                    name: "Jack Xin",
-                    profile: "/images/contactProfiles/granddad.png",
-                    company: "xxxxxxxx",
-                    email: "xxxxxxxx",
-                    phone: "xxxxxxxx",
-                    mobile: "xxxxxxxx",
-                    address: "xxxxxxxx",
-                    birthday: "xxxxxxxx",
-                    relationship: "xxxxxxxx",
-                },
-            ],
-        },
-        {
-            name: "Company",
-            members: [],
-        },
-        {
-            name: "Club",
-            members: [],
-        },
-        {
-            name: "School",
-            members: [],
-        },
-    ]
+    {
+        name: "Family",
+        members: [
+            {
+                name: "John Wick",
+                profile: "/images/contactProfiles/dad.png",
+                company: "xxxxxxxx",
+                email: "xxxxxxxx",
+                phone: "xxxxxxxx",
+                mobile: "xxxxxxxx",
+                address: "xxxxxxxx",
+                birthday: "xxxxxxxx",
+                relationship: "xxxxxxxx",
+            },
+            {
+                name: "Andrew Davis",
+                profile: "/images/contactProfiles/emma.png",
+                company: "xxxxxxxx",
+                email: "xxxxxxxx",
+                phone: "xxxxxxxx",
+                mobile: "xxxxxxxx",
+                address: "xxxxxxxx",
+                birthday: "xxxxxxxx",
+                relationship: "xxxxxxxx",
+            },
+            {
+                name: "Jack Xin",
+                profile: "/images/contactProfiles/granddad.png",
+                company: "xxxxxxxx",
+                email: "xxxxxxxx",
+                phone: "xxxxxxxx",
+                mobile: "xxxxxxxx",
+                address: "xxxxxxxx",
+                birthday: "xxxxxxxx",
+                relationship: "xxxxxxxx",
+            },
+        ],
+    },
+    {
+        name: "Company",
+        members: [],
+    },
+    {
+        name: "Club",
+        members: [],
+    },
+    {
+        name: "School",
+        members: [],
+    },
+]
 
 const contactList = [
-        {
-            name: "Dad",
-            profile: "/images/contactProfiles/dad.png",
-            company: "xxxxxxxx",
-            email: "xxxxxxxx",
-            phone: "xxxxxxxx",
-            mobile: "xxxxxxxx",
-            address: "xxxxxxxx",
-            birthday: "xxxxxxxx",
-            relationship: "xxxxxxxx",
-        },
-        {
-            name: "Emma",
-            profile: "/images/contactProfiles/emma.png",
-            company: "xxxxxxxx",
-            email: "2198434593",
-            phone: "xxxxxxxx",
-            mobile: "xxxxxxxx",
-            address: "xxxxxxxx",
-            birthday: "xxxxxxxx",
-            relationship: "xxxxxxxx",
-        },
-        {
-            name: "Grand dad",
-            profile: "/images/contactProfiles/granddad.png",
-            company: "xxxxxxxx",
-            email: "xxxxxxxx",
-            phone: "xxxxxxxx",
-            mobile: "xxxxxxxx",
-            address: "xxxxxxxx",
-            birthday: "xxxxxxxx",
-            relationship: "xxxxxxxx",
-        },
-        {
-            name: "Grand mom",
-            profile: "/images/contactProfiles/grandmom.png",
-            company: "xxxxxxxx",
-            email: "xxxxxxxx",
-            phone: "xxxxxxxx",
-            mobile: "xxxxxxxx",
-            address: "xxxxxxxx",
-            birthday: "xxxxxxxx",
-            relationship: "xxxxxxxx",
-        },
-        {
-            name: "Mom",
-            profile: "/images/contactProfiles/mom.png",
-            company: "xxxxxxxx",
-            email: "xxxxxxxx",
-            phone: "xxxxxxxx",
-            mobile: "xxxxxxxx",
-            address: "xxxxxxxx",
-            birthday: "xxxxxxxx",
-            relationship: "xxxxxxxx",
-        },
-        {
-            name: "Sophia",
-            profile: "/images/contactProfiles/sophia.png",
-            company: "xxxxxxxx",
-            email: "xxxxxxxx",
-            phone: "xxxxxxxx",
-            mobile: "xxxxxxxx",
-            address: "xxxxxxxx",
-            birthday: "xxxxxxxx",
-            relationship: "xxxxxxxx",
-        },
-        {
-            name: "Wife",
-            profile: "/images/contactProfiles/wife.png",
-            company: "xxxxxxxx",
-            email: "xxxxxxxx",
-            phone: "xxxxxxxx",
-            mobile: "xxxxxxxx",
-            address: "xxxxxxxx",
-            birthday: "xxxxxxxx",
-            relationship: "xxxxxxxx",
-        },
-        {
-            name: "Zoey",
-            profile: "/images/contactProfiles/zoey.png",
-            company: "xxxxxxxx",
-            email: "xxxxxxxx",
-            phone: "xxxxxxxx",
-            mobile: "xxxxxxxx",
-            address: "xxxxxxxx",
-            birthday: "xxxxxxxx",
-            relationship: "xxxxxxxx",
-        },
-    ]
+    {
+        name: "Dad",
+        profile: "/images/contactProfiles/dad.png",
+        company: "xxxxxxxx",
+        email: "xxxxxxxx",
+        phone: "xxxxxxxx",
+        mobile: "xxxxxxxx",
+        address: "xxxxxxxx",
+        birthday: "xxxxxxxx",
+        relationship: "xxxxxxxx",
+    },
+    {
+        name: "Emma",
+        profile: "/images/contactProfiles/emma.png",
+        company: "xxxxxxxx",
+        email: "2198434593",
+        phone: "xxxxxxxx",
+        mobile: "xxxxxxxx",
+        address: "xxxxxxxx",
+        birthday: "xxxxxxxx",
+        relationship: "xxxxxxxx",
+    },
+    {
+        name: "Grand dad",
+        profile: "/images/contactProfiles/granddad.png",
+        company: "xxxxxxxx",
+        email: "xxxxxxxx",
+        phone: "xxxxxxxx",
+        mobile: "xxxxxxxx",
+        address: "xxxxxxxx",
+        birthday: "xxxxxxxx",
+        relationship: "xxxxxxxx",
+    },
+    {
+        name: "Grand mom",
+        profile: "/images/contactProfiles/grandmom.png",
+        company: "xxxxxxxx",
+        email: "xxxxxxxx",
+        phone: "xxxxxxxx",
+        mobile: "xxxxxxxx",
+        address: "xxxxxxxx",
+        birthday: "xxxxxxxx",
+        relationship: "xxxxxxxx",
+    },
+    {
+        name: "Mom",
+        profile: "/images/contactProfiles/mom.png",
+        company: "xxxxxxxx",
+        email: "xxxxxxxx",
+        phone: "xxxxxxxx",
+        mobile: "xxxxxxxx",
+        address: "xxxxxxxx",
+        birthday: "xxxxxxxx",
+        relationship: "xxxxxxxx",
+    },
+    {
+        name: "Sophia",
+        profile: "/images/contactProfiles/sophia.png",
+        company: "xxxxxxxx",
+        email: "xxxxxxxx",
+        phone: "xxxxxxxx",
+        mobile: "xxxxxxxx",
+        address: "xxxxxxxx",
+        birthday: "xxxxxxxx",
+        relationship: "xxxxxxxx",
+    },
+    {
+        name: "Wife",
+        profile: "/images/contactProfiles/wife.png",
+        company: "xxxxxxxx",
+        email: "xxxxxxxx",
+        phone: "xxxxxxxx",
+        mobile: "xxxxxxxx",
+        address: "xxxxxxxx",
+        birthday: "xxxxxxxx",
+        relationship: "xxxxxxxx",
+    },
+    {
+        name: "Zoey",
+        profile: "/images/contactProfiles/zoey.png",
+        company: "xxxxxxxx",
+        email: "xxxxxxxx",
+        phone: "xxxxxxxx",
+        mobile: "xxxxxxxx",
+        address: "xxxxxxxx",
+        birthday: "xxxxxxxx",
+        relationship: "xxxxxxxx",
+    },
+]

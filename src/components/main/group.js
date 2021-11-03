@@ -75,8 +75,8 @@ const Group = ({ group, contact, setGroup, grouplist }) => {
                                         <span style={{ marginRight: "20px" }}>{person.name}</span>
                                     </label>
                                     <input type="checkbox" name="name" value={person.name}
-                                        onChange={handleCheck}
-                                        id={person.name} />
+                                           onChange={handleCheck}
+                                           id={person.name} />
                                 </div>
                             ))}
                             <div style={{ textAlign: "center" }}>
@@ -196,8 +196,8 @@ const Group = ({ group, contact, setGroup, grouplist }) => {
                 {
                     group.map((item, index) => (
                         <div className={currentGroup === item.name ? "checked group" : "group"} key={index} type={item.name}
-                            onMouseEnter={handleGroupEnter}
-                            onClick={() => { handleGroupClick(item) }}>
+                             onMouseEnter={handleGroupEnter}
+                             onClick={() => { handleGroupClick(item) }}>
                             <span
                                 style={{
                                     display: "inline-block",
@@ -208,7 +208,7 @@ const Group = ({ group, contact, setGroup, grouplist }) => {
                                     borderRadius: "10px",
                                     transform: "translateY(10px)"
                                 }}
-                            ></span>
+                            />
                             <span style={{ lineHeight: "60px" }}>
                                 {item.name}
                             </span>

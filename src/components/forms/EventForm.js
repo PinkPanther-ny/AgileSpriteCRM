@@ -10,6 +10,7 @@ import { HomePageContainer } from "./HomePageContainer";
 import "./signup.css";
 import Nav from "../main/nav";
 import {ContactWrapper} from "../main/style";
+import Header from "../header";
 
 class EventForm extends React.Component {
   state = {
@@ -23,10 +24,10 @@ class EventForm extends React.Component {
   };
 
   onChange = (e) =>
-    this.setState({
-      ...this.state,
-      data: { ...this.state.data, [e.target.name]: e.target.value },
-    });
+      this.setState({
+        ...this.state,
+        data: { ...this.state.data, [e.target.name]: e.target.value },
+      });
 
   onSubmit = (e) => {
     e.preventDefault();
@@ -48,8 +49,9 @@ class EventForm extends React.Component {
 
   render() {
     return (
-        <ContactWrapper>
-          <React.Fragment>
+        <React.Fragment>
+          <Header/>
+          <ContactWrapper>
             <Nav />
             <HomePageContainer>
               <Form onSubmit={this.onSubmit} loading={this.loading}>
@@ -101,8 +103,8 @@ class EventForm extends React.Component {
                 </Link>
               </Form>
             </HomePageContainer>
-          </React.Fragment>
-        </ContactWrapper>
+          </ContactWrapper>
+        </React.Fragment>
     );
   }
 }

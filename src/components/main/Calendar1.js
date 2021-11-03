@@ -52,8 +52,12 @@ class Calendar1 extends React.Component {
             <Button1>Add New Event!!</Button1>{" "}
           </Link>
         </div>
-        <Calendar events={events} />
+        <Calendar className="wrapper" events={events} />
       </div>
+
+        // <React.Fragment>
+        //   <Calendar events={events} />
+        // </React.Fragment>
     );
   }
 }

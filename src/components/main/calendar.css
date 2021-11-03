@@ -1,19 +1,27 @@
 .calendar {
-  height: 300px;
+  /*height: 300px;*/
   object-fit: cover;
   position: absolute;
+  min-width: 65%;
+
   left: 17%;
-  top: 5%;
-  width: 900px;
+  padding-top: 60px;
+
 }
 .button {
-  height: 300px;
   object-fit: cover;
   position: absolute;
   left: 25%;
-  top: 50%;
-  width: 300px;
+  top: 100%;
+  width: 50%;
+  border-radius: 12px;
 }
+
+.wrapper{
+
+}
+
+
 @keyframes animate-enter2-frames {
   from {
     opacity: 0;
