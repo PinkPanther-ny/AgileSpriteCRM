@@ -10,7 +10,7 @@ const Button1 = styled.button`
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 10em;
-  border-radius: 3px;
+  border-radius: 13px;
 `;
 const events = [
   {
