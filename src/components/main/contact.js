@@ -2,26 +2,62 @@ import { useState } from "react";
 import Personal from "./personal";
 import Add from "./add";
 import React  from 'react';
+import cookie from "react-cookies";
+import {postDataToBackend} from "../../helper";
+import {CONTACT_GET_ALL_SUCCESS} from "../../backendReturnCodeHandling";
 
-const Contact = ({ contact, setContact }) => {
-  const [current, setCurrent] = useState("");
+export default class Contact extends React.Component  {
+  constructor(props) {
+    super(props);
 
-  const handleAdd = () => {
-    setCurrent("add");
-  };
+    this.state = {
+      contact : [],
+      current : "",
+    };
+    this.renderMyData();
+  }
 
-  const handleDelete = () => {
-    contact.forEach((person, index) => {
-      if (person.name === current.name) {
-        contact.splice(index, 1);
-        setContact([...contact]);
+  // const [current, setCurrent] = useState("");
+  //
+  // const [contact, setContact] = useState(contactList);
+  // const [contact, setAllContact] = useState("");
+
+  renderMyData(){
+    const token = {'token': cookie.load('userToken')}
+    postDataToBackend("contact/get_all", token)
+        .then((responseJson) => {
+          if(responseJson['code']===CONTACT_GET_ALL_SUCCESS){
+            this.setState({ contact : responseJson['contacts'] })
+          }else {
+            // token error
+            alert(responseJson['msg'])
+            window.location.href = "/login";
+          }
+        });
+  }
+
+  handleAdd(){
+    this.state.current = "add";
+  }
+
+  handleDelete(){
+    this.state.contact.forEach((person, index) => {
+      if (person.name === this.state.current.name) {
+        this.state.contact.splice(index, 1);
+        this.state.contact = [...this.state.contact];
       }
     });
-    setCurrent("");
-  };
+    this.state.current = "";
+  }
+  setContact(contact){
+    this.setState({contact : contact})
+  }
+  setCurrent(current){
+    this.setState({current : current})
+  }
 
-  const renderPersonal = () => {
-    switch (current) {
+  renderPersonal(){
+    switch (this.state.current) {
       case "":
         return (
             <img
@@ -33,59 +69,62 @@ const Contact = ({ contact, setContact }) => {
       case "add":
         return (
             <Add
-                contact={contact}
-                setContact={setContact}
-                setCurrent={setCurrent}
+                contact={this.state.contact}
+                setContact={this.setContact}
+                setCurrent={this.setCurrent}
             />
         );
       default:
         return (
             <Personal
-                person={current}
-                contact={contact}
-                setContact={setContact}
+                person={this.state.current}
+                contact={this.state.contact}
+                setContact={this.setContact}
             />
         );
     }
-  };
+  }
 
-  return (
-      <React.Fragment>
-        <section>
-          <div>
-            <span>Contact</span>
-            <span>
-            <span className={"add"} onClick={handleAdd}>
-              +
+  render(){
+      return(
+          <React.Fragment>
+            <section>
+              <div>
+                <span>Contact</span>
+                <span>
+              <span className={"add"} onClick={this.handleAdd}>
+                +
+              </span>
+
+              <span className={"delete"} onClick={this.handleDelete}>
+                -
+              </span>
             </span>
-            <span className={"delete"} onClick={handleDelete}>
-              -
-            </span>
-          </span>
-          </div>
-          <div className={"search"}>
-            <input type="text" />
-          </div>
-          <div className={"contact"}>
-            {contact.map((person, index) => (
-                <div
-                    key={index}
-                    className={
-                      current.name === person.name ? "checked person" : "person"
-                    }
-                    onClick={() => {
-                      setCurrent(person);
-                    }}
-                >
-                  <img src={person.profile} alt="" />
-                  <span>{person.name}</span>
-                </div>
-            ))}
-          </div>
-        </section>
-        <article>{renderPersonal()}</article>
-      </React.Fragment>
-  );
+              </div>
+              <div className={"search"}>
+                <input type="text" />
+              </div>
+
+              <div className={"contact"}>
+                {this.state.contact.map((person, index) => (
+                    <div
+                        key={index}
+                        className={
+                          this.state.current.first_name === person.first_name ? "checked person" : "person"
+                        }
+                        onClick={() => {
+                          this.setCurrent(person);
+                        }}
+                    >
+                      <img src={"/images/contactProfiles/dad.png"} alt="" />
+                      <span>{person.first_name + ' ' + person.last_name}</span>
+                    </div>
+                ))}
+              </div>
+            </section>
+            <article>{this.renderPersonal()}</article>
+          </React.Fragment>
+      )
+  }
 };
 
-export default Contact;

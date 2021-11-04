@@ -2,7 +2,7 @@ import React  from 'react';
 import { useState } from "react"
 
 const Add = ({ contact, setContact, setCurrent }) => {
-    const [fields, setfields] = useState({
+    const [fields, setFields] = useState({
         name: "",
         profile: "",
         company: "",
@@ -15,7 +15,7 @@ const Add = ({ contact, setContact, setCurrent }) => {
     })
 
     const handleChange = (e) => {
-        setfields({ ...fields, [e.target.name]: e.target.value });
+        setFields({ ...fields, [e.target.name]: e.target.value });
     }
 
     const handleSubmit = (e) => {

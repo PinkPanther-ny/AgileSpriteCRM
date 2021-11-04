@@ -12,7 +12,7 @@ const Personal = ({ person, contact, setContact }) => {
 
   const [disabled, setDisabled] = useState(true);
 
-  const [fields, setFields] = useState({ ...person });
+  const [fields, setFields] = useState({ person });
 
   useEffect(() => {
     setFields({ ...person });
@@ -24,169 +24,189 @@ const Personal = ({ person, contact, setContact }) => {
     setFields({ ...fields, [e.target.name]: e.target.value });
   };
 
-  const handleEidt = () => {
+  const handleEdit = () => {
     setDisabled(false);
   };
 
   const handleSubmit = () => {
-    contact.forEach((person) => {
-      if (person.name === fields.name) {
-        person.profile = fields.profile;
-        person.company = fields.company;
-        person.email = fields.email;
-        person.phone = fields.phone;
-        person.mobile = fields.mobile;
-        person.address = fields.address;
-        person.birthday = "xxxxxxxx";
-        person.relationship = "xxxxxxxx";
-        setContact([...contact]);
-        setDisabled(true);
-      }
-    });
+    setDisabled(true);
+    // contact.forEach((person) => {
+    //   if (person.email === fields.email) {
+    //     person.first_name = fields.first_name;
+    //     person.last_name = fields.last_name;
+    //     person.company = fields.company;
+    //     person.email = fields.email;
+    //     person.phone = fields.phone;
+    //     person.mobile = fields.mobile;
+    //     person.address = fields.address;
+    //     person.birthday = fields.birthday;
+    //     person.relationship = fields.relationship;
+    //     person.notes = fields.notes;
+    //     person.profile = fields.profile;
+    //     person.image_address = fields.image_address;
+    //     setContact([...contact]);
+    //     setDisabled(true);
+    //   }
+    // });
   };
 
   return (
-    <div className="personal">
-      <h6>
-        <Link to="/contact" className={path.includes("story") ? "" : "check"}>
-          Detail
-        </Link>
-        <Link
-          to="/contact/story"
-          className={path.includes("story") ? "check" : ""}
-        >
-          Story
-        </Link>
-      </h6>
-      <Switch>
-        <Route path="/contact" exact>
-          <img src={person.profile} alt="profile" align="left" />
-          <form
-            onClick={(e) => {
-              e.preventDefault();
-            }}
+      <div className="personal">
+        <h6>
+          <Link to="/contact" className={path.includes("story") ? "" : "check"}>
+            Detail
+          </Link>
+          <Link
+              to="/contact/story"
+              className={path.includes("story") ? "check" : ""}
           >
-            <div>
-              <label htmlFor="name">Name: </label>
-              <input
-                type="text"
-                id="name"
-                value={fields.name}
-                disabled={true}
-                onChange={handleChange}
-                name="name"
-              />
-            </div>
-            <div>
-              <label htmlFor="company">Company: </label>
-              <input
-                type="text"
-                id="company"
-                value={fields.company}
-                disabled={disabled}
-                onChange={handleChange}
-                name="company"
-              />
-            </div>
-            <div>
-              <label htmlFor="email">Email: </label>
-              <input
-                type="text"
-                id="email"
-                value={fields.email}
-                disabled={disabled}
-                onChange={handleChange}
-                name="email"
-              />
-            </div>
-            <div>
-              <label htmlFor="phone">Phone: </label>
-              <input
-                type="text"
-                id="phone"
-                value={fields.phone}
-                disabled={disabled}
-                onChange={handleChange}
-                name="phone"
-              />
-            </div>
-            <div>
-              <label htmlFor="mobile">Mobile: </label>
-              <input
-                type="text"
-                id="mobile"
-                value={fields.mobile}
-                disabled={disabled}
-                onChange={handleChange}
-                name="mobile"
-              />
-            </div>
-            <div>
-              <label htmlFor="address">Address: </label>
-              <input
-                type="text"
-                id="address"
-                value={fields.address}
-                disabled={disabled}
-                onChange={handleChange}
-                name="address"
-              />
-            </div>
-          </form>
-          <h5>
+            Story
+          </Link>
+        </h6>
+        <Switch>
+          <Route path="/contact" exact>
+            <img src={"/images/contactProfiles/dad.png"} alt="profile" align="left" />
+            <form
+                onClick={(e) => {
+                  e.preventDefault();
+                }}
+            >
+              <div>
+                <label htmlFor="name">Name: </label>
+                <input
+                    type="text"
+                    id="name"
+                    value={fields.first_name + ' ' + fields.last_name}
+                    disabled={disabled}
+                    onChange={handleChange}
+                    name="name"
+                />
+              </div>
+              <div>
+                <label htmlFor="company">Company: </label>
+                <input
+                    type="text"
+                    id="company"
+                    value={fields.company}
+                    disabled={disabled}
+                    onChange={handleChange}
+                    name="company"
+                />
+              </div>
+              <div>
+                <label htmlFor="email">Email: </label>
+                <input
+                    type="text"
+                    id="email"
+                    value={fields.email}
+                    disabled={disabled}
+                    onChange={handleChange}
+                    name="email"
+                />
+              </div>
+              <div>
+                <label htmlFor="phone">Phone: </label>
+                <input
+                    type="text"
+                    id="phone"
+                    value={fields.phone}
+                    disabled={disabled}
+                    onChange={handleChange}
+                    name="phone"
+                />
+              </div>
+              <div>
+                <label htmlFor="mobile">Mobile: </label>
+                <input
+                    type="text"
+                    id="mobile"
+                    value={fields.mobile}
+                    disabled={disabled}
+                    onChange={handleChange}
+                    name="mobile"
+                />
+              </div>
+              <div>
+                <label htmlFor="address">Address: </label>
+                <input
+                    type="text"
+                    id="address"
+                    value={fields.address}
+                    disabled={disabled}
+                    onChange={handleChange}
+                    name="address"
+                />
+              </div>
+            </form>
+
+            <h5>
             <span>
               Birthday : &nbsp;
-              <input type="date" name="" id="" />
+              <input type="date"
+                     id="birthday"
+                     value={fields.birthday}
+                     disabled={disabled}
+                     onChange={handleChange}
+                     name="birthday"
+              />
             </span>
-            <span>
+              <span>
               Relationship : &nbsp;
-              <select defaultValue="relationship" name="relationship">
-                <option value="relationship">relationship</option>
-                <option value="parent">parent</option>
-              </select>
-            </span>
-          </h5>
-          <div className="notes">
-            <h1>Notes</h1>
-            <textarea
-              name=""
-              id=""
-              cols="125"
-              rows="4"
-              placeholder="Add a note ..."
-            ></textarea>
-            <h1>Invited Events</h1>
-            <input type="text" />
-          </div>
-          <div className="buttons">
-            <button onClick={handleEidt}>edit</button>
-            <button onClick={handleSubmit}>save</button>
-          </div>
-        </Route>
-        <Route path="/contact/story">
-          <div className="story">
-            <div className="title">
-              <div>3</div>
-              <div>Stories</div>
-            </div>
-            <div className="stories">
-              <div>
-                <h1>Melbourne,4/9/2021</h1>
-                <img
-                  src="/images/contact story page.jpeg"
-                  alt="contact story page"
+                {/*<select defaultValue="relationship" name="relationship">*/}
+                {/*  <option value="relationship">relationship</option>*/}
+                {/*  <option value="parent">parent</option>*/}
+                {/*</select>*/}
+                <input type="text"
+                       id="relationship"
+                       value={fields.relationship}
+                       disabled={disabled}
+                       onChange={handleChange}
+                       name="relationship"
                 />
-                <div className="article">{articleText}</div>
+            </span>
+            </h5>
+
+            <div className="notes">
+              <h1>Notes</h1>
+              <textarea
+                  name="notes"
+                  id="notes"
+                  cols="125"
+                  rows="6"
+                  value={fields.notes}
+                  placeholder="Add a note ..."
+                  disabled={disabled}
+              />
+            </div>
+            <div className="buttons">
+              <button onClick={handleEdit}>edit</button>
+              <button onClick={handleSubmit}>save</button>
+            </div>
+          </Route>
+          <Route path="/contact/story">
+            <div className="story">
+              <div className="title">
+                <div>3</div>
+                <div>Stories</div>
               </div>
-              <div>
-                <h1>Melbourne,4/9/2021</h1>
-                <div className="article last-article">{articleText}</div>
+              <div className="stories">
+                <div>
+                  <h1>Melbourne,4/9/2021</h1>
+                  <img
+                      src="/images/contact story page.jpeg"
+                      alt="contact story page"
+                  />
+                  <div className="article">{articleText}</div>
+                </div>
+                <div>
+                  <h1>Melbourne,4/9/2021</h1>
+                  <div className="article last-article">{articleText}</div>
+                </div>
               </div>
             </div>
-          </div>
-        </Route>
-      </Switch>
-    </div>
+          </Route>
+        </Switch>
+      </div>
   );
 };
 
