@@ -1,8 +1,8 @@
 import React from "react";
 // import JSONPretty from 'react-json-pretty';
 import cookie from "react-cookies";
-import {postDataToBackend} from "../../helper";
-import {CONTACT_GET_ALL_SUCCESS} from "../../backendReturnCodeHandling";
+import {postDataToBackend, validateCookie} from "../../helper";
+import {ACCOUNT_GET_SUCCESS, CONTACT_GET_ALL_SUCCESS} from "../../backendReturnCodeHandling";
 
 export default class Home extends React.Component  {
 
@@ -16,14 +16,15 @@ export default class Home extends React.Component  {
     }
 
     renderMyData(){
+        validateCookie()
         const token = {'token': cookie.load('userToken')}
-        postDataToBackend("contact/get_all", token)
+        postDataToBackend("account/get", token)
             .then((responseJson) => {
-                if(responseJson['code']===CONTACT_GET_ALL_SUCCESS){
-                    this.setState({ data : responseJson['contacts'] })
+                if(responseJson['code']===ACCOUNT_GET_SUCCESS){
+                    this.setState({ data : responseJson })
                 }else {
                     // token error
-                    alert(responseJson['msg'])
+                    alert(responseJson['code'])
                     window.location.href = "/login";
                 }
             });

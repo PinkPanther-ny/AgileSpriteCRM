@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react";
 import { Switch, Route, Link, useLocation, useHistory } from "react-router-dom";
 import React  from 'react';
+import {postDataToBackend, validateCookie} from "../../helper";
+import {ACCOUNT_GET_SUCCESS, CONTACT_UPDATE_SUCCESS} from "../../backendReturnCodeHandling";
+import cookie from "react-cookies";
+import "./contactDetail.css";
 
 const articleText = `Lorem ipsum dolor sit amet,consectetur adipiscing elit. Nuncmaximus,nulla ut commodo sagittis,sapien dui mattis dui, non pulvinarlorem felis nec eratLorem ipsumdolor sit amet, consectetur adipiscing elit. Nunc maximus, nullaut commodo sagittis, sapien duimattis dui, non pulvinar lorem felisnec eratLorem ipsum dolor sit amet,consectetur adipiscing elit. Nuncmaximus, nulla ut commodo sagittis, sapien dui mattis dui,non pulvinar lorem felis neceratLorem ipsum dolor sit amet,consectetur adipiscing elit. Nuncmaximus, nulla ut commodo sagittis,sapien dui mattis dui, non pulvinarlorem felis nec eratLorem ipsum
 `;
 
-const Personal = ({ person, contact, setContact }) => {
+const Personal = ({ person, contact, loadAllContact }) => {
   const path = useLocation().pathname;
 
   const history = useHistory();
@@ -25,25 +29,68 @@ const Personal = ({ person, contact, setContact }) => {
   };
 
   const handleEdit = () => {
-    setDisabled(false);
+
+    setDisabled(!disabled);
   };
 
   const handleSubmit = () => {
+    if(disabled){
+      return
+    }
     setDisabled(true);
+    validateCookie()
+    const updatedData = {
+      'token': cookie.load('userToken'),
+      'contact_id': fields.id,
+
+      'company': fields.company,
+      'email': fields.email,
+      'phone': fields.phone,
+      'mobile': fields.mobile,
+      'address': fields.address,
+      'birthday': fields.birthday,
+      'relationship': fields.relationship,
+      'notes': fields.notes
+
+    };
+    postDataToBackend("contact/update", updatedData)
+        .then((responseJson) => {
+          if(responseJson['code']===CONTACT_UPDATE_SUCCESS){
+            // alert('Account info updated!')
+            // Update success, change local value
+            person.company = fields.company;
+            person.email = fields.email;
+
+            person.phone = fields.phone;
+            person.mobile = fields.mobile;
+
+            person.address = fields.address;
+            person.birthday = fields.birthday;
+            person.relationship = fields.relationship;
+            person.notes = fields.notes;
+            person.image_address = fields.image_address;
+          }else{
+            alert(responseJson['msg'])
+          }
+        });
+
     // contact.forEach((person) => {
     //   if (person.email === fields.email) {
-    //     person.first_name = fields.first_name;
-    //     person.last_name = fields.last_name;
-    //     person.company = fields.company;
-    //     person.email = fields.email;
-    //     person.phone = fields.phone;
-    //     person.mobile = fields.mobile;
-    //     person.address = fields.address;
-    //     person.birthday = fields.birthday;
-    //     person.relationship = fields.relationship;
-    //     person.notes = fields.notes;
+
+        // person.first_name = fields.first_name;
+        // person.last_name = fields.last_name;
+        // person.company = fields.company;
+        // person.email = fields.email;
+        // person.phone = fields.phone;
+        // person.mobile = fields.mobile;
+        // person.address = fields.address;
+        // person.birthday = fields.birthday;
+        // person.relationship = fields.relationship;
+        // person.notes = fields.notes;
+        // person.image_address = fields.image_address;
+
+
     //     person.profile = fields.profile;
-    //     person.image_address = fields.image_address;
     //     setContact([...contact]);
     //     setDisabled(true);
     //   }
@@ -65,7 +112,7 @@ const Personal = ({ person, contact, setContact }) => {
         </h6>
         <Switch>
           <Route path="/contact" exact>
-            <img src={"/images/contactProfiles/dad.png"} alt="profile" align="left" />
+            <img src={person.image_address} alt="profile" align="left" />
             <form
                 onClick={(e) => {
                   e.preventDefault();
@@ -77,7 +124,7 @@ const Personal = ({ person, contact, setContact }) => {
                     type="text"
                     id="name"
                     value={fields.first_name + ' ' + fields.last_name}
-                    disabled={disabled}
+                    disabled={true}
                     onChange={handleChange}
                     name="name"
                 />
@@ -173,10 +220,10 @@ const Personal = ({ person, contact, setContact }) => {
                   id="notes"
                   cols="125"
                   rows="6"
-                  value={fields.notes}
+                  value={String(fields.notes)}
                   placeholder="Add a note ..."
-                  disabled={disabled}
-              />
+              >
+              </textarea>
             </div>
             <div className="buttons">
               <button onClick={handleEdit}>edit</button>

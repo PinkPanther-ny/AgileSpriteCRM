@@ -14,7 +14,7 @@ export default class Contact extends React.Component  {
       contact : [],
       current : "",
     };
-    this.renderMyData();
+    this.loadAllContact();
   }
 
   // const [current, setCurrent] = useState("");
@@ -22,7 +22,7 @@ export default class Contact extends React.Component  {
   // const [contact, setContact] = useState(contactList);
   // const [contact, setAllContact] = useState("");
 
-  renderMyData(){
+  loadAllContact(){
     const token = {'token': cookie.load('userToken')}
     postDataToBackend("contact/get_all", token)
         .then((responseJson) => {
@@ -79,7 +79,7 @@ export default class Contact extends React.Component  {
             <Personal
                 person={this.state.current}
                 contact={this.state.contact}
-                setContact={this.setContact}
+                setContact={this.loadAllContact}
             />
         );
     }
@@ -116,7 +116,7 @@ export default class Contact extends React.Component  {
                           this.setCurrent(person);
                         }}
                     >
-                      <img src={"/images/contactProfiles/dad.png"} alt="" />
+                      <img src={person.image_address} alt="" />
                       <span>{person.first_name + ' ' + person.last_name}</span>
                     </div>
                 ))}

@@ -5,7 +5,7 @@ export const ContactWrapper = styled.div`
   justify-content: space-between;
 
   div {
-    caret-color: transparent;
+    caret-color: black;
     cursor: pointer;
   }
 

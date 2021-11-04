@@ -1,3 +1,6 @@
+import cookie from "react-cookies";
+import {ACCOUNT_GET_SUCCESS} from "./backendReturnCodeHandling";
+
 export function postDataToBackend(url, data){
     return fetch('https://agilespritebackend.herokuapp.com/' + url, {
         body: JSON.stringify(data), // must match 'Content-Type' header
@@ -44,4 +47,16 @@ export function displayLoading(loader) {
 // hiding loading
 export function hideLoading(loader) {
     loader.classList.remove("display");
+}
+
+export function validateCookie(){
+    const token = {'token': cookie.load('userToken')}
+    postDataToBackend("account/get", token)
+        .then((responseJson) => {
+            if(responseJson['code']!==ACCOUNT_GET_SUCCESS){
+                // token error
+                alert(responseJson['msg'])
+                window.location.href = "/login";
+            }
+        });
 }
