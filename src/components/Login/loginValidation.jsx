@@ -23,7 +23,7 @@ export function validateLogin(event) {
                     cookie.save('userEmail', data.email, {path: "/"})
                     cookie.save('userToken', response['token'], {path: "/"})
 
-                    window.location.href = "/home";
+                    window.location.href = "/me";
 
                 } else {
                     alert(response['msg']);
