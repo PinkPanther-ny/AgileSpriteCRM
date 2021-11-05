@@ -14,6 +14,8 @@ export default class Contact extends React.Component  {
       contact : [],
       current : "",
     };
+    this.handleAdd= this.handleAdd.bind(this);
+    this.setCurrent= this.setCurrent.bind(this);
     this.loadAllContact();
   }
 
@@ -37,7 +39,7 @@ export default class Contact extends React.Component  {
   }
 
   handleAdd(){
-    this.state.current = "add";
+    this.setCurrent("add")
   }
 
   handleDelete(){
@@ -49,7 +51,7 @@ export default class Contact extends React.Component  {
     });
     this.state.current = "";
   }
-  setContact(contact){
+  setContact=(contact)=>{
     this.setState({contact : contact})
   }
   setCurrent(current){

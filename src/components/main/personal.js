@@ -38,20 +38,20 @@ const Personal = ({ person}) => {
     validateCookie()
     const updatedData = {
       // Declare name field even it's not needed.
-      'token': cookie.load('userToken'),
-      'contact_id': fields.id,
+      'token'       : cookie.load('userToken'),
+      'contact_id'  : fields.id,
 
-      'first_name': fields.first_name,
-      'last_name': fields.last_name,
+      'first_name'  : fields.first_name,
+      'last_name'   : fields.last_name,
 
-      'company': fields.company,
-      'email': fields.email,
-      'phone': fields.phone,
-      'mobile': fields.mobile,
-      'address': fields.address,
-      'birthday': fields.birthday,
+      'company'     : fields.company,
+      'email'       : fields.email,
+      'phone'       : fields.phone,
+      'mobile'      : fields.mobile,
+      'address'     : fields.address,
+      'birthday'    : fields.birthday,
       'relationship': fields.relationship,
-      'notes': fields.notes
+      'notes'       : fields.notes
 
     };
     postDataToBackend("contact/update", updatedData)
@@ -59,16 +59,16 @@ const Personal = ({ person}) => {
           if(responseJson['code']===CONTACT_UPDATE_SUCCESS){
             // alert('Account info updated!')
             // Update success, change local value
-            person.company = fields.company;
-            person.email = fields.email;
+            person.company       = fields.company;
+            person.email         = fields.email;
 
-            person.phone = fields.phone;
-            person.mobile = fields.mobile;
+            person.phone         = fields.phone;
+            person.mobile        = fields.mobile;
 
-            person.address = fields.address;
-            person.birthday = fields.birthday;
-            person.relationship = fields.relationship;
-            person.notes = fields.notes;
+            person.address       = fields.address;
+            person.birthday      = fields.birthday;
+            person.relationship  = fields.relationship;
+            person.notes         = fields.notes;
             person.image_address = fields.image_address;
           }else{
             alert(responseJson['msg'])
