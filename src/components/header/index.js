@@ -14,7 +14,7 @@ export default class Header extends React.Component  {
         return(
             <TopBar>
                 <div>A G I L E S P R I T E</div>
-                <img src="/images/logo.jpg" alt="logo" />
+                <img src="../images/logo.jpg" alt="logo" />
             </TopBar>
         );
     }

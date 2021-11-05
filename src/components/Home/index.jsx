@@ -2,7 +2,7 @@ import React from "react";
 // import JSONPretty from 'react-json-pretty';
 import cookie from "react-cookies";
 import {postDataToBackend, validateCookie} from "../../helper";
-import {ACCOUNT_GET_SUCCESS, CONTACT_GET_ALL_SUCCESS} from "../../backendReturnCodeHandling";
+import {ACCOUNT_GET_SUCCESS} from "../../backendReturnCodeHandling";
 
 export default class Home extends React.Component  {
 
@@ -34,7 +34,6 @@ export default class Home extends React.Component  {
         return(
             <div>
                 {JSON.stringify(this.state.data,null,2)}
-                {/*<JSONPretty data={this.state.data} theme={require('react-json-pretty/dist/monikai')}/>*/}
             </div>
         );
     }
