@@ -1,10 +1,31 @@
 
 textarea {
-    padding: 10px;
-    margin-top: 20px;
+    min-width: 100%;
     max-width: 100%;
-    line-height: 1.5;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px #999;
+    min-height: 100px;
+    font-family: Tahoma, sans-serif;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+
+    --gradient-angle: 35deg;
+    --bq-margin: 5vh;
+    border-width: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 1.5rem;
+    width: min(40rem,100%);
+    border-image: linear-gradient(var(--gradient-angle,to bottom),var(--gradient)) 1;
+    border-style: solid;
+}
+
+h1{
+    padding-bottom: 5px;
+}
+
+.notes{
+    padding-top: 15px;
+}
+
+.checked-person{
+
 }

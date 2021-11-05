@@ -10,7 +10,7 @@ export const ContactWrapper = styled.div`
   }
 
   nav {
-    //minWidth: "6%";
+    min-width: 5vw;
     min-height: 900px;
     background-color: rgb(36, 126, 198);
   }
@@ -28,6 +28,7 @@ export const ContactWrapper = styled.div`
   }
 
   a.checked {
+    width: 100%;
     background-color: rgb(30, 171, 241)
   }
 
@@ -43,7 +44,7 @@ export const ContactWrapper = styled.div`
   }
 
   section {
-    width: 18%;
+    width: 20vw;
     min-height: 900px;
     border-right: 1px solid gray;
 
@@ -67,16 +68,22 @@ export const ContactWrapper = styled.div`
 
       input {
         width: 90%;
+        height: 1.5rem;
+        background-color: rgb(243, 252, 255);
+        border-radius: 5px;
       }
     }
 
     .contact {
-      padding: 0 10px;
       margin-top: 20px;
       text-align: left;
     }
 
     .person {
+      border-bottom: solid;
+      border-top: solid;
+      border-width: 1px;
+      border-color: rgba(138, 158, 227, 0.73);
       line-height: 80px;
 
       img {
@@ -150,7 +157,7 @@ export const ContactWrapper = styled.div`
   }
 
   article {
-    width: 76%;
+    width: 75vw;
     padding: 20px;
 
     > img {

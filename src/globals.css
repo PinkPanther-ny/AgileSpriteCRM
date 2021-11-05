@@ -58,3 +58,14 @@ input:focus {
 * {
   box-sizing: border-box;
 }
+
+section{
+  padding-top: 20px;
+  border-color: rgb(224, 239, 241);
+  background: rgb(224, 239, 241);
+}
+
+article{
+  border-color: rgb(224, 239, 241);
+  background: rgb(243, 252, 255);
+}

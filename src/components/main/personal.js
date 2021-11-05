@@ -180,16 +180,12 @@ const Personal = ({ person, contact, loadAllContact }) => {
             </span>
               <span>
               Relationship : &nbsp;
-                {/*<select defaultValue="relationship" name="relationship">*/}
-                {/*  <option value="relationship">relationship</option>*/}
-                {/*  <option value="parent">parent</option>*/}
-                {/*</select>*/}
                 <input type="text"
+                       name="relationship"
                        id="relationship"
                        value={fields.relationship}
                        disabled={disabled}
                        onChange={handleChange}
-                       name="relationship"
                 />
             </span>
             </h5>
@@ -202,7 +198,8 @@ const Personal = ({ person, contact, loadAllContact }) => {
                   cols="125"
                   rows="6"
                   value={fields.notes}
-                  placeholder="Add a note ..."
+                  disabled={disabled}
+                  onChange={handleChange}
               >
               </textarea>
             </div>
@@ -211,6 +208,9 @@ const Personal = ({ person, contact, loadAllContact }) => {
               <button onClick={handleSubmit}>save</button>
             </div>
           </Route>
+
+
+
           <Route path="/contact/story">
             <div className="story">
               <div className="title">
@@ -233,6 +233,9 @@ const Personal = ({ person, contact, loadAllContact }) => {
               </div>
             </div>
           </Route>
+
+
+
         </Switch>
       </div>
   );
