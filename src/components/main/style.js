@@ -10,7 +10,7 @@ export const ContactWrapper = styled.div`
   }
 
   nav {
-    min-width: 5vw;
+    min-width: 5%;
     min-height: 900px;
     background-color: rgb(36, 126, 198);
   }
@@ -44,7 +44,7 @@ export const ContactWrapper = styled.div`
   }
 
   section {
-    width: 20vw;
+    width: 20%;
     min-height: 900px;
     border-right: 1px solid gray;
 
@@ -157,7 +157,7 @@ export const ContactWrapper = styled.div`
   }
 
   article {
-    width: 75vw;
+    width: 75%;
     padding: 20px;
 
     > img {
