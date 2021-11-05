@@ -119,7 +119,7 @@ const Add = ({ contact, setContact, setCurrent }) => {
                 <div>
                     <label htmlFor="avatar">Avatar link: </label>
                     <span>
-                        <input type="text" id="image_address" name="image_address" onChange={handleChange} />
+                        <input type="text" id="image_address" name="image_address" onChange={handleChange} placeholder={"Random avatar if empty"}/>
                     </span>
                 </div>
 
