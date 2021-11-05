@@ -3,7 +3,7 @@ import Add from "./add";
 import React  from 'react';
 import cookie from "react-cookies";
 import {postDataToBackend} from "../../helper";
-import {CONTACT_GET_ALL_SUCCESS} from "../../backendReturnCodeHandling";
+import {CONTACT_DELETE_SUCCESS, CONTACT_GET_ALL_SUCCESS} from "../../backendReturnCodeHandling";
 
 export default class Contact extends React.Component  {
   constructor(props) {
@@ -14,15 +14,11 @@ export default class Contact extends React.Component  {
       current : "",
     };
     this.handleAdd= this.handleAdd.bind(this);
+    this.handleDelete= this.handleDelete.bind(this);
     this.setCurrent= this.setCurrent.bind(this);
     this.setContact= this.setContact.bind(this);
     this.loadAllContact();
   }
-
-  // const [current, setCurrent] = useState("");
-  //
-  // const [contact, setContact] = useState(contactList);
-  // const [contact, setAllContact] = useState("");
 
   loadAllContact(){
     const token = {'token': cookie.load('userToken')}
@@ -45,12 +41,27 @@ export default class Contact extends React.Component  {
   handleDelete(){
     this.state.contact.forEach((person, index) => {
       if (person.id === this.state.current.id) {
-        this.state.contact.splice(index, 1);
-        this.setContact([...this.state.contact]);
+        postDataToBackend("contact/delete",
+            {
+              'token': cookie.load('userToken'),
+              'contact_id' : this.state.current.id}
+        ).then((responseJson) => {
+
+          if(responseJson['code']!==CONTACT_DELETE_SUCCESS){
+            alert(responseJson['code'])
+          }
+
+        }).then(()=>{
+
+              this.state.contact.splice(index, 1);
+              this.setContact([...this.state.contact]);
+
+              this.setCurrent("");
+            }
+        )
       }
 
     });
-    this.setCurrent("");
   }
   setContact=(contact)=>{
     this.setState({contact : contact})

@@ -14,3 +14,5 @@ export const CONTACT_GET_ALL_SUCCESS = 215
 export const CONTACT_UPDATE_SUCCESS = 210
 
 export const CONTACT_ADD_SUCCESS = 200
+
+export const CONTACT_DELETE_SUCCESS = 205
