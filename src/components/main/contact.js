@@ -61,9 +61,9 @@ export default class Contact extends React.Component  {
       case "":
         return (
             <img
-                src="/images/Contact front page.png"
-                alt="Contactfrontpage"
-                className="contactimg"
+                src="../images/Contact front page.png"
+                alt="ContactFrontpage"
+                className="contactImg"
             />
         );
       case "add":
@@ -86,12 +86,12 @@ export default class Contact extends React.Component  {
   }
 
   render(){
-      return(
-          <React.Fragment>
-            <section>
-              <div>
-                <span>Contact</span>
-                <span>
+    return(
+        <React.Fragment>
+          <section>
+            <div>
+              <span>Contact</span>
+              <span>
               <span className={"add"} onClick={this.handleAdd}>
                 +
               </span>
@@ -100,31 +100,32 @@ export default class Contact extends React.Component  {
                 -
               </span>
             </span>
-              </div>
-              <div className={"search"}>
-                <input type="text" />
-              </div>
+            </div>
 
-              <div className={"contact"}>
-                {this.state.contact.map((person, index) => (
-                    <div
-                        key={index}
-                        className={
-                          this.state.current.first_name === person.first_name ? "checked person" : "person"
-                        }
-                        onClick={() => {
-                          this.setCurrent(person);
-                        }}
-                    >
-                      <img src={person.image_address} alt="" />
-                      <span>{person.first_name + ' ' + person.last_name}</span>
-                    </div>
-                ))}
-              </div>
-            </section>
-            <article>{this.renderPersonal()}</article>
-          </React.Fragment>
-      )
+            <div className={"search"}>
+              <input type="text" />
+            </div>
+
+            <div className={"contact"}>
+              {this.state.contact.map((person, index) => (
+                  <div
+                      key={index}
+                      className={
+                        this.state.current.first_name === person.first_name ? "checked person" : "person"
+                      }
+                      onClick={() => {
+                        this.setCurrent(person);
+                      }}
+                  >
+                    <img src={person.image_address} alt="Avatar" />
+                    <span>{person.first_name + ' ' + person.last_name}</span>
+                  </div>
+              ))}
+            </div>
+          </section>
+          <article>{this.renderPersonal()}</article>
+        </React.Fragment>
+    )
   }
 };
 
