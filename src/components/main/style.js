@@ -44,7 +44,10 @@ export const ContactWrapper = styled.div`
   }
 
   section {
-    width: 20%;
+    padding-top: 20px;
+    border-color: rgb(224, 239, 241);
+    background: rgb(251, 252, 252);
+    width: 16%;
     min-height: 900px;
     border-right: 1px solid gray;
 
@@ -157,7 +160,9 @@ export const ContactWrapper = styled.div`
   }
 
   article {
-    width: 75%;
+    border-color: rgb(224, 239, 241);
+    background: rgba(230, 237, 239, 0.59);
+    width: 79%;
     padding: 20px;
 
     > img {
@@ -191,7 +196,7 @@ export const ContactWrapper = styled.div`
         justify-content: space-around;
         background-color: rgb(200, 200, 200);
         padding: 10px 0;
-
+        margin-bottom: 10px;
         a {
           text-decoration: none;
           color: gray;
