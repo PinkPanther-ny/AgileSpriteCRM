@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Personal from "./personal";
 import Add from "./add";
 import React  from 'react';
@@ -16,6 +15,7 @@ export default class Contact extends React.Component  {
     };
     this.handleAdd= this.handleAdd.bind(this);
     this.setCurrent= this.setCurrent.bind(this);
+    this.setContact= this.setContact.bind(this);
     this.loadAllContact();
   }
 
@@ -44,12 +44,13 @@ export default class Contact extends React.Component  {
 
   handleDelete(){
     this.state.contact.forEach((person, index) => {
-      if (person.name === this.state.current.name) {
+      if (person.id === this.state.current.id) {
         this.state.contact.splice(index, 1);
-        this.state.contact = [...this.state.contact];
+        this.setContact([...this.state.contact]);
       }
+
     });
-    this.state.current = "";
+    this.setCurrent("");
   }
   setContact=(contact)=>{
     this.setState({contact : contact})
@@ -61,6 +62,7 @@ export default class Contact extends React.Component  {
   renderPersonal(){
     switch (this.state.current) {
       case "":
+        this.loadAllContact()
         return (
             <img
                 src="../images/Contact front page.png"
@@ -113,7 +115,7 @@ export default class Contact extends React.Component  {
                   <div
                       key={index}
                       className={
-                        this.state.current.first_name === person.first_name ? "checked person" : "person"
+                        this.state.current.id === person.id ? "checked person" : "person"
                       }
                       onClick={() => {
                         this.setCurrent(person);

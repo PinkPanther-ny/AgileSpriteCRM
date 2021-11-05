@@ -4,9 +4,6 @@ import {validateCookie} from "../../helper";
 
 export default class Header extends React.Component  {
 
-    constructor(props) {
-        super(props);
-    }
     componentDidMount(){
         validateCookie();
     }

@@ -1,13 +1,12 @@
-import React  from 'react';
+import React from 'react';
 import { useState } from "react"
 import {postDataToBackend, validateCookie} from "../../helper";
 import cookie from "react-cookies";
-import {CONTACT_ADD_SUCCESS, CONTACT_UPDATE_SUCCESS} from "../../backendReturnCodeHandling";
+import {CONTACT_ADD_SUCCESS} from "../../backendReturnCodeHandling";
 
 const Add = ({ contact, setContact, setCurrent }) => {
     const [fields, setFields] = useState({
         'token'         : cookie.load('userToken'),
-        'contact_id'    : '',
 
         'first_name'    : '',
         'last_name'     : '',
@@ -33,39 +32,15 @@ const Add = ({ contact, setContact, setCurrent }) => {
         e.preventDefault();
         validateCookie()
 
-        // if(fields.image_address===''){
-        //     setFields({ ...fields, ['image_address']: 'https://i.pravatar.cc/150?u=' + fields.first_name });
-        // }
-
-        postDataToBackend("contact/add",
-            {
-                'token'      : fields.token,
-                'first_name' : fields.first_name,
-                'last_name'  : fields.last_name})
+        console.log(fields)
+        postDataToBackend("contact/add", fields)
             .then((responseJson) => {
                 if (responseJson['code'] === CONTACT_ADD_SUCCESS) {
 
-                    console.log('res: ' + responseJson['details']['contact_id'])
-                    setFields({ ...fields, ['contact_id']: responseJson['details']['contact_id'] }, ()=>{
-                        console.log('callback: ')
-                        console.log(fields)
-                        postDataToBackend("contact/update", fields).then((responseJson) => {
-
-                            if (responseJson['code'] !== CONTACT_UPDATE_SUCCESS) {
-                                alert(responseJson['msg'])
-
-                            } else {
-                                contact.push(fields);
-                                setContact([...contact]);
-                                console.log(fields)
-                                setCurrent("");
-                            }
-                        })
-                    });
-
+                    contact.push(fields);
+                    setContact([...contact]);
                     console.log(fields)
-
-
+                    setCurrent("");
 
                 } else {
                     alert(responseJson['msg'])
@@ -144,7 +119,7 @@ const Add = ({ contact, setContact, setCurrent }) => {
                 <div>
                     <label htmlFor="avatar">Avatar link: </label>
                     <span>
-                        <input type="text" id="image_address" name="image_address" value={fields.image_address} onChange={handleChange} />
+                        <input type="text" id="image_address" name="image_address" onChange={handleChange} />
                     </span>
                 </div>
 
