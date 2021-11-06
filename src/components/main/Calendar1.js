@@ -38,14 +38,14 @@ class Calendar1 extends React.Component {
             `${responseJson["contacts"][i]["birthday"]}T01:00:00+00:00`
           );
           this.state.events.push({
-            id: 1,
+            id: responseJson["contacts"][i]["id"],
             color: "#34d8eb",
             from: `${currentYear}-${("0" + (from.getMonth() + 1)).slice(-2)}-${(
               "0" + from.getUTCDay()
             ).slice(-2)}T01:00:00+00:00`,
             to: `${currentYear}-${("0" + (from.getMonth() + 1)).slice(-2)}-${(
               "0" + from.getUTCDay()
-            ).slice(-2)}T24:00:00+00:00`,
+            ).slice(-2)}T02:00:00+00:00`,
             title: `${responseJson["contacts"][i]["first_name"]} ${responseJson["contacts"][i]["last_name"]}
               's birthday!`,
           });
