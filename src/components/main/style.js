@@ -17,9 +17,13 @@ export const ContactWrapper = styled.div`
   }
 
   nav > a {
+    border-bottom-color: black;
+    border-bottom: solid;
+    border-width: 1px;
+    
     display: block;
     line-height: 50px;
-    width: 90px;
+    width: 100%;
     text-align: center;
   }
 
