@@ -1,10 +1,9 @@
 import React from "react";
-// import JSONPretty from 'react-json-pretty';
 import cookie from "react-cookies";
 import {postDataToBackend, validateCookie} from "../../helper";
 import {ACCOUNT_GET_SUCCESS} from "../../backendReturnCodeHandling";
 
-export default class Home extends React.Component  {
+export default class MyProfile extends React.Component  {
 
     constructor(props) {
         super(props);
@@ -21,7 +20,7 @@ export default class Home extends React.Component  {
         postDataToBackend("account/get", token)
             .then((responseJson) => {
                 if(responseJson['code']===ACCOUNT_GET_SUCCESS){
-                    this.setState({ data : responseJson })
+                    this.setState({ data : responseJson['details'] })
                 }else {
                     // token error
                     alert(responseJson['code'])
@@ -32,7 +31,7 @@ export default class Home extends React.Component  {
 
     render(){
         return(
-            <div>
+            <div>Hello. <br/>
                 {JSON.stringify(this.state.data,null,2)}
             </div>
         );

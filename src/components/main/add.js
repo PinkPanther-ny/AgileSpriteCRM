@@ -3,6 +3,7 @@ import { useState } from "react"
 import {postDataToBackend, validateCookie} from "../../helper";
 import cookie from "react-cookies";
 import {CONTACT_ADD_SUCCESS} from "../../backendReturnCodeHandling";
+import "./prettyForm.css";
 
 const Add = ({ contact, setContact, setCurrent }) => {
     const [fields, setFields] = useState({
@@ -51,96 +52,78 @@ const Add = ({ contact, setContact, setCurrent }) => {
     }
 
     return (
-        <div className="add">
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="first_name">First Name : </label>
-                    <span>
-                        <input type="text" id="first_name" name="first_name" onChange={handleChange} required="required" placeholder={'required'}/>
-                    </span>
-                </div>
+        <div className="pretty-form-container">
+            <div className="card">
+                <form onSubmit={handleSubmit} className="card_form">
 
-                <div>
-                    <label htmlFor="last_name">Last Name : </label>
-                    <span>
-                        <input type="text" id="last_name" name="last_name" onChange={handleChange} required="required" placeholder={'required'}/>
-                    </span>
-                </div>
+                    <div className="input">
+                        <input className="input_field" type="text" id="first_name" name="first_name" onChange={handleChange} required="required"/>
+                        <label className="input_label">First Name : </label>
+                    </div>
 
-                <div>
-                    <label htmlFor="company">Company : </label>
-                    <span>
-                        <input type="text" id="company" name="company" onChange={handleChange} />
-                    </span>
-                </div>
+                    <div className="input">
+                        <input className="input_field" type="text" id="last_name" name="last_name" onChange={handleChange} required="required"/>
+                        <label className="input_label">Last Name : </label>
+                    </div>
 
-                <div>
-                    <label htmlFor="email">Email : </label>
-                    <span>
-                        <input type="text" id="email" name="email" onChange={handleChange} />
-                    </span>
-                </div>
+                    <div className="input">
+                        <input className="input_field" type="text" id="company" name="company" onChange={handleChange}/>
+                        <label className="input_label">Company : </label>
+                    </div>
 
-                <div>
-                    <label htmlFor="phone">Phone : </label>
-                    <span>
-                        <input type="text" id="phone" name="phone" onChange={handleChange} />
-                    </span>
-                </div>
+                    <div className="input">
+                        <input className="input_field" type="text" id="email" name="email" onChange={handleChange}/>
+                        <label className="input_label">Email : </label>
+                    </div>
 
-                <div>
-                    <label htmlFor="mobile">Mobile : </label>
-                    <span>
-                        <input type="text" id="mobile" name="mobile" onChange={handleChange} />
-                    </span>
-                </div>
+                    <div className="input">
+                        <input className="input_field" type="text" id="phone" name="phone" onChange={handleChange}/>
+                        <label className="input_label">Phone : </label>
+                    </div>
 
-                <div>
-                    <label htmlFor="address">Address : </label>
-                    <span>
-                        <input type="text" id="address" name="address" onChange={handleChange} />
-                    </span>
-                </div>
+                    <div className="input">
+                        <input className="input_field" type="text" id="mobile" name="mobile" onChange={handleChange}/>
+                        <label className="input_label">Mobile : </label>
+                    </div>
 
-                <div>
-                    <label htmlFor="birthday">Birthday : </label>
-                    <span>
-                        <input type="date" id="birthday" name="birthday" onChange={handleChange} />
-                    </span>
-                </div>
+                    <div className="input">
+                        <input className="input_field" type="text" id="address" name="address" onChange={handleChange}/>
+                        <label className="input_label">Address : </label>
+                    </div>
 
-                <div>
-                    <label htmlFor="relationship">Relationship : </label>
-                    <span>
-                        <input type="text" id="relationship" name="relationship" onChange={handleChange} />
-                    </span>
-                </div>
+                    <div className="input">
+                        <input className="input_field" type="text" id="relationship" name="relationship" onChange={handleChange}/>
+                        <label className="input_label">Relationship : </label>
+                    </div>
 
-                <div>
-                    <label htmlFor="avatar">Avatar link: </label>
-                    <span>
-                        <input type="text" id="image_address" name="image_address" onChange={handleChange} placeholder={"Random avatar if empty"}/>
-                    </span>
-                </div>
+                    <div className="input">
+                        <input className="input_field" type="text" id="image_address" name="image_address" onChange={handleChange}/>
+                        <label className="input_label">Avatar link: </label>
+                    </div>
 
-                <div>
-                    <label htmlFor="notes">Notes : </label>
-                    <span>
-                        <textarea
-                            name="notes"
-                            id="notes"
-                            cols="125"
-                            rows="4"
-                            onChange={handleChange}
-                        >
-              </textarea>
-                    </span>
-                </div>
+                    <div className="input">
 
-                <div className="submit">
-                    <input type="submit" value="Submit" />
-                </div>
-            </form>
+                        <label className="input_label datepicker birthday">Birthday: <span role="img" aria-label={"calendar"}>📆</span><input className="input_field" type="date" id="birthday" name="birthday" onChange={handleChange} onKeyDown="return false" /></label>
+
+                    </div>
+
+                    <div className="input">
+                        <label className="input_label notes">Notes : </label>
+                        <span>
+                            <textarea
+                                name="notes"
+                                id="notes"
+                                cols="125"
+                                rows="4"
+                                onChange={handleChange}
+                            >
+                            </textarea>
+                        </span>
+                    </div>
+
+                    <button type={"submit"} className="card_button">Add new contact</button>
+                </form>
+            </div>
         </div>
     )
 }

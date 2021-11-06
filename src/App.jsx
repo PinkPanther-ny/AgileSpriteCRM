@@ -6,7 +6,7 @@ import Homepage from "./components/Homepage";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import ForgotPassword from "./components/ForgotPassword";
-import Home from "./components/Home";
+import MyProfile from "./components/MyProfile";
 import {ContactWrapper} from "./components/main/style";
 import Nav from "./components/main/nav";
 import Contact from "./components/main/contact";
@@ -40,15 +40,11 @@ function App() {
                     <ForgotPassword {...forgotPasswordData} />
                 </Route>
 
-                <Route path="/home">
-                    <Home />
-                </Route>
-
-
                 <Route path="/me">
                     <Header/>
                     <ContactWrapper>
                         <Nav />
+                        <MyProfile/>
                     </ContactWrapper>
                 </Route>
 
