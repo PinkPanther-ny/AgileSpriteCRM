@@ -32,6 +32,7 @@ export default class MyProfile extends React.Component  {
     render(){
         return(
             <div>Hello. <br/>
+                Token: <br/>{cookie.load('userToken')}<br/>
                 {JSON.stringify(this.state.data,null,2)}
             </div>
         );
