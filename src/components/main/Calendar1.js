@@ -41,16 +41,16 @@ class Calendar1 extends React.Component {
             id: responseJson["contacts"][i]["id"],
             color: "#34d8eb",
             from: `${currentYear}-${("0" + (from.getMonth() + 1)).slice(-2)}-${(
-              "0" + from.getUTCDay()
+              "0" + from.getUTCDate()
             ).slice(-2)}T01:00:00+00:00`,
             to: `${currentYear}-${("0" + (from.getMonth() + 1)).slice(-2)}-${(
-              "0" + from.getUTCDay()
+              "0" + from.getUTCDate()
             ).slice(-2)}T02:00:00+00:00`,
             title: `${responseJson["contacts"][i]["first_name"]} ${responseJson["contacts"][i]["last_name"]}
               's birthday!`,
           });
         }
-        console.log(this.state.events);
+        console.log(from.getUTCDate());
       } else {
         // token error
         alert(responseJson["msg"]);
