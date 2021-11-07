@@ -50,7 +50,6 @@ class Calendar1 extends React.Component {
               's birthday!`,
           });
         }
-        console.log(from.getUTCDate());
       } else {
         // token error
         alert(responseJson["msg"]);
