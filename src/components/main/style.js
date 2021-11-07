@@ -20,7 +20,7 @@ export const ContactWrapper = styled.div`
     border-bottom-color: black;
     border-bottom: solid;
     border-width: 1px;
-    
+
     display: block;
     line-height: 50px;
     width: 100%;
@@ -35,6 +35,11 @@ export const ContactWrapper = styled.div`
   a.checked {
     width: 100%;
     background-color: rgb(30, 171, 241)
+  }
+
+  a.logout:hover, a.not_checked:hover {
+    width: 100%;
+    background-color: rgba(30, 146, 241, 0.6)
   }
 
   section.groupList, article.groupList {
@@ -205,6 +210,7 @@ export const ContactWrapper = styled.div`
         background-color: rgb(200, 200, 200);
         padding: 10px 0;
         margin-bottom: 10px;
+
         a {
           text-decoration: none;
           color: gray;
