@@ -10,16 +10,17 @@ export const ContactWrapper = styled.div`
   }
 
   nav {
-    width: 5%;
-    min-width: 85px;
-    min-height: 900px;
+    width: 4vh;
+    min-width: 78px;
+    min-height: 90px;
+    height: 100vh;
     background-color: rgb(36, 126, 198);
   }
 
   nav > a {
-    border-bottom-color: black;
-    border-bottom: solid;
-    border-width: 1px;
+    //border-bottom-color: black;
+    //border-bottom: solid;
+    //border-width: 1px;
 
     display: block;
     line-height: 50px;
@@ -135,7 +136,7 @@ export const ContactWrapper = styled.div`
       top: -20px;
       background-color: rgb(245, 245, 245);
       border-radius: 10px;
-      left: 101%;
+      left: 100%;
 
       button {
         margin-top: 50px;
