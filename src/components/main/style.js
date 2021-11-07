@@ -107,6 +107,10 @@ export const ContactWrapper = styled.div`
         vertical-align: middle;
       }
     }
+    
+    .person:hover{
+      background-color: rgba(142, 214, 248, .2);
+    }
 
     .person.checked {
       background-color: rgba(29, 172, 241, .2);
