@@ -6,6 +6,7 @@ import SignupLink from "../SignupLink";
 import "./Login.css";
 import "./LoginLoading.css";
 import {validateLogin} from "./loginValidation";
+import {redirectLogin} from "../../helper";
 
 function Login(props) {
   const {
@@ -30,6 +31,7 @@ function Login(props) {
     text6,
   } = props;
 
+  redirectLogin();
   return (
     <div className="container-center-horizontal">
       <form className="loginForm animate-enter2 screen" name="login" onSubmit={validateLogin}>

@@ -60,3 +60,14 @@ export function validateCookie(){
             }
         });
 }
+
+
+export function redirectLogin(){
+    const token = {'token': cookie.load('userToken')}
+    postDataToBackend("account/get", token)
+        .then((responseJson) => {
+            if(responseJson['code']===ACCOUNT_GET_SUCCESS){
+                window.location.href = "/me";
+            }
+        });
+}
