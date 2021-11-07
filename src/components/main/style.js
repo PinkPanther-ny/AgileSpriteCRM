@@ -10,10 +10,10 @@ export const ContactWrapper = styled.div`
   }
 
   nav {
-    width: 4vh;
+    width: 4vw;
     min-width: 78px;
     min-height: 90px;
-    height: 100vh;
+    height: 1080px;
     background-color: rgb(36, 126, 198);
   }
 
@@ -58,7 +58,7 @@ export const ContactWrapper = styled.div`
     padding-top: 20px;
     border-color: rgb(224, 239, 241);
     background: rgb(251, 252, 252);
-    width: 16%;
+    width: 16vw;
     min-width: 280px;
     min-height: 900px;
     border-right: 1px solid gray;
@@ -178,7 +178,7 @@ export const ContactWrapper = styled.div`
   article {
     border-color: rgb(224, 239, 241);
     background: rgba(230, 237, 239, 0.59);
-    width: 79%;
+    width: 80vw;
     padding: 20px;
 
     > img {
