@@ -6,6 +6,7 @@ import LoginLink from "../LoginLink";
 import SignupLink from "../SignupLink";
 import "./ForgotPassword.css";
 import {displayLoading, formToJSON, hideLoading, postDataToBackend} from "../../helper";
+import {ACCOUNT_USERNAME_EXIST} from "../../backendReturnCodeHandling";
 
 function onSubmitForm(event){
   event.preventDefault();
@@ -16,9 +17,13 @@ function onSubmitForm(event){
   const data = formToJSON(form.elements);
   postDataToBackend('account/forgotpassword', {'email': data['email']}).then((response)=>{
 
-    alert(response['msg']);
     hideLoading(loader);
-    window.location.href = '/login'
+    if(response['code']===ACCOUNT_USERNAME_EXIST){
+      alert(response['msg']);
+      window.location.href = '/login'
+    }else{
+      alert(response['msg']);
+    }
   })
 }
 
