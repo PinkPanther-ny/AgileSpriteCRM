@@ -1,4 +1,4 @@
-:root { 
+:root {
   --alto: #d9d9da;
   --blueberry: #4e6ffc;
   --blueberry-2: #4e6ffce8;
@@ -9,7 +9,7 @@
   --scarpa-flow: #555558;
   --unmellow-yellow: #002dec;
   --white: #ffffff;
- 
+
   --font-size-l: 17px;
   --font-size-m: 16px;
   --font-size-xl: 18px;
@@ -17,7 +17,7 @@
   --font-size-xxxl: 26px;
   --font-size-xxxxl: 28px;
   --font-size-xxxxxl: 35px;
- 
+
   --font-family-inter: "Inter", Helvetica;
   --font-family-segoeui-black: "SegoeUI-Black", Helvetica;
   --font-family-tahoma: "Tahoma", Helvetica;

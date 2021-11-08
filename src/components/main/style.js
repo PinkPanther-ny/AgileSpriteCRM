@@ -107,7 +107,7 @@ export const ContactWrapper = styled.div`
         vertical-align: middle;
       }
     }
-    
+
     .person:hover{
       background-color: rgba(142, 214, 248, .2);
     }
