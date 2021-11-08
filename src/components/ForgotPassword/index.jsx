@@ -19,7 +19,7 @@ function ForgotPassword(props) {
               <img className="agile-sprite-4" src={agilesprite} alt={" "}/>
               <div className="account-recovery tahoma-bold-blueberry-35px">{accountRecovery}</div>
               <Email className={emailProps.className} />
-              <a href="" className="align-self-flex-start">
+              <a href="/" className="align-self-flex-start">
                 <div className="signup-btn-2 smart-layers-pointers">
                   <div className="overlap-group-17">
                     <div className="hover-2 smart-layers-pointers hidden"/>
