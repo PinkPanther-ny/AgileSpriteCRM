@@ -9,6 +9,8 @@ export const ACCOUNT_LOGOUT_SUCCESS = 115
 
 export const ACCOUNT_GET_SUCCESS = 125
 
+export const ACCOUNT_USERNAME_EXIST = 127
+
 export const CONTACT_GET_ALL_SUCCESS = 215
 
 export const CONTACT_UPDATE_SUCCESS = 210

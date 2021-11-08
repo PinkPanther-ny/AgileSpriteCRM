@@ -5,13 +5,29 @@ import BackgroundBorder from "../BackgroundBorder";
 import LoginLink from "../LoginLink";
 import SignupLink from "../SignupLink";
 import "./ForgotPassword.css";
+import {displayLoading, formToJSON, hideLoading, postDataToBackend} from "../../helper";
+
+function onSubmitForm(event){
+  event.preventDefault();
+  const loader = document.querySelector("#loading");
+  const form = document.getElementsByName('forgotpassword')[0];
+  displayLoading(loader)
+  // Call our function to get the form data.
+  const data = formToJSON(form.elements);
+  postDataToBackend('account/forgotpassword', {'email': data['email']}).then((response)=>{
+
+    alert(response['msg']);
+    hideLoading(loader);
+    window.location.href = '/login'
+  })
+}
 
 function ForgotPassword(props) {
   const { path4606, agilesprite, accountRecovery, confirm, text9, text10, path4643, emailProps } = props;
 
   return (
     <div className="container-center-horizontal">
-      <form className="forgotpassword animate-enter4 screen" name="form3" method="post">
+      <form className="forgotpassword animate-enter4 screen" name="forgotpassword" onSubmit={onSubmitForm}>
         <div className="overlap-group4-2">
           <img className="path-4606-3" src={path4606}  alt={" "}/>
           <div className="overlap-group2-4">
@@ -19,14 +35,14 @@ function ForgotPassword(props) {
               <img className="agile-sprite-4" src={agilesprite} alt={" "}/>
               <div className="account-recovery tahoma-bold-blueberry-35px">{accountRecovery}</div>
               <Email className={emailProps.className} />
-              <a href="/" className="align-self-flex-start">
+              <button className="align-self-flex-start">
                 <div className="signup-btn-2 smart-layers-pointers">
                   <div className="overlap-group-17">
                     <div className="hover-2 smart-layers-pointers hidden"/>
                     <div className="confirm tahoma-regular-normal-white-18px">{confirm}</div>
                   </div>
                 </div>
-              </a>
+              </button>
             </div>
             <div className="text-9 tahoma-regular-normal-dove-gray-17px">{text9}</div>
           </div>
@@ -50,6 +66,7 @@ function ForgotPassword(props) {
           </div>
         </div>
         <img className="path-4643-3" src={path4643} alt={" "}/>
+        <div className="loading" id="loading"/>
       </form>
     </div>
   );
