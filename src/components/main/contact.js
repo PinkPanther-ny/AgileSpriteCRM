@@ -17,7 +17,17 @@ export default class Contact extends React.Component  {
     this.handleDelete= this.handleDelete.bind(this);
     this.setCurrent= this.setCurrent.bind(this);
     this.setContact= this.setContact.bind(this);
-    this.loadAllContact();
+  }
+
+  componentDidMount(){
+    const allContacts = cookie.load('all_contacts');
+    if((typeof allContacts) !== 'undefined'){
+      console.log(allContacts)
+      this.setState({ contact : allContacts })
+
+    }
+
+    this.loadAllContact()
   }
 
   loadAllContact(){
@@ -26,6 +36,7 @@ export default class Contact extends React.Component  {
         .then((responseJson) => {
           if(responseJson['code']===CONTACT_GET_ALL_SUCCESS){
             this.setState({ contact : responseJson['contacts'] })
+            cookie.save('all_contacts', responseJson['contacts'], {path: "/"})
           }else {
             // token error
             alert(responseJson['msg'])
@@ -73,7 +84,6 @@ export default class Contact extends React.Component  {
   renderPersonal(){
     switch (this.state.current) {
       case "":
-        this.loadAllContact()
         return (
             <img
                 src="../images/Contact front page.png"
