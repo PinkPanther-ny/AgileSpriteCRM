@@ -86,6 +86,14 @@
   font-weight: 700;
 }
 
+.tahoma-bold-ebony-clay-550 {
+  color: var(--ebony-clay);
+  font-family: var(--font-family-tahoma-bold);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 550;
+}
+
 .tahoma-bold-blueberry-35px {
   color: var(--blueberry);
   font-family: var(--font-family-tahoma-bold);
