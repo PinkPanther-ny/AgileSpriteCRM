@@ -11,12 +11,10 @@ import {ACCOUNT_USERNAME_EXIST} from "../../backendReturnCodeHandling";
 function onSubmitForm(event){
   event.preventDefault();
   const loader = document.querySelector("#loading");
-  const form = document.getElementsByName('forgotpassword')[0];
   displayLoading(loader)
-  // Call our function to get the form data.
-  const data = formToJSON(form.elements);
-  postDataToBackend('account/forgotpassword', {'email': data['email']}).then((response)=>{
 
+  const form = document.getElementsByName('forgotpassword')[0];
+  postDataToBackend('account/forgotpassword', formToJSON(form.elements)).then((response)=>{
     hideLoading(loader);
     if(response['code']===ACCOUNT_USERNAME_EXIST){
       alert(response['msg']);
