@@ -14,6 +14,8 @@ import Group from "./components/main/group";
 import Calendar1 from "./components/main/Calendar1";
 import EventForm from "./components/forms/EventForm";
 import Header from "./components/header";
+import {ProfileStyle} from "./components/MyProfile/ProfileStyle";
+import ResetPage from "./components/ResetPage";
 
 function App() {
 
@@ -42,10 +44,10 @@ function App() {
 
                 <Route path="/me">
                     <Header/>
-                    <ContactWrapper>
+                    <ProfileStyle>
                         <Nav />
                         <MyProfile/>
-                    </ContactWrapper>
+                    </ProfileStyle>
                 </Route>
 
                 <Route path="/contact">
@@ -80,6 +82,11 @@ function App() {
 
                 <Route path="/form" component={EventForm} />
 
+                <Route path="/reset">
+
+                    <ResetPage {...resetPageData} />
+                </Route>
+
                 <Route>
                     <NotFoundPage {...notFoundPageData} />
                 </Route>
@@ -100,6 +107,29 @@ const notFoundPageData = {
     signUp: "Sign up",
     text2: "AGILE SPRITE PERSONAL CRM",
     path4643: "/img/path-4643-1@1x.png",
+};
+
+
+const resetPageData = {
+    path4606: "/img/path-4606-1@1x.png",
+    agilesprite: "/img/agilesprite-1@1x.png",
+    address: "RESET PASSWORD",
+    path4599: "/img/path-4599-1@1x.png",
+    signUp: "Sign up",
+    text2: "AGILE SPRITE PERSONAL CRM",
+    path4643: "/img/path-4643-1@1x.png",
+
+    spanText: "New password",
+    spanText2: " *",
+    path54: "/img/path-54-1@1x.png",
+    inputType: "password",
+    inputPlaceholder: "Enter new password",
+    spanText3: "Confirm password ",
+    spanText4: "*",
+    lock: "/img/combined-shape-1@1x.png",
+    inputType2: "password",
+    inputPlaceholder2: "Confirm password",
+    login: "Confirm",
 };
 
 const startButtonData = {

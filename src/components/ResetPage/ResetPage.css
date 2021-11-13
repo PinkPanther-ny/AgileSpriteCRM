@@ -1,0 +1,19 @@
+.reset-page {
+  background-color: var(--white);
+  height: 1079px;
+  overflow: hidden;
+  position: relative;
+  width: 1920px;
+  opacity: 0;
+filter: blur(10px);
+}
+
+.reset-page.animate-enter {
+  animation: animate-enter-frames 0.80s ease-out 0.00s 1 normal forwards;
+  opacity: 0;
+filter: blur(10px);
+}
+
+.reset-page-form{
+  margin-top: 30px;
+}

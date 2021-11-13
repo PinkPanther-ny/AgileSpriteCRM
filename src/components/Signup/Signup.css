@@ -9,7 +9,7 @@ filter: blur(10px);
 }
 
 .signupForm.animate-enter3 {
-  animation: animate-enter3-frames 0.20s ease-out 0.00s 1 normal forwards;
+  animation: animate-enter3-frames 0.40s ease-out 0.00s 1 normal forwards;
   opacity: 0;
 filter: blur(10px);
 }
@@ -399,7 +399,7 @@ filter: blur(10px);
 }
 
 .text-8:hover {
-  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px 2px rgba(0,0,0,0.2);
 }
 
 .path-4643-2 {
@@ -421,14 +421,14 @@ filter: blur(10px);
   border-radius: 4px;
   cursor: pointer;
   height: 50px;
-  margin-right: 2.0px;
+  margin-right: 2px;
   margin-top: 42px;
   pointer-events: auto;
   transition: all 0.15s ease-in-out;
   width: 492px;
 
   position: relative;
-  left: 0px;
+  left: 0;
   line-height: 30px;
   white-space: nowrap;
 

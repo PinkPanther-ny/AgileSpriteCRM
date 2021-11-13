@@ -61,6 +61,17 @@ export function validateCookie(){
         });
 }
 
+export function validateUrl(url_token){
+    const token = {'token': url_token}
+    postDataToBackend("account/get", token)
+        .then((responseJson) => {
+            if(responseJson['code']!==ACCOUNT_GET_SUCCESS){
+                // token error
+                alert(responseJson['msg'])
+                window.location.href = "/login";
+            }
+        });
+}
 
 export function redirectLogin(){
     const token = {'token': cookie.load('userToken')}

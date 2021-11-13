@@ -9,7 +9,7 @@ filter: blur(10px);
 }
 
 .not-found-page.animate-enter {
-  animation: animate-enter-frames 0.20s ease-out 0.00s 1 normal forwards;
+  animation: animate-enter-frames 0.40s ease-out 0.00s 1 normal forwards;
   opacity: 0;
 filter: blur(10px);
 }
@@ -45,7 +45,7 @@ filter: blur(10px);
 .agile-sprite {
   cursor: pointer;
   height: 159px;
-  margin-right: 26.0px;
+  margin-right: 26px;
   object-fit: cover;
   width: 162px;
 }
@@ -53,17 +53,17 @@ filter: blur(10px);
 .address {
   letter-spacing: 0;
   line-height: 35px;
-  margin-right: 25.0px;
+  margin-right: 25px;
   margin-top: 38px;
   min-height: 44px;
   min-width: 291px;
-  text-shadow: 0px 8px 6px #00000082;
+  text-shadow: 0 8px 6px #00000082;
   white-space: nowrap;
 }
 
 .text-1 {
   -webkit-text-stroke: 1px var(--dove-gray);
-  letter-spacing: 0.10px;
+  letter-spacing: 0;
   line-height: 22px;
   margin-top: 56px;
   min-height: 23px;
@@ -77,9 +77,9 @@ filter: blur(10px);
   font-family: var(--font-family-tahoma-bold);
   font-size: var(--font-size-xxl);
   font-weight: 700;
-  letter-spacing: 0.16px;
+  letter-spacing: 0;
   line-height: 22px;
-  margin-right: 23.0px;
+  margin-right: 23px;
   margin-top: 210px;
   min-height: 29px;
   min-width: 215px;
@@ -146,7 +146,7 @@ filter: blur(10px);
 }
 
 .group-143614:hover {
-  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px 2px rgba(0,0,0,0.2);
 }
 
 .overlap-group {
@@ -166,7 +166,7 @@ filter: blur(10px);
 
 .sign-up {
   left: 0;
-  letter-spacing: 0.16px;
+  letter-spacing: 0;
   line-height: 22px;
   position: absolute;
   top: 0;
@@ -186,7 +186,7 @@ filter: blur(10px);
 }
 
 .text-2:hover {
-  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px 2px rgba(0,0,0,0.2);
 }
 
 .path-4643 {

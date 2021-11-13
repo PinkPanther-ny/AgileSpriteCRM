@@ -8,7 +8,7 @@
 }
 
 .loginForm.animate-enter2 {
-  animation: animate-enter2-frames 0.20s ease-out 0.00s 1 normal forwards;
+  animation: animate-enter2-frames 0.40s ease-out 0.00s 1 normal forwards;
   opacity: 0;
   filter: blur(10px);
 }
