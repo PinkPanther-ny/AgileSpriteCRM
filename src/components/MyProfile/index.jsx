@@ -117,7 +117,7 @@ export default class MyProfile extends React.Component  {
                                         const ret_code = response['code'];
                                         if (ret_code === ACCOUNT_UPDATE_SUCCESS) {
 
-                                            alert(response['msg']);
+                                            // alert(response['msg']);
                                             this.renderMyData()
 
                                             this.setState({editing_detail : false})

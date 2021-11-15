@@ -42,6 +42,7 @@ const Add = ({ contact, setContact, setCurrent }) => {
                     setContact([...contact]);
                     console.log(fields)
                     setCurrent("");
+                    window.location.href = '/contact'
 
                 } else {
                     alert(responseJson['msg'])

@@ -51,7 +51,8 @@ const Personal = ({ person}) => {
       'address'     : fields.address,
       'birthday'    : fields.birthday,
       'relationship': fields.relationship,
-      'notes'       : fields.notes
+      'notes'       : fields.notes,
+      'image_address': fields.image_address
 
     };
     postDataToBackend("contact/update", updatedData)
@@ -93,7 +94,7 @@ const Personal = ({ person}) => {
         </h6>
         <Switch>
           <Route path="/contact" exact>
-            <img src={person.image_address} alt="profile" align="left" />
+            <img src={fields.image_address} alt="profile" align="left" />
             <form
                 onClick={(e) => {
                   e.preventDefault();
