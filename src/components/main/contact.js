@@ -4,6 +4,7 @@ import React  from 'react';
 import cookie from "react-cookies";
 import {postDataToBackend} from "../../helper";
 import {CONTACT_DELETE_SUCCESS, CONTACT_GET_ALL_SUCCESS} from "../../backendReturnCodeHandling";
+import {BooleanPrompt} from "../BooleanPrompt";
 
 export default class Contact extends React.Component  {
   constructor(props) {
@@ -12,6 +13,7 @@ export default class Contact extends React.Component  {
     this.state = {
       contact : [],
       current : "",
+      deleteContactPromptOpen : false
     };
     this.handleAdd= this.handleAdd.bind(this);
     this.handleDelete= this.handleDelete.bind(this);
@@ -74,6 +76,15 @@ export default class Contact extends React.Component  {
 
     });
   }
+
+  handleClosePrompt = (value) => {
+    this.setState({deleteContactPromptOpen : false})
+    if(value===0){
+      this.handleDelete()
+    }
+
+  }
+
   setContact=(contact)=>{
     this.setState({contact : contact})
   }
@@ -121,9 +132,15 @@ export default class Contact extends React.Component  {
                 +
               </span>
 
-              <span className={"delete"} onClick={this.handleDelete}>
+              <span className={"delete"} onClick={()=>{
+
+                this.setState({deleteContactPromptOpen : true})
+              }}>
                 -
               </span>
+                <div>
+                  <BooleanPrompt open={this.state.deleteContactPromptOpen} onClose={this.handleClosePrompt} title={"Are you sure you want to delete this contact?"}/>
+                </div>
             </span>
             </div>
 
