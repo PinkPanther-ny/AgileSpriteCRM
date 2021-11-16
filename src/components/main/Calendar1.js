@@ -5,7 +5,10 @@ import "./calendar.css";
 import styled from "styled-components";
 import cookie from "react-cookies";
 import { postDataToBackend } from "../../helper";
-import { CONTACT_GET_ALL_SUCCESS } from "../../backendReturnCodeHandling";
+import {
+  EVENT_DELETE_SUCCESS,
+  CONTACT_GET_ALL_SUCCESS,
+} from "../../backendReturnCodeHandling";
 const Button1 = styled.button`
   background: #3180e8;
   color: white;
@@ -18,12 +21,14 @@ const Button1 = styled.button`
 class Calendar1 extends React.Component {
   constructor(props) {
     super(props);
+    this.loadAllBirthday();
 
     this.state = {
       events: [],
       current: "",
     };
-    this.loadAllBirthday();
+    this.onSelectEvent = this.onSelectEvent.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   loadAllBirthday() {
@@ -57,6 +62,28 @@ class Calendar1 extends React.Component {
       }
     });
   }
+  onSelectEvent(pEvent) {
+    const r = window.confirm("Would you like to remove this event?");
+    if (r === true) {
+      this.handleDelete(pEvent);
+    }
+  }
+  handleDelete(pEvent) {
+    postDataToBackend("calendar/delete_event/", {
+      token: cookie.load("userToken"),
+      id: pEvent,
+    })
+      .then((responseJson) => {
+        if (responseJson["code"] !== EVENT_DELETE_SUCCESS) {
+          alert(responseJson["code"]);
+        }
+      })
+      .then(() => {
+        const idx = this.state.events.indexOf(pEvent);
+        this.state.events.splice(idx, 1);
+      });
+  }
+
   render() {
     return (
       <div className="calendar">
@@ -65,7 +92,11 @@ class Calendar1 extends React.Component {
             <Button1>Add New Event!!</Button1>{" "}
           </Link>
         </div>
-        <Calendar className="wrapper" events={this.state.events} />
+        <Calendar
+          className="wrapper"
+          onClickEvent={this.onSelectEvent}
+          events={this.state.events}
+        />
       </div>
 
       // <React.Fragment>
