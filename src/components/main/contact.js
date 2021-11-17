@@ -133,13 +133,17 @@ export default class Contact extends React.Component  {
               </span>
 
               <span className={"delete"} onClick={()=>{
-
-                this.setState({deleteContactPromptOpen : true})
+                if(document.getElementsByClassName('checked person').length){
+                  this.setState({deleteContactPromptOpen : true})
+                }
               }}>
                 -
               </span>
                 <div>
-                  <BooleanPrompt open={this.state.deleteContactPromptOpen} onClose={this.handleClosePrompt} title={"Are you sure you want to delete this contact?"}/>
+                  <BooleanPrompt
+                      open={this.state.deleteContactPromptOpen}
+                      onClose={this.handleClosePrompt}
+                      title={"Are you sure you want to delete this contact?"}/>
                 </div>
             </span>
             </div>
