@@ -276,6 +276,7 @@ export const ContactWrapper = styled.div`
           justify-content: space-between;
 
           > div {
+            min-width: 100%;
             box-sizing: border-box;
             padding: 20px 30px;
             background-color: white;
@@ -286,8 +287,8 @@ export const ContactWrapper = styled.div`
 
             img {
               display: block;
-              margin: 40px auto;
-              width: 600px;
+              margin: 30px auto;
+              width: 100%;
             }
           }
 

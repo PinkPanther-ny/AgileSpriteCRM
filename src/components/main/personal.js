@@ -6,7 +6,7 @@ import {CONTACT_UPDATE_SUCCESS} from "../../backendReturnCodeHandling";
 import cookie from "react-cookies";
 import "./contactDetail.css";
 
-const articleText = `Lorem ipsum dolor sit amet,consectetur adipiscing elit. Nuncmaximus,nulla ut commodo sagittis,sapien dui mattis dui, non pulvinarlorem felis nec eratLorem ipsumdolor sit amet, consectetur adipiscing elit. Nunc maximus, nullaut commodo sagittis, sapien duimattis dui, non pulvinar lorem felisnec eratLorem ipsum dolor sit amet,consectetur adipiscing elit. Nuncmaximus, nulla ut commodo sagittis, sapien dui mattis dui,non pulvinar lorem felis neceratLorem ipsum dolor sit amet,consectetur adipiscing elit. Nuncmaximus, nulla ut commodo sagittis,sapien dui mattis dui, non pulvinarlorem felis nec eratLorem ipsum`;
+const articleText = `Lorem ipsum dolor sit amet,consectetur adipiscing elit.   nulla ut clis neceratLorem ipsum dolor sit amet,consectetur adipiscing elit. Nuncmaximus, nulla ut commodo sagittis,sapien dui mattis dui, non pulvinarlorem felis nec eratLorem ipsum`;
 
 const Personal = ({ person}) => {
   const path = useLocation().pathname;
@@ -213,12 +213,16 @@ const Personal = ({ person}) => {
 
 
           <Route path="/contact/story">
+
             <div className="story">
-              <div className="title">
-                <div>3</div>
-                <div>Stories</div>
-              </div>
+
+              {/*<div className="title">*/}
+              {/*  <div>Stories</div>*/}
+
+              {/*</div>*/}
+
               <div className="stories">
+
                 <div>
                   <h1>Melbourne,4/9/2021</h1>
                   <img
@@ -226,13 +230,15 @@ const Personal = ({ person}) => {
                       alt="contact story page"
                   />
                   <div className="article">{articleText}</div>
+
                 </div>
-                <div>
-                  <h1>Melbourne,4/9/2021</h1>
-                  <div className="article last-article">{articleText}</div>
-                </div>
+
+
+
               </div>
+
             </div>
+
           </Route>
 
 
