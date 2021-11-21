@@ -102,7 +102,8 @@ export const ContactWrapper = styled.div`
       line-height: 80px;
 
       img {
-        width: 40px;
+        width: 55px;
+        border-radius: 50%;
         margin: 0 20px;
         vertical-align: middle;
       }
@@ -194,8 +195,9 @@ export const ContactWrapper = styled.div`
     }
 
     > div > img {
-      width: 250px;
-      margin-right: 50px;
+      width: 35%;
+      border-radius: 20%;
+      margin: 0 50px 20px 0;
     }
 
     form {

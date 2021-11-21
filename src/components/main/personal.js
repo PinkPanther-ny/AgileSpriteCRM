@@ -75,8 +75,6 @@ const Personal = ({ person}) => {
             alert(responseJson['msg'])
           }
         });
-    //     setContact([...contact]);
-    //     setDisabled(true);
   };
 
   return (
