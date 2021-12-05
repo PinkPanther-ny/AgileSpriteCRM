@@ -1,8 +1,8 @@
 import cookie from "react-cookies";
-import {ACCOUNT_GET_SUCCESS} from "./backendReturnCodeHandling";
+import {ACCOUNT_GET_SUCCESS, BACKEND_ADDRESS} from "./backendReturnCodeHandling";
 
 export function postDataToBackend(url, data){
-    return fetch('https://agilespritebackend.herokuapp.com/' + url, {
+    return fetch(BACKEND_ADDRESS + url, {
         body: JSON.stringify(data), // must match 'Content-Type' header
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
         credentials: 'same-origin', // include, same-origin, *omit

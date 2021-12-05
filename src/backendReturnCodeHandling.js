@@ -1,3 +1,6 @@
+// API address
+export const BACKEND_ADDRESS = 'https://agilespritebackendpostgres.herokuapp.com/';
+
 // Account Operations
 export const ACCOUNT_LOGIN_SUCCESS = 100;
 
