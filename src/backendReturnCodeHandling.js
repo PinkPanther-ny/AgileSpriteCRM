@@ -1,5 +1,5 @@
 // API address
-export const BACKEND_ADDRESS = 'https://agilespritebackend.herokuapp.com/';
+export const BACKEND_ADDRESS = 'https://agilespriteapi.herokuapp.com/';
 
 // Account Operations
 export const ACCOUNT_LOGIN_SUCCESS = 100;
